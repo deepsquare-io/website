@@ -26,6 +26,13 @@ $enable-grid: false;
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+:root {
+  --mono-img-filter: saturate(0%) brightness(0%);
+}
+
+[data-theme="dark"] {
+  --mono-img-filter: saturate(0%) brightness(0%) invert(100%);
+}
 
 /** Footer */
 #root > footer p, #root > footer a {

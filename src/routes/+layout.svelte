@@ -72,6 +72,3 @@
 		</div>
 	</div>
 </footer>
-
-<style>
-</style>

@@ -247,10 +247,6 @@
 
 <style>
 	#partners img {
-		filter: saturate(0%) brightness(0%);
-	}
-
-	[data-theme='dark'] #partners img {
-		filter: saturate(0%) brightness(0%) invert(100%);
+		filter: var(--mono-img-filter);
 	}
 </style>
