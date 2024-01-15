@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { navigating } from '$app/stores';
+	import DeepSquareLogo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
 	import { quintInOut } from 'svelte/easing';
 	import { fade, slide } from 'svelte/transition';
 	let open = false;
@@ -8,62 +9,101 @@
 		open = !open;
 	}
 
+	let oldScrollY = 0;
+	let scrollY = 0;
+	let showTopBar = true;
+	let showTopBarBackground = true;
+
+	$: {
+		showTopBarBackground = scrollY >= 40;
+		showTopBar = oldScrollY > scrollY || scrollY < 40;
+		oldScrollY = scrollY;
+	}
+
 	$: if ($navigating) open = false;
 
 	const inDuration = 200;
 	const outDuration = 200;
+
+	const routes = [
+		{
+			name: 'About',
+			href: '/about'
+		},
+		{
+			name: 'Investors',
+			href: '/investors'
+		},
+		{
+			name: 'Technology',
+			href: '/technology'
+		},
+		{
+			name: 'DeepLabs',
+			href: '/deeplabs'
+		},
+		{
+			name: 'Blog',
+			href: '/deepsquare-blog'
+		},
+		{
+			name: 'FAQ',
+			href: '/faqs'
+		},
+		{
+			name: 'Contact',
+			href: '/contact'
+		}
+	];
 </script>
 
-<nav class="px-2">
-	<ul>
-		<li><a href="/"><strong>DeepSquare</strong></a></li>
-	</ul>
-	<ul class="hidden md:flex">
-		<li>
-			<a href="/about">About</a>
-		</li>
-		<li>
-			<a href="/investors">Investors</a>
-		</li>
-		<li>
-			<a href="/technology">Technology</a>
-		</li>
-		<li>
-			<a href="/deeplabs">DeepLabs</a>
-		</li>
-		<li>
-			<a href="/deepsquare-blog">Blog</a>
-		</li>
-		<li>
-			<a href="/faqs">FAQ</a>
-		</li>
-		<li>
-			<a href="/contact">Contact</a>
-		</li>
-	</ul>
+<!-- This div add margin on top of documents. -->
+<div style="height: 4em">
+	{#if showTopBar}
+		<nav
+			transition:slide={{ duration: 200, easing: quintInOut, axis: 'y' }}
+			class="fixed inset-x-0 top-0 z-25 px-4 {showTopBarBackground
+				? 'bg-nav shadow-xl'
+				: undefined}"
+		>
+			<ul>
+				<li>
+					<a href="/"><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
+					>
+				</li>
+			</ul>
+			<ul class="hidden md:flex">
+				{#each routes as route}
+					<li>
+						<a href={route.href}>{route.name}</a>
+					</li>
+				{/each}
+			</ul>
 
-	<ul class="md:hidden">
-		<li>
-			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="#" on:click={toggle}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="w-6 h-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16m-7 6h7"
-					/>
-				</svg>
-			</a>
-		</li>
-	</ul>
-</nav>
+			<ul class="md:hidden">
+				<li>
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<a href="#" on:click={toggle}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16m-7 6h7"
+							/>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	{/if}
+</div>
 
 {#if open}
 	<div
@@ -115,27 +155,11 @@
 										</svg></a
 									>
 								</li>
-								<li class="flex justify-end">
-									<a href="/about">About</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/investors">Investors</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/technology">Technology</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/deeplabs">DeepLabs</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/deepsquare-blog">Blog</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/faqs">FAQ</a>
-								</li>
-								<li class="flex justify-end">
-									<a href="/contact">Contact</a>
-								</li>
+								{#each routes as route}
+									<li class="flex justify-end">
+										<a href={route.href}>{route.name}</a>
+									</li>
+								{/each}
 							</ul>
 						</nav>
 					</aside>
@@ -144,3 +168,11 @@
 		</div>
 	</div>
 {/if}
+
+<svelte:window bind:scrollY />
+
+<style>
+	.bg-nav {
+		background-color: var(--card-background-color);
+	}
+</style>

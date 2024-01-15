@@ -11,9 +11,7 @@
 
 <Nav />
 
-<main>
-	<slot />
-</main>
+<main><slot /></main>
 
 <footer>
 	<div class="grid md:grid-cols-4">

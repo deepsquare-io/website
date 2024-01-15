@@ -24,10 +24,56 @@ $enable-grid: false;
   --font-family: "Montserrat", "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+  --mono-img-filter: saturate(0%) brightness(0%);
+  --border-radius: 0;
+  --primary: #6753FF;
+  --primary-hover: #C247FF;
+  --primary-focus: #C247FF;
+  --primary-inverse: #FFF;
 }
 
-:root {
-  --mono-img-filter: saturate(0%) brightness(0%);
+// Ref: https://codepen.io/russgossett/pen/gMNrOQ
+$transition-bezier: 1.000, 0.000, 0.000, 1.000;
+$transition-len: 0.20s;
+
+// Outline button
+:is(button, input[type=submit], input[type=button], [role=button]).outline, input[type=reset].outline {
+  position: relative;
+
+  // Create a background inside the button
+  &::before {
+    content: '';
+
+    // Background color
+    background: var(--primary-hover);
+
+    // Position relative to button
+    position: absolute;
+
+    // Transition after extending the background
+    transition: all $transition-len cubic-bezier($transition-bezier);
+
+    // Stretch so that it superposes the button
+    height: 100%;
+    width: 0;
+
+    // Position so that it superposes the button
+    top: 0;
+    left: 0;
+
+    // Make sure it's behind the text
+    z-index: -1;
+  }
+}
+
+// Hover
+:is(button, input[type=submit], input[type=button], [role=button]).outline:is([aria-current], :hover, :active, :focus), input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
+  --color: var(--primary-inverse);
+
+  // Extend the background to the full width
+  &::before {
+    width: 100%;
+  }
 }
 
 [data-theme="dark"] {
