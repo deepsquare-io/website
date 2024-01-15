@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	blocklist: ['list-item'],
 	theme: {
 		fontFamily: {
 			sans: [
@@ -18,6 +19,9 @@ export default {
 			]
 		},
 		extend: {}
+	},
+	corePlugins: {
+		preflight: false
 	},
 	plugins: []
 };

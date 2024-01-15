@@ -122,13 +122,14 @@
 		<a
 			role="button"
 			href="https://docs.deepsquare.run/workflow/overview"
-			style="text-transform: uppercase">Get started</a
+			style="text-transform: uppercase"
+			class="my-2">Get started</a
 		>
 		<a
 			role="button"
 			href="https://discord.com/invite/3PQkJGvUGB"
 			style="text-transform: uppercase"
-			class="outline">Join our Discord</a
+			class="outline my-2">Join our Discord</a
 		>
 	</div>
 </section>

@@ -5,11 +5,7 @@
 	import ClusterFactory from '$lib/assets/media/ClusterFactory-min-scaled.jpg';
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
-	import DevApp from '$lib/assets/media/DevApp0.png';
-	import TextToImage from '$lib/assets/media/TextToImage.png';
-	import Unity from '$lib/assets/media/U_Logo_Black_RGB.svg';
-	import Upscaling from '$lib/assets/media/Upscaling.png';
-	import Blender from '$lib/assets/media/blender_logo.svg';
+	import Applications from '$lib/components/Applications.svelte';
 </script>
 
 <svelte:head>
@@ -145,49 +141,7 @@
 		<h2>Ready to use Applications</h2>
 		<small>Current Applications. More Available Soon!</small>
 
-		<div>
-			<div class="grid md:grid-cols-2 lg:grid-cols-3">
-				<div>
-					<div class="py-4 content-center" style="height: 200px;">
-						<img width="100" height="100" src={DevApp} alt="DevApp" />
-					</div>
-					<p><strong>Dev: </strong>Develop deploy your own applications.</p>
-				</div>
-				<div>
-					<div class="py-4 content-center" style="height: 200px;">
-						<img width="100" height="100" src={TextToImage} alt="TextToImage" />
-					</div>
-					<p>
-						<strong>Text to Image: </strong>Create an image based on given textual descriptions or
-						captions. Supported models: Stable Diffusion v2.1 and Waifu Diffusion v1.4.
-					</p>
-				</div>
-				<div>
-					<div class="py-4 content-center" style="height: 200px;">
-						<img width="100" height="100" src={Upscaling} alt="Upscaling" />
-					</div>
-					<p>
-						<strong>Upscaling:</strong> Upscale your images with Real ESRGAN.
-					</p>
-				</div>
-				<div>
-					<div class="py-4 content-center" style="height: 200px;">
-						<img width="300" height="300" src={Unity} alt="Unity" />
-					</div>
-					<p>
-						<strong>Unity Render Streaming: </strong> Render in real-time your Unity project in the cloud.
-					</p>
-				</div>
-				<div>
-					<div class="py-4 content-center" style="height: 200px;">
-						<img width="300" height="300" src={Blender} alt="Blender" />
-					</div>
-					<p>
-						<strong>Blender: </strong> Render in your Blender project in the cloud.
-					</p>
-				</div>
-			</div>
-		</div>
+		<Applications />
 
 		<a
 			role="button"
