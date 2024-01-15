@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$material-symbols-font-path: 'material-symbols/';
+@import 'material-symbols';
+
+$semantic-root-element: "#root";
+
+// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+$enable-semantic-container: true;
+
+// Enable .classes
+$enable-classes: true;
+
+// Enable Picocss grid
+$enable-grid: false;
+
+@import '@picocss/pico/scss/pico';
+
+/** Custom styles */
+/** General */
+:root {
+  --font-family: "Montserrat", "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+/** Footer */
+#root > footer p, #root > footer a {
+  font-size: 14px;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
