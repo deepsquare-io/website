@@ -239,7 +239,7 @@
 	.resp-sharing-button__icon svg {
 		width: 1em;
 		height: 1em;
-		vertical-align: top;
+		vertical-align: center;
 	}
 	/* Non solid icons get a stroke */
 	.resp-sharing-button__icon {

@@ -198,9 +198,9 @@
 						</div>
 
 						<div class="m-2">
-							<h4>{name}</h4>
+							<div style="height: 5em;"><h4>{name}</h4></div>
 
-							<p>{role}</p>
+							<div style="height: 4em;"><p>{role}</p></div>
 
 							<p>{description}</p>
 						</div>
@@ -230,7 +230,7 @@
 						</div>
 
 						<div class="m-2">
-							<h4>{name}</h4>
+							<div style="height: 5em;"><h4>{name}</h4></div>
 
 							<p>{description}</p>
 						</div>
