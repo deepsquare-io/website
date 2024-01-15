@@ -29,7 +29,7 @@
 			<a href="/deepsquare-blog">Blog</a>
 		</li>
 		<li>
-			<a href="/faqs">FAQS</a>
+			<a href="/faqs">FAQ</a>
 		</li>
 		<li>
 			<a href="/contact">Contact</a>
