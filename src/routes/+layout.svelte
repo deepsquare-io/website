@@ -3,39 +3,13 @@
 	import Yellowpaper from '$lib/assets/media/Yellow-Paper_Tokenize_HPC.pdf';
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg-BIJELI-1.svg';
 	import poweredby from '$lib/assets/media/poweredby.svg';
+	import Nav from '$lib/components/Nav.svelte';
 	import '../app.scss';
 
 	const year = new Date().getFullYear();
 </script>
 
-<nav class="px-2">
-	<ul>
-		<li><a href="/"><strong>DeepSquare</strong></a></li>
-	</ul>
-	<ul>
-		<li>
-			<a href="/about">About</a>
-		</li>
-		<li>
-			<a href="/investors">Investors</a>
-		</li>
-		<li>
-			<a href="/technology">Technology</a>
-		</li>
-		<li>
-			<a href="/deeplabs">DeepLabs</a>
-		</li>
-		<li>
-			<a href="/deepsquare-blog">Blog</a>
-		</li>
-		<li>
-			<a href="/faqs">FAQ</a>
-		</li>
-		<li>
-			<a href="/contact">Contact</a>
-		</li>
-	</ul>
-</nav>
+<Nav />
 
 <main>
 	<slot />
