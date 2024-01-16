@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title} - DeepSquare</title>
 
 	<style>
 		#stack article,

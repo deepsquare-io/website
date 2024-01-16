@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title} - DeepSquare</title>
 </svelte:head>
 
 <section id="investors">

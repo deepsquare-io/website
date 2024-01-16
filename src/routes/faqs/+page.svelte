@@ -1,5 +1,5 @@
 <script lang="ts">
-	const title = 'FAQs';
+	const title = 'FAQ';
 
 	import Telegram from '$lib/assets/media/telegram.svg';
 	import SvelteMarkdown from 'svelte-markdown';
@@ -41,7 +41,7 @@ of all sizes.`
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title} - DeepSquare</title>
 </svelte:head>
 
 <section id="faqs">

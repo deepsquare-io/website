@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title} - DeepSquare</title>
 </svelte:head>
 
 <h1>{title}</h1>
