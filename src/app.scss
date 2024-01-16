@@ -32,6 +32,18 @@ $enable-grid: false;
   --primary-inverse: #FFF;
 }
 
+[data-theme=light], :root:not([data-theme=dark]) {
+  --font-family: "Montserrat", "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --mono-img-filter: saturate(0%) brightness(0%);
+  --border-radius: 0;
+  --primary: #6753FF;
+  --primary-hover: #C247FF;
+  --primary-focus: #C247FF;
+  --primary-inverse: #FFF;
+}
+
 // Remove main margin and prefer section paddings.
 // This is to put the section background in full width.
 body {
@@ -43,6 +55,9 @@ body {
   padding-right: 2em;
   padding-top: 4em;
   padding-bottom: 2em;
+
+  // Force the sections to fill a significant part of the screen.
+  min-height: 70vh;
 }
 
 #root > main > section > main, #root > main > section > footer, #root > main > section > header {
@@ -69,9 +84,9 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1050px) {
   #root > main > section > main, #root > main > section > footer, #root > main > section > header {
-    max-width: 920px;
+    max-width: 990px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -130,13 +145,54 @@ $transition-len: 0.20s;
   font-size: 14px;
 }
 
+#root > footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 4em;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
 .material-symbols-outlined {
   vertical-align: middle;
 }
 
 /** Navbar */
-nav a {
+header  nav a {
   --color: #fff;
+}
+
+[data-theme="dark"] header > nav a {
+  --color: #fff;
+}
+
+.bg-nav-floating {
+  background-color: #120641;
+}
+
+[data-theme="dark"] .bg-nav-floating {
+  background-color: #120641;
+}
+
+.bg-nav-top {
+  background-color: #120641;
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .bg-nav-top {
+  background-color: rgba(18, 6, 65, 0.619);
+  backdrop-filter: blur(12px);
+}
+
+
+.bg-nav-scrolled {
+  background-color: rgba(18, 6, 65, 1);
+  backdrop-filter: blur(12px);
+}
+
+
+[data-theme="dark"] .bg-nav-scrolled {
+  background-color: rgba(18, 6, 65, 0.619);
+  backdrop-filter: blur(12px);
 }
 
 // Add padding top for the nav bar

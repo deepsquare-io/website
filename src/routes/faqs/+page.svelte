@@ -1,6 +1,7 @@
 <script lang="ts">
 	const title = 'FAQ';
 
+	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
 	import Telegram from '$lib/assets/media/telegram.svg';
 	import SvelteMarkdown from 'svelte-markdown';
 
@@ -64,7 +65,11 @@ of all sizes.`
 		{/each}
 	</main>
 
-	<footer>
+	<footer class="py-20 relative">
+		<div
+			class="absolute inset-0"
+			style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+		></div>
 		<center>
 			<h4>Join our Community</h4>
 			<div>

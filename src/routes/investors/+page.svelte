@@ -1,6 +1,8 @@
 <script lang="ts">
 	const title = 'For Investors';
 
+	import InvestorsBg from '$lib/assets/media/coins-dark07-1-min.png';
+	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
 	import Telegram from '$lib/assets/media/telegram.svg';
 </script>
 
@@ -8,7 +10,16 @@
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section id="investors">
+<section
+	id="investors-banner"
+	class="relative -z-10"
+	style="background-image: radial-gradient(at center center, #000 0%, #120641 100%);"
+>
+	<!-- Overlay image -->
+	<div
+		class="absolute inset-0 -z-10"
+		style="background-image: url({InvestorsBg}); background-position: bottom center; background-repeat: no-repeat; background-size: contain;"
+	></div>
 	<header>
 		<h1 style="font-weight: 400;"><b>Flash Sale</b></h1>
 
@@ -16,7 +27,9 @@
 
 		<h2 style="font-weight: 400;"><b>December 27, 2023</b></h2>
 	</header>
+</section>
 
+<section id="investors">
 	<main>
 		<p>
 			<span
@@ -55,7 +68,11 @@
 		</center>
 	</main>
 
-	<footer>
+	<footer class="py-20 relative">
+		<div
+			class="absolute inset-0"
+			style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+		></div>
 		<center>
 			<h4>Join our Community</h4>
 			<div>

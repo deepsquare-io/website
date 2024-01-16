@@ -2,13 +2,18 @@
 	const title = 'Contact';
 
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
+	import ContactBg from '$lib/assets/media/fv-min.jpg';
+	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
 </script>
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section id="contact">
+<section
+	id="contact"
+	style="background-image: url({ContactBg}); background-size: cover; background-repeat: no-repeat;"
+>
 	<header><h1>{title}</h1></header>
 
 	<main>
@@ -43,7 +48,11 @@
 	</footer>
 </section>
 
-<section id="newsletter">
+<section id="newsletter" class="py-20 relative">
+	<div
+		class="absolute inset-0"
+		style="background-image: url({Glos}); background-position: 76% center; background-repeat: no-repeat; background-size: contain;"
+	></div>
 	<header>
 		<h2>Sign up for our Newsletter</h2>
 		<small>

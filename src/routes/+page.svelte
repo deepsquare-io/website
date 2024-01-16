@@ -12,6 +12,7 @@
 
 	import Submer from '$lib/assets/media/Submer.svg';
 
+	import Applications from '$components/Applications.svelte';
 	import BlockchainGameAlliance from '$lib/assets/media/BGA.png';
 	import CryptoValleyAssociation from '$lib/assets/media/CVA.png';
 	import EcoCloud from '$lib/assets/media/EcoCloud.png';
@@ -140,15 +141,15 @@
 </section>
 
 <section id="presentation">
-	<main>
+	<header>
 		<center>
 			<h1>DeepSquare in 2 minutes</h1>
 		</center>
-	</main>
+	</header>
 </section>
 
 <section id="applications">
-	<main>
+	<header>
 		<center>
 			<h1>Ready to use applications: Your AI Hub</h1>
 			<p>
@@ -157,6 +158,10 @@
 				sustainable. Click on any of those to see them in action
 			</p>
 		</center>
+	</header>
+
+	<main>
+		<center><Applications /></center>
 	</main>
 </section>
 

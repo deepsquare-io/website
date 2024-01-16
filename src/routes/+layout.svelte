@@ -13,8 +13,8 @@
 
 <main><slot /></main>
 
-<footer class="container">
-	<div class="grid md:grid-cols-4">
+<footer>
+	<div class="grid md:grid-cols-4 justify-around place-items-center">
 		<div class="md:col-span-2">
 			<div class="box">
 				<div class="py-4">

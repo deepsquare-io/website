@@ -44,7 +44,7 @@
 		},
 		{
 			name: 'Blog',
-			href: '/deepsquare-blog'
+			href: '/blog'
 		},
 		{
 			name: 'FAQ',
@@ -103,81 +103,71 @@
 			</ul>
 		</nav>
 	{/if}
-</header>
 
-{#if open}
-	<div
-		in:fade={{ duration: inDuration }}
-		out:fade={{ delay: outDuration, duration: outDuration }}
-		class="md:hidden fixed inset-0 z-50 relative"
-	>
-		<!-- Fading screen -->
-		<div class="fixed bg-black inset-0 opacity-75 h-screen w-screen"></div>
-		<!-- Pane -->
-		<div class="fixed inset-0 flex flex-row-reverse h-screen">
-			<div
-				in:slide={{
-					delay: inDuration,
-					duration: inDuration,
-					easing: quintInOut,
-					axis: 'x'
-				}}
-				out:slide={{
-					duration: outDuration,
-					easing: quintInOut,
-					axis: 'x'
-				}}
-				class="w-full grid sm:grid-cols-2"
-			>
-				<!-- svelte-ignore a11y-no-static-element-interactions -->
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<div class="hidden sm:block" on:click={toggle}></div>
-				<article class="m-0">
-					<aside>
-						<nav>
-							<ul>
-								<li class="flex justify-end">
-									<!-- svelte-ignore a11y-invalid-attribute -->
-									<a href="#" on:click={toggle}
-										><svg
-											class="w-6 h-6"
-											fill="none"
-											stroke="currentColor"
-											viewBox="0 0 24 24"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d="M6 18L18 6M6 6l12 12"
-											></path>
-										</svg></a
-									>
-								</li>
-								{#each routes as route}
+	<!-- Narbar for mobile -->
+	{#if open}
+		<div
+			in:fade={{ duration: inDuration }}
+			out:fade={{ delay: outDuration, duration: outDuration }}
+			class="md:hidden fixed inset-0 z-50 relative"
+		>
+			<!-- Fading screen -->
+			<div class="fixed bg-black inset-0 opacity-75 h-screen w-screen"></div>
+			<!-- Pane -->
+			<div class="fixed inset-0 flex flex-row-reverse h-screen">
+				<div
+					in:slide={{
+						delay: inDuration,
+						duration: inDuration,
+						easing: quintInOut,
+						axis: 'x'
+					}}
+					out:slide={{
+						duration: outDuration,
+						easing: quintInOut,
+						axis: 'x'
+					}}
+					class="w-full grid sm:grid-cols-2"
+				>
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<div class="hidden sm:block" on:click={toggle}></div>
+					<article class="m-0 bg-nav-floating">
+						<aside>
+							<nav>
+								<ul>
 									<li class="flex justify-end">
-										<a href={route.href}>{route.name}</a>
+										<!-- svelte-ignore a11y-invalid-attribute -->
+										<a href="#" on:click={toggle}
+											><svg
+												class="w-6 h-6"
+												fill="none"
+												stroke="currentColor"
+												viewBox="0 0 24 24"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													stroke-width="2"
+													d="M6 18L18 6M6 6l12 12"
+												></path>
+											</svg></a
+										>
 									</li>
-								{/each}
-							</ul>
-						</nav>
-					</aside>
-				</article>
+									{#each routes as route}
+										<li class="flex justify-end">
+											<a href={route.href}>{route.name}</a>
+										</li>
+									{/each}
+								</ul>
+							</nav>
+						</aside>
+					</article>
+				</div>
 			</div>
 		</div>
-	</div>
-{/if}
+	{/if}
+</header>
 
 <svelte:window bind:scrollY />
-
-<style>
-	.bg-nav-top {
-		background-color: rgba(0, 0, 0, 0.61);
-	}
-
-	.bg-nav-scrolled {
-		background-color: rgba(0, 0, 0, 0.61);
-		backdrop-filter: blur(8px);
-	}
-</style>

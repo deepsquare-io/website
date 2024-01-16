@@ -41,10 +41,10 @@
 </script>
 
 <div>
-	<div class="grid md:grid-cols-2 lg:grid-cols-3">
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 justify-items-center place-content-around">
 		{#each applications as application}
 			<div>
-				<div class="py-4 content-center" style="height: 200px;">
+				<div class="py-4 flex justify-center items-center flex-col" style="height: 200px;">
 					<img
 						width={application.width ?? 100}
 						height={application.height ?? 100}

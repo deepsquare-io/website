@@ -24,6 +24,7 @@
 	import Tuomo from '$lib/assets/media/Tuomo-Pyykkonen.png';
 
 	import WhatIsDeepSquareBg from '$lib/assets/media/b5-min.png';
+	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
 
 	const coreTeam = [
 		{
@@ -204,7 +205,7 @@
 					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
 				>
 					{#each coreTeam as { name, role, description, avatar }}
-						<article class="p-0 m-0" style="max-width: 256px">
+						<div class="p-0 m-0" style="max-width: 256px">
 							<div>
 								<img
 									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
@@ -220,7 +221,7 @@
 
 								<p>{description}</p>
 							</div>
-						</article>
+						</div>
 					{/each}
 				</div>
 			</main>
@@ -238,7 +239,7 @@
 					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
 				>
 					{#each advisorTeam as { name, description, avatar }}
-						<article class="p-0 m-0" style="max-width: 256px">
+						<div class="p-0 m-0" style="max-width: 256px">
 							<div>
 								<img
 									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
@@ -252,7 +253,7 @@
 
 								<p>{description}</p>
 							</div>
-						</article>
+						</div>
 					{/each}
 				</div>
 			</main>
@@ -260,7 +261,11 @@
 	</main>
 </section>
 
-<section id="reach-out">
+<section id="reach-out" class="relative">
+	<div
+		class="absolute inset-0"
+		style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+	></div>
 	<main>
 		<center>
 			<h2>Reach out to us</h2>

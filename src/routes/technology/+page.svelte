@@ -5,48 +5,32 @@
 	import ClusterFactory from '$lib/assets/media/ClusterFactory-min-scaled.jpg';
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
+	import TechnologyBg from '$lib/assets/media/b5-min.jpg';
 	import Applications from '$lib/components/Applications.svelte';
 </script>
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
-
-	<style>
-		#stack article,
-		#stack article > header,
-		#stack article > footer {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
-		#stack article > header {
-			margin-bottom: 0;
-			height: 200px;
-		}
-
-		#stack article {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
-		#stack article > main > p {
-			padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);
-		}
-	</style>
 </svelte:head>
 
-<section id="technology-banner">
+<section
+	id="technology-banner"
+	style="background-image: url({TechnologyBg}); background-position: top center; background-repeat: no-repeat; background-size: cover;"
+>
 	<main>
 		<h1>Accelerate your Innovation</h1>
 
 		<p>
 			Build your projects with ease on <strong>DeepSquare</strong> – the platform built by builders for
-			builders. Say goodbye to hardware optimization and maintenance hassle.
+			builders. Say goodbye to hardware optimization and infrastructure maintenance hassle.
 		</p>
 	</main>
 </section>
 
 <section id="technology">
+	<header>
+		<center><h1>The Foundation Pillars of DeepSquare</h1></center>
+	</header>
 	<main>
 		<div id="stack" class="grid md:grid-cols-3 gap-4">
 			<div>
@@ -199,3 +183,26 @@
 		</center>
 	</main>
 </section>
+
+<style>
+	#stack article,
+	#stack article > header,
+	#stack article > footer {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	#stack article > header {
+		margin-bottom: 0;
+		height: 200px;
+	}
+
+	#stack article {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#stack article > main > p {
+		padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);
+	}
+</style>

@@ -4,8 +4,8 @@
 	import DeepLabsLogo from '$lib/assets/media/DeepLabs.jpg';
 </script>
 
-<section id="deeplabs-banner">
-	<main>
+<section id="deeplabs">
+	<header>
 		<div class="grid md:grid-cols-4">
 			<div class="md:col-span-3">
 				<h1>
@@ -20,10 +20,8 @@
 				</center>
 			</div>
 		</div>
-	</main>
-</section>
+	</header>
 
-<section id="deeplabs">
 	<main class="my-10">
 		<p>
 			<strong>DeepLabs</strong> is a pioneering technology company dedicated to making
