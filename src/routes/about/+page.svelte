@@ -24,7 +24,14 @@
 	import Tuomo from '$lib/assets/media/Tuomo-Pyykkonen.png';
 
 	import WhatIsDeepSquareBg from '$lib/assets/media/b5-min.png';
-	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
+	import Glos1 from '$lib/assets/media/glos1-15-min.png';
+	import Glos4 from '$lib/assets/media/glos4-tamniji-4-min.png';
+
+	import Pozadina1 from '$lib/assets/media/pozadina01.svg';
+	import Pozadina2 from '$lib/assets/media/pozadina02.svg';
+	import Pozadina3 from '$lib/assets/media/pozadina03.svg';
+
+	import Portrait from '$lib/components/Portrait.svelte';
 
 	const coreTeam = [
 		{
@@ -126,15 +133,16 @@
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section
-	id="what-is-deepsquare"
-	style="background-image: url({WhatIsDeepSquareBg}); background-position: center left; background-repeat: no-repeat; background-size: cover;"
->
+<section data-theme="dark" id="what-is-deepsquare" class="relative flex items-center">
+	<div
+		class="absolute inset-0 -z-10"
+		style="background-image: url({WhatIsDeepSquareBg}); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
+	></div>
 	<main>
-		<div class="grid md:grid-cols-2">
-			<div>
-				<h1 class="lg:text-5xl">What is DeepSquare?</h1>
-				<p>
+		<div class="grid md:grid-cols-3">
+			<div class="md:col-span-2">
+				<h1 class="text-4xl md:text-6xl">What is DeepSquare?</h1>
+				<p class="text-xl">
 					A platform to seamlessly interconnect users with decentralized supercomputing resources.
 				</p>
 				<Share
@@ -147,9 +155,16 @@
 	</main>
 </section>
 
-<section class="grid" id="description">
-	<main>
-		<article class="grid md:grid-cols-4 justify-around place-items-center">
+<section id="description">
+	<main data-theme="dark" class="m-0">
+		<article
+			class="grid md:grid-cols-4 justify-around place-items-center relative"
+			style="background-image: url({Pozadina3}); background-position: center right; background-size: cover;"
+		>
+			<div
+				class="absolute inset-0"
+				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+			></div>
 			<div class="md:col-span-3">
 				<h2>Governance</h2>
 				<p>
@@ -162,7 +177,14 @@
 				<img src={Governance} alt="Governance" />
 			</center>
 		</article>
-		<article class="grid md:grid-cols-4 justify-around place-items-center">
+		<article
+			class="grid md:grid-cols-4 justify-around place-items-center relative"
+			style="background-image: url({Pozadina1}); background-position: center right; background-size: cover;"
+		>
+			<div
+				class="absolute inset-0"
+				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+			></div>
 			<div class="md:col-span-3">
 				<h2>Our Mission</h2>
 				<p>
@@ -172,10 +194,17 @@
 				</p>
 			</div>
 			<center>
-				<img src={Mission} alt="Mission" />
+				<img style="filter: saturate(0%) brightness(2) opacity(0.5);" src={Mission} alt="Mission" />
 			</center>
 		</article>
-		<article class="grid md:grid-cols-4 justify-around place-items-center">
+		<article
+			class="grid md:grid-cols-4 justify-around place-items-center relative"
+			style="background-image: url({Pozadina2}); background-position: center right; background-size: cover;"
+		>
+			<div
+				class="absolute inset-0"
+				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+			></div>
 			<div class="md:col-span-3">
 				<h2>Vision</h2>
 				<p>
@@ -206,15 +235,9 @@
 				>
 					{#each coreTeam as { name, role, description, avatar }}
 						<div class="p-0 m-0" style="max-width: 256px">
-							<div>
-								<img
-									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
-									src={avatar}
-									alt={name}
-								/>
-							</div>
+							<Portrait src={avatar} alt={name} />
 
-							<div class="m-2">
+							<div class="my-4 mx-2">
 								<div style="height: 4em;"><h4>{name}</h4></div>
 
 								<div style="height: 3em;"><p>{role}</p></div>
@@ -240,15 +263,9 @@
 				>
 					{#each advisorTeam as { name, description, avatar }}
 						<div class="p-0 m-0" style="max-width: 256px">
-							<div>
-								<img
-									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
-									src={avatar}
-									alt={name}
-								/>
-							</div>
+							<Portrait src={avatar} alt={name} />
 
-							<div class="m-2">
+							<div class="my-4 mx-2">
 								<div style="height: 4em;"><h4>{name}</h4></div>
 
 								<p>{description}</p>
@@ -264,13 +281,13 @@
 <section id="reach-out" class="relative mini-section">
 	<div
 		class="absolute inset-0"
-		style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+		style="background-image: url({Glos4}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<main>
 		<center>
 			<h2>Reach out to us</h2>
 
-			<a role="button" class="outline" href="/contact">Contact</a>
+			<a role="button" class="outline" href="/contact"><span>Contact</span></a>
 		</center>
 	</main>
 </section>

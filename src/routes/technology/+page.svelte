@@ -14,11 +14,13 @@
 </svelte:head>
 
 <section
+	data-theme="dark"
 	id="technology-banner"
+	class="flex items-center"
 	style="background-image: url({TechnologyBg}); background-position: top center; background-repeat: no-repeat; background-size: cover;"
 >
 	<main>
-		<h1>Accelerate your Innovation</h1>
+		<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
 
 		<p>
 			Build your projects with ease on <strong>DeepSquare</strong> – the platform built by builders for
@@ -32,11 +34,11 @@
 		<center><h1>The Foundation Pillars of DeepSquare</h1></center>
 	</header>
 	<main>
-		<div id="stack" class="grid md:grid-cols-3 gap-4 justify-items-center place-items-stretch">
+		<div id="stack" class="grid lg:grid-cols-3 gap-4 justify-items-center place-items-stretch">
 			<div>
 				<article>
 					<header>
-						<h4>DeepSquare Grid</h4>
+						<h4><center>DeepSquare Grid</center></h4>
 					</header>
 
 					<main>
@@ -44,20 +46,20 @@
 							<img src={DeepSquareGrid} alt="DeepSquare Grid" />
 						</div>
 
-						<p>
+						<p class="lg:min-h-80">
 							A network of server clusters forming the pool of compute required to process users’
 							workloads. Or, as we love to call it, the meta-cluster.
 						</p>
 					</main>
 
-					<footer>
+					<footer class="mt-0 min-h-40">
 						<center>
 							<a
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
 								href="https://share-eu1.hsforms.com/186i4x9HOQAyEAboeeRaBCwev6gi"
-								>Become a grid partner</a
+								><span>Become a grid partner</span></a
 							>
 						</center>
 					</footer>
@@ -66,28 +68,28 @@
 			<div>
 				<article>
 					<header>
-						<h4>DeepSquare ClusterFactory</h4>
+						<h4><center>DeepSquare ClusterFactory</center></h4>
 					</header>
 
 					<main>
 						<div>
 							<img src={ClusterFactory} alt="DeepSquare ClusterFactory" />
 						</div>
-						<p>
+						<p class="lg:min-h-80">
 							An open-source Kubernetes-based infrastructure orchestrator that automates the process
 							of deploying, managing and monitoring compute-optimized clusters from bare metal
 							servers to VMs and containers.
 						</p>
 					</main>
 
-					<footer>
+					<footer class="mt-0 min-h-40">
 						<center>
 							<a
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
 								href="https://docs.deepsquare.run/deepsquare-grid/clusterfactory/overview"
-								>Learn more</a
+								><span>Learn more</span></a
 							>
 						</center>
 					</footer>
@@ -96,26 +98,26 @@
 			<div>
 				<article>
 					<header>
-						<h4>DeepSquare Community</h4>
+						<h4><center>DeepSquare Community</center></h4>
 					</header>
 
 					<main>
 						<div>
 							<img src={DeepSquareCommunity} alt="DeepSquare Community" />
 						</div>
-						<p>
+						<p class="lg:min-h-80">
 							Builders, developers, AI engineers, artists, blockchain enthusiasts, disruptors,
 							innovators and visionaries. Join us in our mission to democratize access to HPC!
 						</p>
 					</main>
 
-					<footer>
+					<footer class="mt-0 min-h-40">
 						<center>
 							<a
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
-								href="https://t.me/DeepSquareProject">Join us</a
+								href="https://t.me/DeepSquareProject"><span>Join us</span></a
 							>
 						</center>
 					</footer>
@@ -135,15 +137,19 @@
 
 			<a
 				role="button"
-				class="outline"
+				class="outline my-4"
 				style="text-transform: uppercase;"
-				href="https://app.deepsquare.run">Build on DeepSquare</a
+				href="https://app.deepsquare.run"><span>Build on DeepSquare</span></a
 			>
 		</center>
 	</main>
 </section>
 
 <section id="sustainability">
+	<header>
+		<center><h1>Sustainability</h1> </center>
+	</header>
+
 	<main>
 		<div class="grid md:grid-cols-4 gap-4">
 			<div>
@@ -181,7 +187,7 @@
 				class="outline"
 				style="text-transform: uppercase;"
 				href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
-				>Learn more</a
+				><span>Learn more</span></a
 			>
 		</center>
 	</main>

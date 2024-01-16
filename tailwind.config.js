@@ -20,6 +20,7 @@ export default {
 		},
 		extend: {}
 	},
+	darkMode: ['class', '[data-theme="dark"]'],
 	corePlugins: {
 		preflight: false
 	},

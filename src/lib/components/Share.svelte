@@ -7,9 +7,12 @@
 	let open = false;
 </script>
 
-<button
+<!-- svelte-ignore a11y-invalid-attribute -->
+<a
 	style="text-transform: uppercase;"
 	class="outline"
+	role="button"
+	href="#"
 	on:click={() => {
 		try {
 			navigator.share({
@@ -20,7 +23,7 @@
 		} catch (e) {
 			open = true;
 		}
-	}}>Share <span class="material-symbols-outlined">share</span></button
+	}}><span>Share <span class="material-symbols-outlined">share</span></span></a
 >
 
 <!-- https://sharingbuttons.io -->

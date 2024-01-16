@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { navigating } from '$app/stores';
 	import DeepSquareLogo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
+	import DarkThemeButton from '$lib/components/DarkThemeButton.svelte';
 	import { quintInOut } from 'svelte/easing';
 	import { fade, slide } from 'svelte/transition';
+
 	let open = false;
 
 	function toggle() {
@@ -27,20 +29,12 @@
 
 	const routes = [
 		{
-			name: 'About',
-			href: '/about'
+			name: 'Home',
+			href: '/'
 		},
 		{
-			name: 'Investors',
-			href: '/investors'
-		},
-		{
-			name: 'Technology',
+			name: 'Tech',
 			href: '/technology'
-		},
-		{
-			name: 'DeepLabs',
-			href: '/deeplabs'
 		},
 		{
 			name: 'Blog',
@@ -51,8 +45,32 @@
 			href: '/faqs'
 		},
 		{
-			name: 'Contact',
-			href: '/contact'
+			name: 'Company',
+			children: [
+				{
+					name: 'About',
+					href: '/about'
+				},
+				{
+					name: 'Contact',
+					href: '/contact'
+				}
+			]
+		},
+		{
+			name: 'GitHub',
+			icon: '<i class="fa-brands fa-github"></i>',
+			href: 'https://github.com/deepsquare-io/grid'
+		},
+		{
+			name: 'Telegram',
+			icon: '<i class="fa-brands fa-telegram"></i>',
+			href: 'https://t.me/DeepSquareProject'
+		},
+		{
+			name: 'Discord',
+			icon: '<i class="fa-brands fa-discord"></i>',
+			href: 'https://discord.com/invite/3PQkJGvUGB'
 		}
 	];
 </script>
@@ -61,10 +79,11 @@
 <header>
 	{#if showTopBar}
 		<nav
+			data-theme="dark"
 			transition:slide={{ duration: 200, easing: quintInOut, axis: 'y' }}
-			class="fixed inset-x-0 top-0 z-25 px-4 {showTopBarBackground
+			class="fixed inset-x-0 top-0 z-50 px-8 {showTopBarBackground
 				? 'bg-nav-top'
-				: 'bg-nav-scrolled'}"
+				: 'bg-nav-scrolled shadow-lg'}"
 		>
 			<ul>
 				<li>
@@ -73,11 +92,33 @@
 				</li>
 			</ul>
 			<ul class="hidden md:flex">
+				<li>
+					<a role="button" href="https://docs.deepsquare.run/workflow/overview">Get Started</a>
+				</li>
 				{#each routes as route}
-					<li>
-						<a href={route.href}>{route.name}</a>
-					</li>
+					{#if route.href}
+						<li>
+							{#if route.icon}
+								<a href={route.href}>{@html route.icon}</a>
+							{:else}
+								<a href={route.href}>{@html route.name}</a>
+							{/if}
+						</li>
+					{:else if route.children}
+						<li role="list" dir="rtl">
+							<!-- svelte-ignore a11y-missing-attribute -->
+							<a>{@html route.name}</a>
+							<ul role="listbox">
+								{#each route.children as child}
+									<li><a href={child.href}>{@html child.name}</a></li>
+								{/each}
+							</ul>
+						</li>
+					{/if}
 				{/each}
+				<li class="flex justify-end">
+					<DarkThemeButton />
+				</li>
 			</ul>
 
 			<ul class="md:hidden">
@@ -134,7 +175,7 @@
 					<div class="hidden sm:block" on:click={toggle}></div>
 					<article class="m-0 bg-nav-floating">
 						<aside>
-							<nav>
+							<nav data-theme="dark">
 								<ul>
 									<li class="flex justify-end">
 										<!-- svelte-ignore a11y-invalid-attribute -->
@@ -157,9 +198,24 @@
 									</li>
 									{#each routes as route}
 										<li class="flex justify-end">
-											<a href={route.href}>{route.name}</a>
+											{#if route.href}
+												<a href={route.href}>{@html route.name} {@html route.icon ?? ''}</a>
+											{:else if route.children}
+												<details>
+													<summary>{route.name}</summary>
+													<ul style="text-align: end;">
+														{#each route.children as child}
+															<li><a href={child.href}>{@html child.name}</a></li>
+														{/each}
+													</ul>
+												</details>
+											{/if}
 										</li>
 									{/each}
+
+									<li class="flex justify-end">
+										<DarkThemeButton />
+									</li>
 								</ul>
 							</nav>
 						</aside>

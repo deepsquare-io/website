@@ -7,11 +7,15 @@
 	import '../app.scss';
 
 	const year = new Date().getFullYear();
+
+	import { fade } from 'svelte/transition';
 </script>
 
 <Nav />
 
-<main><slot /></main>
+<main in:fade={{ duration: 100, delay: 200 }} out:fade={{ duration: 100 }}>
+	<slot />
+</main>
 
 <footer>
 	<div class="grid md:grid-cols-4 justify-around place-items-center">

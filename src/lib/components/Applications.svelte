@@ -27,27 +27,27 @@
 			description:
 				'<strong>Unity Render Streaming</strong>: Render in real-time your Unity project in the cloud.',
 			img: Unity,
-			width: 300,
-			height: 300
+			width: 378,
+			height: 378
 		},
 		{
 			name: 'Blender',
 			description: '<strong>Blender</strong>: Render in your Blender project in the cloud.',
 			img: Blender,
-			width: 300,
-			height: 300
+			width: 378,
+			height: 378
 		}
 	];
 </script>
 
 <div>
-	<div class="grid md:grid-cols-2 lg:grid-cols-3 justify-items-center place-content-around">
+	<div class="grid md:grid-cols-2 gap-4 lg:grid-cols-3 justify-items-center place-content-around">
 		{#each applications as application}
 			<div>
 				<div class="py-4 flex justify-center items-center flex-col" style="height: 200px;">
 					<img
-						width={application.width ?? 100}
-						height={application.height ?? 100}
+						width={application.width ?? 128}
+						height={application.height ?? 128}
 						src={application.img}
 						alt={application.name}
 					/>

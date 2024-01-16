@@ -1,6 +1,7 @@
 <script lang="ts">
 	const title = 'FAQ';
 
+	import animatedDetails from '$lib/animation/animatedDetails';
 	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
 	import Telegram from '$lib/assets/media/telegram.svg';
 	import SvelteMarkdown from 'svelte-markdown';
@@ -45,7 +46,7 @@ of all sizes.`
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section id="faqs">
+<section id="faqs" class="m-0">
 	<header>
 		<h1>{title}</h1>
 
@@ -57,31 +58,26 @@ of all sizes.`
 
 	<main>
 		{#each faqs as { title, content }}
-			<details>
+			<details use:animatedDetails={{ duration: 200 }}>
 				<summary>{title}</summary>
 
 				<SvelteMarkdown source={content} />
 			</details>
 		{/each}
 	</main>
+</section>
 
-	<footer class="py-20 relative">
-		<div
-			class="absolute inset-0"
-			style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
-		></div>
-		<center>
-			<h4>Join our Community</h4>
-			<div>
-				<a href="https://t.me/DeepSquareProject" target="_blank">
-					<img
-						style="filter: var(--mono-img-filter);"
-						id="telegram"
-						src={Telegram}
-						alt="Telegram"
-					/>
-				</a>
-			</div>
-		</center>
-	</footer>
+<section class="py-4 relative mini-section">
+	<div
+		class="absolute inset-0"
+		style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+	></div>
+	<center>
+		<h4>Join our Community</h4>
+		<div>
+			<a href="https://t.me/DeepSquareProject" target="_blank">
+				<img style="filter: var(--mono-img-filter);" id="telegram" src={Telegram} alt="Telegram" />
+			</a>
+		</div>
+	</center>
 </section>

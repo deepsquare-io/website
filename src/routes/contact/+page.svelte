@@ -11,6 +11,7 @@
 </svelte:head>
 
 <section
+	data-theme="dark"
 	id="contact"
 	style="background-image: url({ContactBg}); background-size: cover; background-repeat: no-repeat;"
 >

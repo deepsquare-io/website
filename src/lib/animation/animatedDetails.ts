@@ -1,0 +1,116 @@
+import type { Action } from 'svelte/action';
+
+type EventHandler = (e: CustomEvent<HTMLDetailsElement>) => void;
+
+type Attributes = {
+	'on:openstart'?: EventHandler;
+	'on:openend'?: EventHandler;
+	'on:closestart'?: EventHandler;
+	'on:closeend'?: EventHandler;
+};
+
+const defaultOptions: KeyframeAnimationOptions = {
+	duration: 400,
+	easing: 'ease-out'
+};
+
+export const animatedDetails: Action<
+	HTMLDetailsElement,
+	KeyframeAnimationOptions | undefined,
+	Attributes
+> = (element: HTMLDetailsElement, options = defaultOptions) => {
+	const summary = element.querySelector('summary');
+	if (!summary) return {};
+
+	options = {
+		...defaultOptions,
+		...options
+	};
+
+	const { writingMode } = getComputedStyle(element);
+
+	let transitioning = false;
+
+	const animatePanel = (opening: boolean) => {
+		transitioning = true;
+
+		if (opening) {
+			element.open = true;
+		}
+
+		element.dispatchEvent(
+			new CustomEvent(opening ? 'openstart' : 'closestart', { detail: element })
+		);
+
+		const widthChanges = writingMode.startsWith('vertical') || writingMode.startsWith('tb');
+
+		const blockSizeKeyframes = [
+			`${summary[widthChanges ? 'offsetWidth' : 'offsetHeight']}px`,
+			`${element[widthChanges ? 'clientWidth' : 'clientHeight']}px`
+		];
+
+		if (!opening) {
+			blockSizeKeyframes.reverse();
+		}
+
+		const animation = element.animate(
+			{
+				blockSize: blockSizeKeyframes
+			},
+			options
+		);
+
+		animation.oncancel =
+			animation.onfinish =
+			animation.onremove =
+				() => {
+					element.dispatchEvent(
+						new CustomEvent(opening ? 'openend' : 'closeend', { detail: element })
+					);
+
+					if (!opening) {
+						element.open = false;
+					}
+
+					transitioning = false;
+				};
+	};
+
+	const onClick = (e: Event) => {
+		e.preventDefault();
+
+		if (transitioning) return;
+
+		animatePanel(!element.open);
+	};
+
+	const onMutate: MutationCallback = (mutationList) => {
+		for (const mutation of mutationList) {
+			if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+				if (transitioning) return;
+
+				if (element.open) {
+					animatePanel(true);
+				}
+			}
+		}
+	};
+
+	const observer = new MutationObserver(onMutate);
+	observer.observe(element, { attributes: true });
+	summary.addEventListener('click', onClick);
+
+	return {
+		destroy() {
+			observer.disconnect();
+			summary.removeEventListener('click', onClick);
+		},
+		update(newOptions: KeyframeAnimationOptions = defaultOptions) {
+			options = {
+				...options,
+				...newOptions
+			};
+		}
+	};
+};
+export default animatedDetails;

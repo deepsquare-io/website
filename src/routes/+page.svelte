@@ -1,6 +1,8 @@
 <script lang="ts">
 	const title = 'DeepSquare';
 
+	import IntroductionBg from '$lib/assets/media/Group-180-min.jpg';
+
 	import YData from '$lib/assets/media/YData.svg';
 	import Openfabric from '$lib/assets/media/openfabric-logo-black-1.png';
 	import SquareFactory from '$lib/assets/media/squarefactory-logo-neg.svg';
@@ -112,12 +114,20 @@
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section id="introduction">
+<section data-theme="dark" id="introduction" class="relative flex items-center">
+	<div
+		class="absolute inset-0 -z-10"
+		style="background-image: url({IntroductionBg}); background-position: 25% center; background-size: cover; background-repeat: no-repeat;"
+	></div>
+	<div
+		class="absolute inset-0 -z-10"
+		style="background-color: #000; background-size: cover; opacity: 0.2;"
+	></div>
 	<main>
-		<div class="grid md:grid-cols-2">
-			<div>
-				<h1 class="lg:text-5xl">Decentralized compute power in one click</h1>
-				<p>
+		<div class="grid lg:grid-cols-3">
+			<div class="lg:col-span-2">
+				<h1 class="text-4xl md:text-6xl">Decentralized compute power in one click</h1>
+				<p class="text-xl">
 					The first and only <strong>sustainable</strong> <strong>professional</strong>
 					decentralized
 					<b>High Performance Computing</b> Ecosystem&nbsp;&nbsp;
@@ -133,7 +143,7 @@
 					role="button"
 					href="https://discord.com/invite/3PQkJGvUGB"
 					style="text-transform: uppercase"
-					class="outline my-2">Join our Discord</a
+					class="outline my-2"><span>Join our Discord</span></a
 				>
 			</div>
 		</div>
@@ -143,7 +153,7 @@
 <section id="presentation">
 	<header>
 		<center>
-			<h1>DeepSquare in 2 minutes</h1>
+			<h2>DeepSquare in 2 minutes</h2>
 		</center>
 	</header>
 </section>
@@ -151,7 +161,7 @@
 <section id="applications">
 	<header>
 		<center>
-			<h1>Ready to use applications: Your AI Hub</h1>
+			<h2>Ready to use applications: Your AI Hub</h2>
 			<p>
 				Our library already provides a good range of software applications that users can utilise to
 				efficiently train their models, render and prototype their projects while remaining
@@ -165,24 +175,30 @@
 	</main>
 </section>
 
-<section id="partners">
+<section id="partners" class="m-0 bg-section-a">
 	<main>
 		<center>
 			<section id="builders">
-				<h1>Builders</h1>
+				<h2>Builders</h2>
 				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
 					{#each builders as builder}
-						<div style="max-width: 256px">
+						<div style="max-width: 512px">
 							<main>
 								<div
-									style="height: 128px; max-width: 128px;"
+									style="min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4"
 								>
 									<a href={builder.href}>
-										<img height="128" width="128" src={builder.img} alt={builder.name} />
+										<img
+											style="max-height: 100px;"
+											height="172"
+											width="172"
+											src={builder.img}
+											alt={builder.name}
+										/>
 									</a>
 								</div>
-								<h4>{builder.name}</h4>
+								<!-- <h4>{builder.name}</h4> -->
 								<p>{builder.description}</p>
 							</main>
 						</div>
@@ -190,20 +206,20 @@
 				</div>
 			</section>
 			<section id="incubators-accelerators">
-				<h1>Incubators &amp; Accelerators</h1>
-				<div class="grid sm:grid-cols-2 justify-items-center">
+				<h2>Incubators &amp; Accelerators</h2>
+				<div class="grid sm:grid-cols-2 justify-items-center content-stretch">
 					{#each incubatorsAndAccelerators as incubator}
-						<div style="max-width: 256px">
+						<div style="max-width: 512px">
 							<main>
 								<div
-									style="height: 128px; max-width: 128px;"
+									style="min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4"
 								>
 									<a href={incubator.href}>
-										<img height="128" width="128" src={incubator.img} alt={incubator.name} />
+										<img style="max-height: 100px;" src={incubator.img} alt={incubator.name} />
 									</a>
 								</div>
-								<h4>{incubator.name}</h4>
+								<!-- <h4>{incubator.name}</h4> -->
 								<p>{incubator.description}</p>
 							</main>
 						</div>
@@ -211,20 +227,20 @@
 				</div>
 			</section>
 			<section id="technology-partners">
-				<h1>Technology Partners</h1>
-				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+				<h2>Technology Partners</h2>
+				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center content-stretch">
 					{#each technologyPartners as partner}
-						<div style="max-width: 256px">
+						<div style="max-width: 512px">
 							<main>
 								<div
-									style="height: 128px; max-width: 128px;"
+									style="min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4"
 								>
 									<a href={partner.href}>
-										<img height="128" width="128" src={partner.img} alt={partner.name} />
+										<img style="max-height: 100px;" src={partner.img} alt={partner.name} />
 									</a>
 								</div>
-								<h4>{partner.name}</h4>
+								<!-- <h4>{partner.name}</h4> -->
 								<p>{partner.description}</p>
 							</main>
 						</div>
@@ -232,25 +248,24 @@
 				</div>
 			</section>
 			<section id="organisations-associations">
-				<h1>Organizations and Associations</h1>
-				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center">
+				<h2>Organizations and Associations</h2>
+				<div class="grid sm:grid-cols-2 justify-items-center content-stretch">
 					{#each organizationsAndAssociations as organizationOrAssociation}
-						<div style="max-width: 256px">
+						<div style="max-width: 512px">
 							<main>
 								<div
-									style="height: 128px; max-width: 128px;"
+									style="min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4"
 								>
 									<a href={organizationOrAssociation.href}>
 										<img
-											height="128"
-											width="128"
+											style="max-height: 100px;"
 											src={organizationOrAssociation.img}
 											alt={organizationOrAssociation.name}
 										/>
 									</a>
 								</div>
-								<h4>{organizationOrAssociation.name}</h4>
+								<!-- <h4>{organizationOrAssociation.name}</h4> -->
 								<p>{organizationOrAssociation.description}</p>
 							</main>
 						</div>
@@ -264,5 +279,9 @@
 <style>
 	#partners img {
 		filter: var(--mono-img-filter);
+	}
+
+	section h2 {
+		font-size: 3rem;
 	}
 </style>

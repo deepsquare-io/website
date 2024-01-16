@@ -11,8 +11,9 @@
 </svelte:head>
 
 <section
+	data-theme="dark"
 	id="investors-banner"
-	class="relative -z-10"
+	class="relative -z-10 flex items-center"
 	style="background-image: radial-gradient(at center center, #000 0%, #120641 100%);"
 >
 	<!-- Overlay image -->
@@ -21,11 +22,11 @@
 		style="background-image: url({InvestorsBg}); background-position: bottom center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<header>
-		<h1 style="font-weight: 400;"><b>Flash Sale</b></h1>
+		<h1 class="text-4xl md:text-6xl">Flash Sale</h1>
 
-		<h1 style="font-weight: 400;">TOZEX Platform</h1>
+		<h1 class="text-3xl">TOZEX Platform</h1>
 
-		<h2 style="font-weight: 400;"><b>December 27, 2023</b></h2>
+		<h2 class="text-3xl">December 27, 2023</h2>
 	</header>
 </section>
 
