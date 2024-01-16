@@ -32,7 +32,7 @@
 		<center><h1>The Foundation Pillars of DeepSquare</h1></center>
 	</header>
 	<main>
-		<div id="stack" class="grid md:grid-cols-3 gap-4">
+		<div id="stack" class="grid md:grid-cols-3 gap-4 justify-items-center place-items-stretch">
 			<div>
 				<article>
 					<header>
@@ -43,6 +43,7 @@
 						<div>
 							<img src={DeepSquareGrid} alt="DeepSquare Grid" />
 						</div>
+
 						<p>
 							A network of server clusters forming the pool of compute required to process users’
 							workloads. Or, as we love to call it, the meta-cluster.
@@ -50,13 +51,15 @@
 					</main>
 
 					<footer>
-						<a
-							role="button"
-							class="outline"
-							style="text-transform: uppercase;"
-							href="https://share-eu1.hsforms.com/186i4x9HOQAyEAboeeRaBCwev6gi"
-							>Become a grid partner</a
-						>
+						<center>
+							<a
+								role="button"
+								class="outline"
+								style="text-transform: uppercase;"
+								href="https://share-eu1.hsforms.com/186i4x9HOQAyEAboeeRaBCwev6gi"
+								>Become a grid partner</a
+							>
+						</center>
 					</footer>
 				</article>
 			</div>
@@ -102,7 +105,7 @@
 						</div>
 						<p>
 							Builders, developers, AI engineers, artists, blockchain enthusiasts, disruptors,
-							innovators, and visionaries. Join us!
+							innovators and visionaries. Join us in our mission to democratize access to HPC!
 						</p>
 					</main>
 
@@ -194,7 +197,7 @@
 
 	#stack article > header {
 		margin-bottom: 0;
-		height: 200px;
+		height: 8em;
 	}
 
 	#stack article {

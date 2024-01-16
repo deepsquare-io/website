@@ -149,7 +149,7 @@
 
 <section class="grid" id="description">
 	<main>
-		<article class="grid md:grid-cols-4">
+		<article class="grid md:grid-cols-4 justify-around place-items-center">
 			<div class="md:col-span-3">
 				<h2>Governance</h2>
 				<p>
@@ -162,7 +162,7 @@
 				<img src={Governance} alt="Governance" />
 			</center>
 		</article>
-		<article class="grid md:grid-cols-4">
+		<article class="grid md:grid-cols-4 justify-around place-items-center">
 			<div class="md:col-span-3">
 				<h2>Our Mission</h2>
 				<p>
@@ -175,7 +175,7 @@
 				<img src={Mission} alt="Mission" />
 			</center>
 		</article>
-		<article class="grid md:grid-cols-4">
+		<article class="grid md:grid-cols-4 justify-around place-items-center">
 			<div class="md:col-span-3">
 				<h2>Vision</h2>
 				<p>
@@ -215,9 +215,9 @@
 							</div>
 
 							<div class="m-2">
-								<div style="height: 5em;"><h4>{name}</h4></div>
+								<div style="height: 4em;"><h4>{name}</h4></div>
 
-								<div style="height: 4em;"><p>{role}</p></div>
+								<div style="height: 3em;"><p>{role}</p></div>
 
 								<p>{description}</p>
 							</div>
@@ -249,7 +249,7 @@
 							</div>
 
 							<div class="m-2">
-								<div style="height: 5em;"><h4>{name}</h4></div>
+								<div style="height: 4em;"><h4>{name}</h4></div>
 
 								<p>{description}</p>
 							</div>
@@ -261,7 +261,7 @@
 	</main>
 </section>
 
-<section id="reach-out" class="relative">
+<section id="reach-out" class="relative mini-section">
 	<div
 		class="absolute inset-0"
 		style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
