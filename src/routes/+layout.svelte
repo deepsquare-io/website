@@ -13,7 +13,7 @@
 
 <main><slot /></main>
 
-<footer>
+<footer class="container">
 	<div class="grid md:grid-cols-4">
 		<div class="md:col-span-2">
 			<div class="box">

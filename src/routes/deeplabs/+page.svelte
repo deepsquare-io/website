@@ -4,20 +4,24 @@
 	import DeepLabsLogo from '$lib/assets/media/DeepLabs.jpg';
 </script>
 
-<header class="grid md:grid-cols-4">
-	<div class="md:col-span-3">
-		<h1>
-			{title}
-		</h1>
-		<p>Democratizing High-Performance Computing for All</p>
-	</div>
+<section id="deeplabs-banner">
+	<main>
+		<div class="grid md:grid-cols-4">
+			<div class="md:col-span-3">
+				<h1>
+					{title}
+				</h1>
+				<p>Democratizing High-Performance Computing for All</p>
+			</div>
 
-	<div>
-		<center class="box">
-			<img src={DeepLabsLogo} alt="DeepLabs Logo" />
-		</center>
-	</div>
-</header>
+			<div>
+				<center class="box">
+					<img src={DeepLabsLogo} alt="DeepLabs Logo" />
+				</center>
+			</div>
+		</div>
+	</main>
+</section>
 
 <section id="deeplabs">
 	<main class="my-10">

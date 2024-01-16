@@ -111,138 +111,149 @@
 	<title>{title}</title>
 </svelte:head>
 
-<section class="grid md:grid-cols-2" id="introduction">
-	<div>
-		<h1 class="lg:text-5xl">Decentralized compute power in one click</h1>
-		<p>
-			The first and only <strong>sustainable</strong> <strong>professional</strong> decentralized
-			<b>High Performance Computing</b> Ecosystem&nbsp;&nbsp;
-		</p>
+<section id="introduction">
+	<main>
+		<div class="grid md:grid-cols-2">
+			<div>
+				<h1 class="lg:text-5xl">Decentralized compute power in one click</h1>
+				<p>
+					The first and only <strong>sustainable</strong> <strong>professional</strong>
+					decentralized
+					<b>High Performance Computing</b> Ecosystem&nbsp;&nbsp;
+				</p>
 
-		<a
-			role="button"
-			href="https://docs.deepsquare.run/workflow/overview"
-			style="text-transform: uppercase"
-			class="my-2">Get started</a
-		>
-		<a
-			role="button"
-			href="https://discord.com/invite/3PQkJGvUGB"
-			style="text-transform: uppercase"
-			class="outline my-2">Join our Discord</a
-		>
-	</div>
+				<a
+					role="button"
+					href="https://docs.deepsquare.run/workflow/overview"
+					style="text-transform: uppercase"
+					class="my-2">Get started</a
+				>
+				<a
+					role="button"
+					href="https://discord.com/invite/3PQkJGvUGB"
+					style="text-transform: uppercase"
+					class="outline my-2">Join our Discord</a
+				>
+			</div>
+		</div>
+	</main>
 </section>
 
 <section id="presentation">
-	<center>
-		<h1>DeepSquare in 2 minutes</h1>
-	</center>
+	<main>
+		<center>
+			<h1>DeepSquare in 2 minutes</h1>
+		</center>
+	</main>
 </section>
 
 <section id="applications">
-	<center>
-		<h1>Ready to use applications: Your AI Hub</h1>
-		<p>
-			Our library already provides a good range of software applications that users can utilise to
-			efficiently train their models, render and prototype their projects while remaining
-			sustainable. Click on any of those to see them in action
-		</p>
-	</center>
+	<main>
+		<center>
+			<h1>Ready to use applications: Your AI Hub</h1>
+			<p>
+				Our library already provides a good range of software applications that users can utilise to
+				efficiently train their models, render and prototype their projects while remaining
+				sustainable. Click on any of those to see them in action
+			</p>
+		</center>
+	</main>
 </section>
 
 <section id="partners">
-	<center>
-		<section id="builders">
-			<h1>Builders</h1>
-			<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-				{#each builders as builder}
-					<div style="max-width: 256px">
-						<main>
-							<div
-								style="height: 128px; max-width: 128px;"
-								class="flex justify-center items-center my-4"
-							>
-								<a href={builder.href}>
-									<img height="128" width="128" src={builder.img} alt={builder.name} />
-								</a>
-							</div>
-							<h4>{builder.name}</h4>
-							<p>{builder.description}</p>
-						</main>
-					</div>
-				{/each}
-			</div>
-		</section>
-		<section id="incubators-accelerators">
-			<h1>Incubators &amp; Accelerators</h1>
-			<div class="grid sm:grid-cols-2 justify-items-center">
-				{#each incubatorsAndAccelerators as incubator}
-					<div style="max-width: 256px">
-						<main>
-							<div
-								style="height: 128px; max-width: 128px;"
-								class="flex justify-center items-center my-4"
-							>
-								<a href={incubator.href}>
-									<img height="128" width="128" src={incubator.img} alt={incubator.name} />
-								</a>
-							</div>
-							<h4>{incubator.name}</h4>
-							<p>{incubator.description}</p>
-						</main>
-					</div>
-				{/each}
-			</div>
-		</section>
-		<section id="technology-partners">
-			<h1>Technology Partners</h1>
-			<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-				{#each technologyPartners as partner}
-					<div style="max-width: 256px">
-						<main>
-							<div
-								style="height: 128px; max-width: 128px;"
-								class="flex justify-center items-center my-4"
-							>
-								<a href={partner.href}>
-									<img height="128" width="128" src={partner.img} alt={partner.name} />
-								</a>
-							</div>
-							<h4>{partner.name}</h4>
-							<p>{partner.description}</p>
-						</main>
-					</div>
-				{/each}
-			</div>
-		</section>
-		<section id="organisations-associations">
-			<h1>Organizations and Associations</h1>
-			<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center">
-				{#each organizationsAndAssociations as organizationOrAssociation}
-					<div style="max-width: 256px">
-						<main>
-							<div
-								style="height: 128px; max-width: 128px;"
-								class="flex justify-center items-center my-4"
-							>
-								<a href={organizationOrAssociation.href}>
-									<img
-										height="128"
-										width="128"
-										src={organizationOrAssociation.img}
-										alt={organizationOrAssociation.name}
-									/>
-								</a>
-							</div>
-							<h4>{organizationOrAssociation.name}</h4>
-							<p>{organizationOrAssociation.description}</p>
-						</main>
-					</div>
-				{/each}
-			</div>
-		</section>
-	</center>
+	<main>
+		<center>
+			<section id="builders">
+				<h1>Builders</h1>
+				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+					{#each builders as builder}
+						<div style="max-width: 256px">
+							<main>
+								<div
+									style="height: 128px; max-width: 128px;"
+									class="flex justify-center items-center my-4"
+								>
+									<a href={builder.href}>
+										<img height="128" width="128" src={builder.img} alt={builder.name} />
+									</a>
+								</div>
+								<h4>{builder.name}</h4>
+								<p>{builder.description}</p>
+							</main>
+						</div>
+					{/each}
+				</div>
+			</section>
+			<section id="incubators-accelerators">
+				<h1>Incubators &amp; Accelerators</h1>
+				<div class="grid sm:grid-cols-2 justify-items-center">
+					{#each incubatorsAndAccelerators as incubator}
+						<div style="max-width: 256px">
+							<main>
+								<div
+									style="height: 128px; max-width: 128px;"
+									class="flex justify-center items-center my-4"
+								>
+									<a href={incubator.href}>
+										<img height="128" width="128" src={incubator.img} alt={incubator.name} />
+									</a>
+								</div>
+								<h4>{incubator.name}</h4>
+								<p>{incubator.description}</p>
+							</main>
+						</div>
+					{/each}
+				</div>
+			</section>
+			<section id="technology-partners">
+				<h1>Technology Partners</h1>
+				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+					{#each technologyPartners as partner}
+						<div style="max-width: 256px">
+							<main>
+								<div
+									style="height: 128px; max-width: 128px;"
+									class="flex justify-center items-center my-4"
+								>
+									<a href={partner.href}>
+										<img height="128" width="128" src={partner.img} alt={partner.name} />
+									</a>
+								</div>
+								<h4>{partner.name}</h4>
+								<p>{partner.description}</p>
+							</main>
+						</div>
+					{/each}
+				</div>
+			</section>
+			<section id="organisations-associations">
+				<h1>Organizations and Associations</h1>
+				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center">
+					{#each organizationsAndAssociations as organizationOrAssociation}
+						<div style="max-width: 256px">
+							<main>
+								<div
+									style="height: 128px; max-width: 128px;"
+									class="flex justify-center items-center my-4"
+								>
+									<a href={organizationOrAssociation.href}>
+										<img
+											height="128"
+											width="128"
+											src={organizationOrAssociation.img}
+											alt={organizationOrAssociation.name}
+										/>
+									</a>
+								</div>
+								<h4>{organizationOrAssociation.name}</h4>
+								<p>{organizationOrAssociation.description}</p>
+							</main>
+						</div>
+					{/each}
+				</div>
+			</section>
+		</center>
+	</main>
 </section>
 
 <style>

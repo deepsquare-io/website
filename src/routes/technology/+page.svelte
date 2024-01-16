@@ -35,14 +35,16 @@
 	</style>
 </svelte:head>
 
-<header>
-	<h1>Accelerate your Innovation</h1>
+<section id="technology-banner">
+	<main>
+		<h1>Accelerate your Innovation</h1>
 
-	<p>
-		Build your projects with ease on <strong>DeepSquare</strong> – the platform built by builders for
-		builders. Say goodbye to hardware optimization and maintenance hassle.
-	</p>
-</header>
+		<p>
+			Build your projects with ease on <strong>DeepSquare</strong> – the platform built by builders for
+			builders. Say goodbye to hardware optimization and maintenance hassle.
+		</p>
+	</main>
+</section>
 
 <section id="technology">
 	<main>
@@ -137,59 +139,63 @@
 </section>
 
 <section id="applications">
-	<center>
-		<h2>Ready to use Applications</h2>
-		<small>Current Applications. More Available Soon!</small>
+	<main>
+		<center>
+			<h2>Ready to use Applications</h2>
+			<small>Current Applications. More Available Soon!</small>
 
-		<Applications />
+			<Applications />
 
-		<a
-			role="button"
-			class="outline"
-			style="text-transform: uppercase;"
-			href="https://app.deepsquare.run">Build on DeepSquare</a
-		>
-	</center>
+			<a
+				role="button"
+				class="outline"
+				style="text-transform: uppercase;"
+				href="https://app.deepsquare.run">Build on DeepSquare</a
+			>
+		</center>
+	</main>
 </section>
 
 <section id="sustainability">
-	<div class="grid md:grid-cols-4 gap-4">
-		<div>
-			<img src={sustainability} alt="sustainability" />
+	<main>
+		<div class="grid md:grid-cols-4 gap-4">
+			<div>
+				<img src={sustainability} alt="sustainability" />
+			</div>
+			<div class="md:col-span-3">
+				<p>
+					<span style="font-weight: 400;"
+						>The sustainability approach taken by Deep<strong>Square</strong> is to provide a ready to
+						use sustainable configuration,</span
+					><span style="font-weight: 400;"> reducing</span><span style="font-weight: 400;">
+						the impact of compute resources to its minimum. Deep<strong>Square</strong> looks to bring
+						the latest technologies together to decrease electrical consumption through renewable sources
+						and deliver supercomputer-strength processing power within reach of small businesses, researchers,
+						and academic institutions for the first time.</span
+					>
+				</p>
+				<p>
+					<br /><span style="font-weight: 400;">We advocate Immersion </span><span
+						style="font-weight: 400;">Cooling</span
+					><span style="font-weight: 400;">, a </span><span style="font-weight: 400;">practice</span
+					><span style="font-weight: 400;">
+						of placing electronic equipment into a thermally conductive, and electronically
+						resistive liquid that is 1,200 times more efficient than air at capturing heat. The heat
+						captured through immersion cooling can be exchanged in a simple, but efficient
+						liquid-to-liquid heat exchanger. The heat then can directly be reused for heating
+						purposes or industrial processes</span
+					>
+				</p>
+			</div>
 		</div>
-		<div class="md:col-span-3">
-			<p>
-				<span style="font-weight: 400;"
-					>The sustainability approach taken by Deep<strong>Square</strong> is to provide a ready to
-					use sustainable configuration,</span
-				><span style="font-weight: 400;"> reducing</span><span style="font-weight: 400;">
-					the impact of compute resources to its minimum. Deep<strong>Square</strong> looks to bring
-					the latest technologies together to decrease electrical consumption through renewable sources
-					and deliver supercomputer-strength processing power within reach of small businesses, researchers,
-					and academic institutions for the first time.</span
-				>
-			</p>
-			<p>
-				<br /><span style="font-weight: 400;">We advocate Immersion </span><span
-					style="font-weight: 400;">Cooling</span
-				><span style="font-weight: 400;">, a </span><span style="font-weight: 400;">practice</span
-				><span style="font-weight: 400;">
-					of placing electronic equipment into a thermally conductive, and electronically resistive
-					liquid that is 1,200 times more efficient than air at capturing heat. The heat captured
-					through immersion cooling can be exchanged in a simple, but efficient liquid-to-liquid
-					heat exchanger. The heat then can directly be reused for heating purposes or industrial
-					processes</span
-				>
-			</p>
-		</div>
-	</div>
-	<center>
-		<a
-			role="button"
-			class="outline"
-			style="text-transform: uppercase;"
-			href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
-			>Learn more</a
-		>
-	</center>
+		<center>
+			<a
+				role="button"
+				class="outline"
+				style="text-transform: uppercase;"
+				href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
+				>Learn more</a
+			>
+		</center>
+	</main>
 </section>

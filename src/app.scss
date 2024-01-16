@@ -5,10 +5,10 @@
 $material-symbols-font-path: 'material-symbols/';
 @import 'material-symbols';
 
-$semantic-root-element: "#root";
+// $semantic-root-element: "#root";
 
-// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
-$enable-semantic-container: true;
+// // Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+// $enable-semantic-container: true;
 
 // Enable .classes
 $enable-classes: true;
@@ -30,6 +30,51 @@ $enable-grid: false;
   --primary-hover: #C247FF;
   --primary-focus: #C247FF;
   --primary-inverse: #FFF;
+}
+
+// Remove main margin and prefer section paddings.
+// This is to put the section background in full width.
+body {
+  margin: 0;
+}
+
+#root > main > section {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+
+#root > main > section > main, #root > main > section > footer, #root > main > section > header {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
+    max-width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // Ref: https://codepen.io/russgossett/pen/gMNrOQ
@@ -87,4 +132,14 @@ $transition-len: 0.20s;
 
 .material-symbols-outlined {
   vertical-align: middle;
+}
+
+/** Navbar */
+nav a {
+  --color: #fff;
+}
+
+// Add padding top for the nav bar
+#root > main > section:first-child {
+  padding-top: 8em;
 }

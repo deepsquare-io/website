@@ -23,6 +23,8 @@
 	import Pamela from '$lib/assets/media/Pamela-Delgado.png';
 	import Tuomo from '$lib/assets/media/Tuomo-Pyykkonen.png';
 
+	import WhatIsDeepSquareBg from '$lib/assets/media/b5-min.png';
+
 	const coreTeam = [
 		{
 			name: 'Arnaud de La Chapelle',
@@ -123,128 +125,147 @@
 	<title>{title}</title>
 </svelte:head>
 
-<section class="grid md:grid-cols-2" id="what-is-deepsquare">
-	<div>
-		<h1 class="lg:text-5xl">What is DeepSquare?</h1>
-		<p>A platform to seamlessly interconnect users with decentralized supercomputing resources.</p>
-		<Share
-			title="DeepSquare"
-			text="DeepSquare is a pioneering technology company dedicated to making high-performance computing (HPC) accessible to everyone."
-			url="https://deepsquare.io"
-		/>
-	</div>
+<section
+	id="what-is-deepsquare"
+	style="background-image: url({WhatIsDeepSquareBg}); background-position: center left; background-repeat: no-repeat; background-size: cover;"
+>
+	<main>
+		<div class="grid md:grid-cols-2">
+			<div>
+				<h1 class="lg:text-5xl">What is DeepSquare?</h1>
+				<p>
+					A platform to seamlessly interconnect users with decentralized supercomputing resources.
+				</p>
+				<Share
+					title="DeepSquare"
+					text="DeepSquare is a pioneering technology company dedicated to making high-performance computing (HPC) accessible to everyone."
+					url="https://deepsquare.io"
+				/>
+			</div>
+		</div>
+	</main>
 </section>
 
 <section class="grid" id="description">
-	<article class="grid md:grid-cols-4">
-		<div class="md:col-span-3">
-			<h2>Governance</h2>
-			<p>
-				The DeepSquare project is a community led project, meaning that the community actively
-				participates in streaming the decision making process with a system modelled on a
-				community-owned smart contract protocol.
-			</p>
-		</div>
-		<center>
-			<img src={Governance} alt="Governance" />
-		</center>
-	</article>
-	<article class="grid md:grid-cols-4">
-		<div class="md:col-span-3">
-			<h2>Our Mission</h2>
-			<p>
-				DeepSquare aims to support innovation in Europe and beyond and to offer a true alternative
-				to the hyperscalers by providing world-class decentralised, responsible, sustainable, and
-				managed High-Performance Computing (HPC) as an Ecosystem.
-			</p>
-		</div>
-		<center>
-			<img src={Mission} alt="Mission" />
-		</center>
-	</article>
-	<article class="grid md:grid-cols-4">
-		<div class="md:col-span-3">
-			<h2>Vision</h2>
-			<p>
-				Empowering the professional cloud with the DeepSquare decentralised interoperable
-				heterogeneous network in a sustainable and environmentally beneficial way.
-			</p>
-		</div>
-		<center>
-			<img src={Vision} alt="Vision" />
-		</center>
-	</article>
+	<main>
+		<article class="grid md:grid-cols-4">
+			<div class="md:col-span-3">
+				<h2>Governance</h2>
+				<p>
+					The DeepSquare project is a community led project, meaning that the community actively
+					participates in streaming the decision making process with a system modelled on a
+					community-owned smart contract protocol.
+				</p>
+			</div>
+			<center>
+				<img src={Governance} alt="Governance" />
+			</center>
+		</article>
+		<article class="grid md:grid-cols-4">
+			<div class="md:col-span-3">
+				<h2>Our Mission</h2>
+				<p>
+					DeepSquare aims to support innovation in Europe and beyond and to offer a true alternative
+					to the hyperscalers by providing world-class decentralised, responsible, sustainable, and
+					managed High-Performance Computing (HPC) as an Ecosystem.
+				</p>
+			</div>
+			<center>
+				<img src={Mission} alt="Mission" />
+			</center>
+		</article>
+		<article class="grid md:grid-cols-4">
+			<div class="md:col-span-3">
+				<h2>Vision</h2>
+				<p>
+					Empowering the professional cloud with the DeepSquare decentralised interoperable
+					heterogeneous network in a sustainable and environmentally beneficial way.
+				</p>
+			</div>
+			<center>
+				<img src={Vision} alt="Vision" />
+			</center>
+		</article>
+	</main>
 </section>
 
 <section id="teams">
-	<section id="core-team">
-		<header>
-			<center>
-				<small>Team</small>
-				<h1>Core Team</h1>
-			</center>
-		</header>
+	<main>
+		<section id="core-team">
+			<header>
+				<center>
+					<small>Team</small>
+					<h1>Core Team</h1>
+				</center>
+			</header>
 
-		<main>
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 place-content-around">
-				{#each coreTeam as { name, role, description, avatar }}
-					<article class="p-0 m-0" style="max-width: 256px">
-						<div>
-							<img
-								style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
-								src={avatar}
-								alt={name}
-							/>
-						</div>
+			<main>
+				<div
+					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
+				>
+					{#each coreTeam as { name, role, description, avatar }}
+						<article class="p-0 m-0" style="max-width: 256px">
+							<div>
+								<img
+									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
+									src={avatar}
+									alt={name}
+								/>
+							</div>
 
-						<div class="m-2">
-							<div style="height: 5em;"><h4>{name}</h4></div>
+							<div class="m-2">
+								<div style="height: 5em;"><h4>{name}</h4></div>
 
-							<div style="height: 4em;"><p>{role}</p></div>
+								<div style="height: 4em;"><p>{role}</p></div>
 
-							<p>{description}</p>
-						</div>
-					</article>
-				{/each}
-			</div>
-		</main>
-	</section>
-	<section id="advisors">
-		<header>
-			<center>
-				<small>Team</small>
-				<h1>Advisors</h1>
-			</center>
-		</header>
+								<p>{description}</p>
+							</div>
+						</article>
+					{/each}
+				</div>
+			</main>
+		</section>
+		<section id="advisors">
+			<header>
+				<center>
+					<small>Team</small>
+					<h1>Advisors</h1>
+				</center>
+			</header>
 
-		<main>
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 place-content-around">
-				{#each advisorTeam as { name, description, avatar }}
-					<article class="p-0 m-0" style="max-width: 256px">
-						<div>
-							<img
-								style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
-								src={avatar}
-								alt={name}
-							/>
-						</div>
+			<main>
+				<div
+					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
+				>
+					{#each advisorTeam as { name, description, avatar }}
+						<article class="p-0 m-0" style="max-width: 256px">
+							<div>
+								<img
+									style="max-width: 256px; max-height: 256px; width: 100%; height: 100%;"
+									src={avatar}
+									alt={name}
+								/>
+							</div>
 
-						<div class="m-2">
-							<div style="height: 5em;"><h4>{name}</h4></div>
+							<div class="m-2">
+								<div style="height: 5em;"><h4>{name}</h4></div>
 
-							<p>{description}</p>
-						</div>
-					</article>
-				{/each}
-			</div>
-		</main>
-	</section>
+								<p>{description}</p>
+							</div>
+						</article>
+					{/each}
+				</div>
+			</main>
+		</section>
+	</main>
 </section>
 
 <section id="reach-out">
-	<center>
-		<h2>Reach out to us</h2>
+	<main>
+		<center>
+			<h2>Reach out to us</h2>
 
-		<a role="button" class="outline" href="/contact">Contact</a>
-	</center>
+			<a role="button" class="outline" href="/contact">Contact</a>
+		</center>
+	</main>
 </section>

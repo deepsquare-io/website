@@ -15,8 +15,8 @@
 	let showTopBarBackground = true;
 
 	$: {
-		showTopBarBackground = scrollY >= 40;
-		showTopBar = oldScrollY > scrollY || scrollY < 40;
+		showTopBarBackground = scrollY <= 100;
+		showTopBar = oldScrollY > scrollY || scrollY < 100;
 		oldScrollY = scrollY;
 	}
 
@@ -58,13 +58,13 @@
 </script>
 
 <!-- This div add margin on top of documents. -->
-<div style="height: 4em">
+<header>
 	{#if showTopBar}
 		<nav
 			transition:slide={{ duration: 200, easing: quintInOut, axis: 'y' }}
 			class="fixed inset-x-0 top-0 z-25 px-4 {showTopBarBackground
-				? 'bg-nav shadow-xl'
-				: undefined}"
+				? 'bg-nav-top'
+				: 'bg-nav-scrolled'}"
 		>
 			<ul>
 				<li>
@@ -103,7 +103,7 @@
 			</ul>
 		</nav>
 	{/if}
-</div>
+</header>
 
 {#if open}
 	<div
@@ -172,7 +172,12 @@
 <svelte:window bind:scrollY />
 
 <style>
-	.bg-nav {
-		background-color: var(--card-background-color);
+	.bg-nav-top {
+		background-color: rgba(0, 0, 0, 0.61);
+	}
+
+	.bg-nav-scrolled {
+		background-color: rgba(0, 0, 0, 0.61);
+		backdrop-filter: blur(8px);
 	}
 </style>
