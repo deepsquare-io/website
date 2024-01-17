@@ -5,8 +5,6 @@
 	import ClusterFactory from '$lib/assets/media/ClusterFactory-min-scaled.jpg';
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
-	import TechnologyBg from '$lib/assets/media/b5-min.jpg';
-	import Applications from '$lib/components/Applications.svelte';
 </script>
 
 <svelte:head>
@@ -17,7 +15,7 @@
 	data-theme="dark"
 	id="technology-banner"
 	class="flex items-center"
-	style="background-image: url({TechnologyBg}); background-position: top center; background-repeat: no-repeat; background-size: cover;"
+	style="background-color: var(--background-color);"
 >
 	<main>
 		<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
@@ -46,7 +44,7 @@
 							<img src={DeepSquareGrid} alt="DeepSquare Grid" />
 						</div>
 
-						<p class="lg:min-h-80">
+						<p class="lg:min-h-80 xl:min-h-60">
 							A network of server clusters forming the pool of compute required to process users’
 							workloads. Or, as we love to call it, the meta-cluster.
 						</p>
@@ -75,7 +73,7 @@
 						<div>
 							<img src={ClusterFactory} alt="DeepSquare ClusterFactory" />
 						</div>
-						<p class="lg:min-h-80">
+						<p class="lg:min-h-80 xl:min-h-60">
 							An open-source Kubernetes-based infrastructure orchestrator that automates the process
 							of deploying, managing and monitoring compute-optimized clusters from bare metal
 							servers to VMs and containers.
@@ -105,7 +103,7 @@
 						<div>
 							<img src={DeepSquareCommunity} alt="DeepSquare Community" />
 						</div>
-						<p class="lg:min-h-80">
+						<p class="lg:min-h-80 xl:min-h-60">
 							Builders, developers, AI engineers, artists, blockchain enthusiasts, disruptors,
 							innovators and visionaries. Join us in our mission to democratize access to HPC!
 						</p>
@@ -127,24 +125,6 @@
 	</main>
 </section>
 
-<section id="applications">
-	<main>
-		<center>
-			<h2>Ready to use Applications</h2>
-			<small>Current Applications. More Available Soon!</small>
-
-			<Applications />
-
-			<a
-				role="button"
-				class="outline my-4"
-				style="text-transform: uppercase;"
-				href="https://app.deepsquare.run"><span>Build on DeepSquare</span></a
-			>
-		</center>
-	</main>
-</section>
-
 <section id="sustainability">
 	<header>
 		<center><h1>Sustainability</h1> </center>
@@ -157,27 +137,18 @@
 			</div>
 			<div class="md:col-span-3">
 				<p>
-					<span style="font-weight: 400;"
-						>The sustainability approach taken by Deep<strong>Square</strong> is to provide a ready to
-						use sustainable configuration,</span
-					><span style="font-weight: 400;"> reducing</span><span style="font-weight: 400;">
-						the impact of compute resources to its minimum. Deep<strong>Square</strong> looks to bring
-						the latest technologies together to decrease electrical consumption through renewable sources
-						and deliver supercomputer-strength processing power within reach of small businesses, researchers,
-						and academic institutions for the first time.</span
-					>
+					The sustainability approach taken by DeepSquare is to provide a ready to use sustainable
+					configuration, reducing the impact of compute resources to its minimum. DeepSquare looks
+					to bring the latest technologies together to decrease electrical consumption through
+					renewable sources and deliver supercomputer-strength processing power within reach of
+					small businesses, researchers, and academic institutions for the first time.
 				</p>
 				<p>
-					<br /><span style="font-weight: 400;">We advocate Immersion </span><span
-						style="font-weight: 400;">Cooling</span
-					><span style="font-weight: 400;">, a </span><span style="font-weight: 400;">practice</span
-					><span style="font-weight: 400;">
-						of placing electronic equipment into a thermally conductive, and electronically
-						resistive liquid that is 1,200 times more efficient than air at capturing heat. The heat
-						captured through immersion cooling can be exchanged in a simple, but efficient
-						liquid-to-liquid heat exchanger. The heat then can directly be reused for heating
-						purposes or industrial processes</span
-					>
+					We advocate <b>Immersion Cooling</b>, a practice of placing electronic equipment into a
+					thermally conductive, and electronically resistive liquid that is 1,200 times more
+					efficient than air at capturing heat. The heat captured through immersion cooling can be
+					exchanged in a simple, but efficient liquid-to-liquid heat exchanger. The heat then can
+					directly be reused for heating purposes or industrial processes.
 				</p>
 			</div>
 		</div>

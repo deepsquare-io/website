@@ -51,8 +51,8 @@ of all sizes.`
 		<h1>{title}</h1>
 
 		<p>
-			Deep<strong>Square</strong>'s FAQ offers comprehensive answers to common inquiries users may
-			have about various aspects of Deep<strong>Square</strong>.
+			DeepSquare's FAQ offers comprehensive answers to common inquiries users may have about various
+			aspects of DeepSquare.
 		</p>
 	</header>
 

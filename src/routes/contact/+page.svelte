@@ -19,7 +19,7 @@
 
 	<main>
 		<div>
-			<h3 style="font-weight: 400;">Deep<strong>Square</strong></h3>
+			<h3 style="font-weight: 400;">DeepSquare</h3>
 			<p>Gotthardstrasse 26<br />6300 Zug<br />Switzerland</p>
 		</div>
 		[TODO: Hubspot Form]
@@ -29,8 +29,8 @@
 		<div>
 			<p>
 				<span style="font-weight: 400;"
-					>Deep<strong>Square</strong> is disrupting the cloud supply chain, business and delivery models:
-					owned, served and grown by the expanding community of actors in its inclusive ecosystem.&nbsp;</span
+					>DeepSquare is disrupting the cloud supply chain, business and delivery models: owned,
+					served and grown by the expanding community of actors in its inclusive ecosystem.&nbsp;</span
 				><span style="font-weight: 400;"
 					>A completely novel model that frees companies and individuals of the need to manage the
 					underlying infrastructure, security and updates, DeepSquare helps innovators reach their
@@ -38,9 +38,7 @@
 				>
 			</p>
 			<p>
-				<span style="font-weight: 400;"
-					>Deep<strong>Square</strong>, the tokenised, decentralised cloud.</span
-				>
+				<span style="font-weight: 400;">DeepSquare, the tokenised, decentralised cloud.</span>
 			</p>
 		</div>
 		<center>

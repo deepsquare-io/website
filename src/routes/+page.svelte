@@ -150,23 +150,53 @@
 	</main>
 </section>
 
-<section id="presentation">
+<section id="presentation" class="min-h-screen">
 	<header>
 		<center>
-			<h2>DeepSquare in 2 minutes</h2>
+			<h2>Accelerate Your Projects and Scale on HPC with Ease and Trust</h2>
 		</center>
 	</header>
+
+	<main>
+		<div class="grid md:grid-cols-3 gap-4 justify-items-center">
+			<div>
+				<h3>Easy to Use and Deploy</h3>
+				<p>
+					DeepSquare simplifies job submission by abstracting runtimes from specifications,
+					presenting a user-friendly standard — encapsulated within a concise, straightforward YAML
+					format instead of a busy shell script.
+				</p>
+			</div>
+			<div>
+				<h3>Containers on HPC</h3>
+				<p>
+					DeepSquare provides comprehensive HPC and containerization functionalities, granting
+					widespread accessibility to low-level optimization, parallelization, precise resource
+					scheduling, and hardware accelerators within a decentralized infrastructure.
+				</p>
+			</div>
+			<div>
+				<h3>Transparent, Fair, Accessible to everyone</h3>
+				<p>
+					Through its advanced scheduling system, DeepSquare ensures transparent, fair and equitable
+					access for all users, irrespective of their status or skills, guaranteeing that every
+					demand is met on the decentralized infrastructure.
+				</p>
+			</div>
+		</div>
+	</main>
 </section>
 
 <section id="applications">
 	<header>
 		<center>
-			<h2>Ready to use applications: Your AI Hub</h2>
+			<h2>For AI, Rendering, Simulations...</h2>
 			<p>
-				Our library already provides a good range of software applications that users can utilise to
-				efficiently train their models, render and prototype their projects while remaining
-				sustainable. Click on any of those to see them in action
+				DeepSquare supports a wide range of computing needs. From GPU-intensive applications to
+				parallelized workflows, DeepSquare is perfect to speed up your projects. We provide examples
+				that you can test and deploy in one click.
 			</p>
+			<p>Try them out!</p>
 		</center>
 	</header>
 
@@ -282,6 +312,6 @@
 	}
 
 	section h2 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 </style>

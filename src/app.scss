@@ -46,8 +46,8 @@ $enable-grid: false;
   --mono-img-filter: saturate(0%) brightness(0%) invert(100%);
   --border-radius: 0;
   --background-color: hsl(250, 70%, 16%);
-  --card-sectionning-background-color: hsl(250, 70%, 20%);
-  --card-background-color: hsl(250, 70%, 16%);
+  --card-sectionning-background-color: hsl(250, 70%, 26%);
+  --card-background-color: hsl(250, 70%, 20%);
   --dropdown-background-color: hsla(252, 83%, 10%, 0.819);
   --dropdown-hover-background-color: #C247FF;
   --color: #fff;
@@ -214,11 +214,6 @@ header nav a:focus, header nav summary[role="link"]:focus {
   --background-color: invisible;
 }
 
-header nav a:not([role="button"]):hover, header nav summary[role="link"]:hover {
-  color: var(--primary-hover);
-}
-
-
 header nav details {
   overflow: visible;
 }
@@ -266,7 +261,7 @@ details[role=list] summary + ul, li[role=list] > ul {
 // Add padding top for the nav bar
 #root > main > section:first-child {
   padding-top: 8em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 details {
@@ -283,4 +278,35 @@ details > summary {
 
 [data-theme="dark"] .bg-section-a {
   background-color: #0E0535;
+}
+
+/* Add a white aura on hover */
+[data-theme=light] .aura:hover, :root:not([data-theme='dark']) .aura:hover {
+  animation: aura 0.2s ease normal forwards;
+}
+
+[data-theme='dark'] .aura:hover {
+  animation: aura-dark 0.2s ease normal forwards;
+}
+
+@keyframes aura-dark {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0rem #fff);
+    filter: drop-shadow(0 0 0rem #fff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0.75rem #fff);
+    filter: drop-shadow(0 0 0.75rem #fff);
+  }
+}
+
+@keyframes aura {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0rem var(--primary-hover));
+    filter: drop-shadow(0 0 0rem var(--primary-hover));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0.75rem var(--primary-hover));
+    filter: drop-shadow(0 0 0.75rem var(--primary-hover));
+  }
 }

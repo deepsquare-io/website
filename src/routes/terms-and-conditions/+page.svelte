@@ -10,17 +10,16 @@
 
 <div>
 	<p>
-		These Deep<strong>Square</strong> Terms of Use govern your use of the Deep<strong>Square</strong
-		>
-		Project website and its contents (collectively – the “Site”). By using the site, you agree to the
-		provided terms of use and data protection policy, and to transact with us electronically. If you
-		do not agree, please do not use our website. By using, sending, receiving, buying or selling the
-		Deep<strong>Square</strong> Token you accept the terms of use, as well as, the risk related to
-		the cryptocurrency trading, investing and holding. Deep<strong>Square</strong> Token is not
-		responsible for any risk associated with the use of the Deep<strong>Square</strong> Token. including
-		all the investments, trades, positions borrowing or holding of the cryptocurrency. The cryptocurrency
-		investments are associated with a risk, comparable to investments on stock exchanges. All of the
-		transactions and investments are provided with the user’s own risk.
+		These DeepSquare Terms of Use govern your use of the DeepSquare Project website and its contents
+		(collectively – the “Site”). By using the site, you agree to the provided terms of use and data
+		protection policy, and to transact with us electronically. If you do not agree, please do not
+		use our website. By using, sending, receiving, buying or selling the DeepSquare Token you accept
+		the terms of use, as well as, the risk related to the cryptocurrency trading, investing and
+		holding. DeepSquare Token is not responsible for any risk associated with the use of the
+		DeepSquare Token. including all the investments, trades, positions borrowing or holding of the
+		cryptocurrency. The cryptocurrency investments are associated with a risk, comparable to
+		investments on stock exchanges. All of the transactions and investments are provided with the
+		user’s own risk.
 	</p>
 	<p></p>
 	<ol>
