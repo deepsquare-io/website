@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Whitepaper from '$lib/assets/media/DeepSquare_White-Paper-1.pdf';
 	import Yellowpaper from '$lib/assets/media/Yellow-Paper_Tokenize_HPC.pdf';
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg-BIJELI-1.svg';
@@ -54,12 +55,12 @@
 									<a href="https://docs.deepsquare.run/workflow/overview">Documentation</a>
 								</li>
 								<li>
-									<a title="Terms and Conditions" href="/terms-and-conditions"
+									<a title="Terms and Conditions" href="{base}/terms-and-conditions"
 										>Terms and Conditions</a
 									>
 								</li>
 								<li>
-									<a title="Privacy Policy" rel="privacy-policy" href="/privacy-policy"
+									<a title="Privacy Policy" rel="privacy-policy" href="{base}/privacy-policy"
 										>Privacy Policy</a
 									>
 								</li>

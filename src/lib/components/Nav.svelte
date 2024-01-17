@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { navigating } from '$app/stores';
 	import DeepSquareLogo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
 	import DarkThemeButton from '$lib/components/DarkThemeButton.svelte';
@@ -30,30 +31,30 @@
 	const routes = [
 		{
 			name: 'Home',
-			href: '/'
+			href: base + '/'
 		},
 		{
 			name: 'Tech',
-			href: '/technology'
+			href: base + '/technology'
 		},
 		{
 			name: 'Blog',
-			href: '/blog'
+			href: base + '/blog'
 		},
 		{
 			name: 'FAQ',
-			href: '/faqs'
+			href: base + '/faqs'
 		},
 		{
 			name: 'Company',
 			children: [
 				{
 					name: 'About',
-					href: '/about'
+					href: base + '/about'
 				},
 				{
 					name: 'Contact',
-					href: '/contact'
+					href: base + '/contact'
 				}
 			]
 		},
@@ -87,7 +88,8 @@
 		>
 			<ul>
 				<li>
-					<a href="/"><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
+					<a href={base}
+						><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
 					>
 				</li>
 			</ul>

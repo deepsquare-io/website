@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const title = 'Contact';
 
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
@@ -42,7 +44,7 @@
 			</p>
 		</div>
 		<center>
-			<a href="/"><img height="45" width="216" src={logo} alt="DeepSquare Logo" /></a>
+			<a href={base}><img height="45" width="216" src={logo} alt="DeepSquare Logo" /></a>
 		</center>
 	</footer>
 </section>

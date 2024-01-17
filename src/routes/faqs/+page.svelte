@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const title = 'FAQ';
 
 	import animatedDetails from '$lib/animation/animatedDetails';
@@ -37,7 +39,7 @@ of all sizes.`
 		},
 		{
 			title: 'Where can I buy DPS?',
-			content: `We are currently in the private sale stage. For more info, please check the [Investors](/investors) page or reach out to the team.`
+			content: `We are currently in the private sale stage. For more info, please check the [Investors](${base}/investors) page or reach out to the team.`
 		}
 	];
 </script>

@@ -31,6 +31,7 @@
 	import Pozadina2 from '$lib/assets/media/pozadina02.svg';
 	import Pozadina3 from '$lib/assets/media/pozadina03.svg';
 
+	import { base } from '$app/paths';
 	import Portrait from '$lib/components/Portrait.svelte';
 
 	const coreTeam = [
@@ -287,7 +288,7 @@
 		<center>
 			<h2>Reach out to us</h2>
 
-			<a role="button" class="outline" href="/contact"><span>Contact</span></a>
+			<a role="button" class="outline" href="{base}/contact"><span>Contact</span></a>
 		</center>
 	</main>
 </section>
