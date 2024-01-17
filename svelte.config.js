@@ -18,7 +18,7 @@ const config = {
 			$gen: 'gen'
 		},
 		paths: {
-			base: '/website'
+			base: process.env.BASE_URL
 		}
 	}
 };

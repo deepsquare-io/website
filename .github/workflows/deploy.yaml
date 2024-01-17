@@ -29,6 +29,8 @@ jobs:
 
       - name: Build website
         run: pnpm run build
+        env:
+          BASE_URL: /website
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
