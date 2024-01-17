@@ -24,12 +24,12 @@
 
 	<main class="my-10">
 		<p>
-			<strong>DeepLabs</strong> is a pioneering technology company dedicated to making
-			high-performance computing (HPC) accessible to everyone. Our mission is to break down the
-			barriers that have traditionally limited the use of HPC to large corporations and research
-			institutions. In collaboration with the <strong>DeepSquare Association</strong>, we develop
-			innovative solutions that empower businesses, researchers, and developers of all sizes to
-			harness the power of HPC for their projects and applications.
+			<b>DeepLabs</b> is a pioneering technology company dedicated to making high-performance
+			computing (HPC) accessible to everyone. Our mission is to break down the barriers that have
+			traditionally limited the use of HPC to large corporations and research institutions. In
+			collaboration with the <b>DeepSquare Association</b>, we develop innovative solutions that
+			empower businesses, researchers, and developers of all sizes to harness the power of HPC for
+			their projects and applications.
 		</p>
 		<p>
 			<span style="font-weight: 400;"

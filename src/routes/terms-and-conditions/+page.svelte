@@ -24,11 +24,10 @@
 	<p></p>
 	<ol>
 		<li>
-			<strong>Non-Commercial Use</strong><br />This Site is for your own personal non-commercial use
-			only.
+			<b>Non-Commercial Use</b><br />This Site is for your own personal non-commercial use only.
 		</li>
 		<li>
-			<strong>Privacy Statement</strong>
+			<b>Privacy Statement</b>
 			<ol>
 				<li>
 					Your use of this Site signifies your continuing consent to our Data Protection Policy,
@@ -42,12 +41,12 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Changes to this Site</strong><br />We may discontinue or change any content, service,
-			function or feature of the Site at any time with or without notice.
+			<b>Changes to this Site</b><br />We may discontinue or change any content, service, function
+			or feature of the Site at any time with or without notice.
 		</li>
 		<li>
-			<strong>Proper Use of This Site</strong><br />You may use the Site for lawful purposes only
-			and may use the Site only in ways consistent with the law. You agree that you will not:<br />
+			<b>Proper Use of This Site</b><br />You may use the Site for lawful purposes only and may use
+			the Site only in ways consistent with the law. You agree that you will not:<br />
 			<ol type="a">
 				<li>
 					Use the Site in any way that breaches any applicable local, national, federal or
@@ -129,7 +128,7 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Proprietary Rights</strong>
+			<b>Proprietary Rights</b>
 			<ol>
 				<li>
 					We and our suppliers reserve all the rights to the intellectual property on the Site.
@@ -145,19 +144,19 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Changes to the Terms of Use</strong><br />We may change the Terms of Use at any time.
-			You can review the most current version of the Terms of Use by clicking on the Site’s “Terms
-			of Use” link. If you continue to use this Site after we make changes to the Terms of Use, you
-			are signifying your acceptance of the new terms. You are responsible for checking these terms
+			<b>Changes to the Terms of Use</b><br />We may change the Terms of Use at any time. You can
+			review the most current version of the Terms of Use by clicking on the Site’s “Terms of Use”
+			link. If you continue to use this Site after we make changes to the Terms of Use, you are
+			signifying your acceptance of the new terms. You are responsible for checking these terms
 			periodically for any changes.
 		</li>
 		<li>
-			<strong>Electronic Delivery Statement and Your Consent</strong><br />You agree that we may
-			provide to you notices and other information concerning token sales or this Site
-			electronically, including notice to any email address that you may provide.
+			<b>Electronic Delivery Statement and Your Consent</b><br />You agree that we may provide to
+			you notices and other information concerning token sales or this Site electronically,
+			including notice to any email address that you may provide.
 		</li>
 		<li>
-			<strong>Content That You Supply</strong>
+			<b>Content That You Supply</b>
 			<ol>
 				<li>
 					We may allow you to supply content for the Site or its functions (e.g. social media
@@ -174,46 +173,45 @@
 			</ol>
 		</li>
 		<li>
-			<strong>No Duty to Monitor</strong><br />You agree that we are not liable for content that is
-			provided by third parties. We have no duty to screen content that you may supply or post, but
-			we have the right to refuse to post or to edit submitted content. We reserve the right to
-			remove any content for any reason at any time.
+			<b>No Duty to Monitor</b><br />You agree that we are not liable for content that is provided
+			by third parties. We have no duty to screen content that you may supply or post, but we have
+			the right to refuse to post or to edit submitted content. We reserve the right to remove any
+			content for any reason at any time.
 		</li>
 		<li>
-			<strong>Third Party Sites and Advertisers</strong><br />We may include on the Site links to
-			third party websites and third party content and information. You agree that we are not
-			responsible or liable for any content or other materials of third parties or on third party
-			sites. You also agree that we are not responsible for content supplied by our advertisers. We
-			are also not responsible for any transactions or dealings between you and any third party or
-			any advertiser. You agree that we are not responsible for any claim or loss due to a third
-			party site or any advertiser.
+			<b>Third Party Sites and Advertisers</b><br />We may include on the Site links to third party
+			websites and third party content and information. You agree that we are not responsible or
+			liable for any content or other materials of third parties or on third party sites. You also
+			agree that we are not responsible for content supplied by our advertisers. We are also not
+			responsible for any transactions or dealings between you and any third party or any
+			advertiser. You agree that we are not responsible for any claim or loss due to a third party
+			site or any advertiser.
 		</li>
 		<li>
-			<strong>Disclaimer of Warranties</strong><br />We provide this Site and its contents in the
-			form that is visible on our website. We and our suppliers make no expressed warranties or
-			guarantees about this Site. To the fullest extent permitted by law, we and our suppliers
-			disclaim implied warranties including any warranty that the site, its content and information
-			are or will be merchantable, of satisfactory quality, accurate, timely, fit for a particular
-			purpose or need, or non-infringing. We do not guarantee that this site, its content and
-			information will meet your requirements, is error- free, reliable, or will operate without
-			interruption.
+			<b>Disclaimer of Warranties</b><br />We provide this Site and its contents in the form that is
+			visible on our website. We and our suppliers make no expressed warranties or guarantees about
+			this Site. To the fullest extent permitted by law, we and our suppliers disclaim implied
+			warranties including any warranty that the site, its content and information are or will be
+			merchantable, of satisfactory quality, accurate, timely, fit for a particular purpose or need,
+			or non-infringing. We do not guarantee that this site, its content and information will meet
+			your requirements, is error- free, reliable, or will operate without interruption.
 		</li>
 		<li>
-			<strong>Limitation of Liability</strong><br />You may not assert claims for monetary damages
-			arising from this Site or its content. We and our suppliers shall not be liable for any
-			direct, indirect, special, incidental, consequential or exemplary detriment, even if we knew
-			or should have known of the possibility of such detriments.
+			<b>Limitation of Liability</b><br />You may not assert claims for monetary damages arising
+			from this Site or its content. We and our suppliers shall not be liable for any direct,
+			indirect, special, incidental, consequential or exemplary detriment, even if we knew or should
+			have known of the possibility of such detriments.
 		</li>
 		<li>
-			<strong>Indemnification</strong><br />You agree to defend, indemnify, and hold harmless us,
-			our respective owners, employees, contractors, officers, directors, and agents from all
+			<b>Indemnification</b><br />You agree to defend, indemnify, and hold harmless us, our
+			respective owners, employees, contractors, officers, directors, and agents from all
 			liabilities, claims, and expenses, including attorney’s fees, that arise from your use or
 			misuse of this Site. We reserve the right, at our own expense, to assume the exclusive defense
 			and control of any matter otherwise subject to indemnification by you, in which event you will
 			cooperate with us in asserting any available defenses.
 		</li>
 		<li>
-			<strong>Choice of Law and Location for Resolving Disputes</strong>
+			<b>Choice of Law and Location for Resolving Disputes</b>
 			<ol>
 				<li>
 					You agree that the law of Switzerland governs these terms of use, its subject matter, your
@@ -243,15 +241,15 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Severability and Integration</strong><br />These Terms of Use and any supplemental
-			terms, the Data Protection Policy posted on this Site constitute the entire agreement between
-			you and us and supersede all previous written or oral agreements. If any part of the Terms of
-			Use is held invalid or unenforceable, that portion shall be construed in a manner consistent
-			with applicable law to reflect, as nearly as possible, the original intentions of the parties,
-			and the remaining portions shall remain in full force and effect.
+			<b>Severability and Integration</b><br />These Terms of Use and any supplemental terms, the
+			Data Protection Policy posted on this Site constitute the entire agreement between you and us
+			and supersede all previous written or oral agreements. If any part of the Terms of Use is held
+			invalid or unenforceable, that portion shall be construed in a manner consistent with
+			applicable law to reflect, as nearly as possible, the original intentions of the parties, and
+			the remaining portions shall remain in full force and effect.
 		</li>
 		<li>
-			<strong>Assignment</strong>
+			<b>Assignment</b>
 			<ol>
 				<li>
 					We may transfer, assign, sublicense or pledge this agreement and the Site, in whole or in
@@ -264,14 +262,13 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Termination</strong><br />We reserve the right to terminate your use of this Site if
-			you violate the Terms of Use or for any other reason at our discretion.
+			<b>Termination</b><br />We reserve the right to terminate your use of this Site if you violate
+			the Terms of Use or for any other reason at our discretion.
 		</li>
 		<li>
-			<strong>Claims of Copyright Infringement</strong><br />If you believe that your work has been
-			copied and is accessible on this Site in a way that constitutes copyright infringement, please
-			send us a notification of claimed copyright infringement, which must include the following:<br
-			/>
+			<b>Claims of Copyright Infringement</b><br />If you believe that your work has been copied and
+			is accessible on this Site in a way that constitutes copyright infringement, please send us a
+			notification of claimed copyright infringement, which must include the following:<br />
 			<ol type="a">
 				<li>
 					a physical or electronic signature of the owner (or person authorized to act on behalf of
@@ -298,8 +295,8 @@
 			</ol>
 		</li>
 		<li>
-			<strong>Affiliate/Referral</strong><br />This paragraph is setting the rules on how to use the
-			reference links for the DeepSquare Project platform and the DeepSquare Token Referral program.
+			<b>Affiliate/Referral</b><br />This paragraph is setting the rules on how to use the reference
+			links for the DeepSquare Project platform and the DeepSquare Token Referral program.
 			<p>
 				Referring private individuals via the referral link will credit the Referrer with 12% of the
 				number of tokens purchased by their referee by first degree of separation only.
@@ -322,7 +319,7 @@
 			25% unlocked after ICO, and 75% over 12 months.
 		</li>
 		<li>
-			<strong>Restrictions</strong><br />The Buyer represents and warrants that he/she
+			<b>Restrictions</b><br />The Buyer represents and warrants that he/she
 			<ul>
 				<li>
 					itself, nor any affiliates nor any person acting on its behalf (1) has offered or sold, or

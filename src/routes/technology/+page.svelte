@@ -21,8 +21,8 @@
 		<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
 
 		<p>
-			Build your projects with ease on <strong>DeepSquare</strong> – the platform built by builders for
-			builders. Say goodbye to hardware optimization and infrastructure maintenance hassle.
+			Build your projects with ease on <b>DeepSquare</b> – the platform built by builders for builders.
+			Say goodbye to hardware optimization and infrastructure maintenance hassle.
 		</p>
 	</main>
 </section>

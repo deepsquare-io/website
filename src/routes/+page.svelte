@@ -128,9 +128,8 @@
 			<div class="lg:col-span-2">
 				<h1 class="text-4xl md:text-6xl">Decentralized compute power in one click</h1>
 				<p class="text-xl">
-					The first and only <strong>sustainable</strong> <strong>professional</strong>
-					decentralized
-					<b>High Performance Computing</b> Ecosystem&nbsp;&nbsp;
+					The first and only <b>sustainable</b> <b>professional</b> decentralized
+					<b>High Performance Computing</b> Ecosystem.
 				</p>
 
 				<a

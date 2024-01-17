@@ -32,7 +32,7 @@
 					services.
 				</p>
 				<p>
-					Copyright © {year} – <strong>The DeepSquare Association</strong> – CHE-130.663.967, Switzerland.
+					Copyright © {year} – <b>The DeepSquare Association</b> – CHE-130.663.967, Switzerland.
 				</p>
 			</div>
 		</div>

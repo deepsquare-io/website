@@ -10,20 +10,20 @@
 		{
 			name: 'TextToImage',
 			description:
-				'<strong>Text to Image</strong>: Create an image based on given textual descriptions or captions.',
+				'<b>Text to Image</b>: Create an image based on given textual descriptions or captions.',
 			img: TextToImage,
 			href: 'https://app.deepsquare.run/texttoimage'
 		},
 		{
 			name: 'Upscaling',
-			description: '<strong>Upscaling</strong>: Upscale your images with Real ESRGAN.',
+			description: '<b>Upscaling</b>: Upscale your images with Real ESRGAN.',
 			img: Upscaling,
 			href: 'https://app.deepsquare.run/upscaling'
 		},
 		{
 			name: 'Unity',
 			description:
-				'<strong>Unity Render Streaming</strong>: Render in real-time your Unity project in the cloud.',
+				'<b>Unity Render Streaming</b>: Render in real-time your Unity project in the cloud.',
 			img: Unity,
 			width: 378,
 			height: 378,
@@ -31,7 +31,7 @@
 		},
 		{
 			name: 'Blender',
-			description: '<strong>Blender</strong>: Render in your Blender project in the cloud.',
+			description: '<b>Blender</b>: Render in your Blender project in the cloud.',
 			img: Blender,
 			width: 378,
 			height: 378,
@@ -39,14 +39,14 @@
 		},
 		{
 			name: 'Dev',
-			description: '<strong>Develop:</strong> Write and deploy your own applications.',
+			description: '<b>Develop:</b> Write and deploy your own applications.',
 			img: DevApp,
 			href: 'https://app.deepsquare.run/sandbox'
 		},
 		{
 			name: 'And more...',
 			img: Community,
-			description: '<strong>Community workflows</strong>: Discover and run community workflows.',
+			description: '<b>Community workflows</b>: Discover and run community workflows.',
 			href: 'https://github.com/deepsquare-io/workflow-catalog'
 		}
 	];

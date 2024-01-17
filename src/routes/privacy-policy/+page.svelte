@@ -21,11 +21,11 @@
 	<p></p>
 	<p></p>
 	<p>
-		<strong>Personal data</strong> is any information relating to an identified or identifiable natural
-		person (Article 4(1) of the EU General Data Protection Regulation (“GDPR”)). This includes information
-		such as your name, your e-mail address, your postal address, or your telephone number. It does not
-		include information which cannot be linked directly to a natural person’s identity, such as the number
-		of persons visiting this website.
+		<b>Personal data</b> is any information relating to an identified or identifiable natural person
+		(Article 4(1) of the EU General Data Protection Regulation (“GDPR”)). This includes information such
+		as your name, your e-mail address, your postal address, or your telephone number. It does not include
+		information which cannot be linked directly to a natural person’s identity, such as the number of
+		persons visiting this website.
 	</p>
 	<p></p>
 	<p></p>
@@ -36,7 +36,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>Processed Personal Data&nbsp;</strong></p>
+	<p><b>Processed Personal Data&nbsp;</b></p>
 	<p></p>
 	<p></p>
 	<ul>
@@ -46,7 +46,7 @@
 	</ul>
 	<p></p>
 	<p></p>
-	<p><strong>Affected Persons</strong></p>
+	<p><b>Affected Persons</b></p>
 	<p></p>
 	<p></p>
 	<ul>
@@ -54,7 +54,7 @@
 	</ul>
 	<p></p>
 	<p></p>
-	<p><strong>Visitors to this website are hereafter referred to as Users.</strong></p>
+	<p><b>Visitors to this website are hereafter referred to as Users.</b></p>
 	<p></p>
 	<p></p>
 	<ul>
@@ -66,7 +66,7 @@
 	</ul>
 	<p></p>
 	<p></p>
-	<p><strong>Third-party Services and Cross-Border Data Processing</strong></p>
+	<p><b>Third-party Services and Cross-Border Data Processing</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -97,7 +97,7 @@
 	</ul>
 	<p></p>
 	<p></p>
-	<p><strong>Cookies</strong></p>
+	<p><b>Cookies</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -122,7 +122,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>Deletion of Data</strong></p>
+	<p><b>Deletion of Data</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -132,7 +132,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>Comments and Posts</strong></p>
+	<p><b>Comments and Posts</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -143,7 +143,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>Newsletter</strong></p>
+	<p><b>Newsletter</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -168,7 +168,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>Use of Google Analytics</strong></p>
+	<p><b>Use of Google Analytics</b></p>
 	<p></p>
 	<p></p>
 	<p>
@@ -181,7 +181,7 @@
 	</p>
 	<p></p>
 	<p></p>
-	<p><strong>HOW TO CONTACT US</strong></p>
+	<p><b>HOW TO CONTACT US</b></p>
 	<p></p>
 	<p></p>
 	<p>
