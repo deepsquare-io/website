@@ -57,20 +57,19 @@
 	<div class="grid md:grid-cols-2 gap-4 lg:grid-cols-3 justify-items-center place-content-around">
 		{#each applications as application, index}
 			<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 10}s both`}>
-				<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col">
-					<div class="flex justify-center items-center flex-col" style="height: 200px;">
-						<a href={application.href}>
+				<a href={application.href}>
+					<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col aura px-4">
+						<div class="flex justify-center items-center flex-col" style="height: 200px;">
 							<img
-								class="aura"
 								width={application.width ?? 128}
 								height={application.height ?? 128}
 								src={application.img}
 								alt={application.name}
 							/>
-						</a>
-					</div>
-					<p>{@html application.description}</p>
-				</article>
+						</div>
+						<p>{@html application.description}</p>
+					</article>
+				</a>
 			</AnimatedInView>
 		{/each}
 	</div>
