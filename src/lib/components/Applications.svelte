@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AnimatedInView from '$components/AnimatedInView.svelte';
 	import DevApp from '$lib/assets/media/Circle-icons-dev.svg';
 	import Unity from '$lib/assets/media/U_Logo_Black_RGB.svg';
 	import Blender from '$lib/assets/media/blender_logo.svg';
@@ -54,21 +55,39 @@
 
 <div>
 	<div class="grid md:grid-cols-2 gap-4 lg:grid-cols-3 justify-items-center place-content-around">
-		{#each applications as application}
-			<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col">
-				<div class="flex justify-center items-center flex-col" style="height: 200px;">
-					<a href={application.href}>
-						<img
-							class="aura"
-							width={application.width ?? 128}
-							height={application.height ?? 128}
-							src={application.img}
-							alt={application.name}
-						/>
-					</a>
-				</div>
-				<p>{@html application.description}</p>
-			</article>
+		{#each applications as application, index}
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 10}s both`}>
+				<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col">
+					<div class="flex justify-center items-center flex-col" style="height: 200px;">
+						<a href={application.href}>
+							<img
+								class="aura"
+								width={application.width ?? 128}
+								height={application.height ?? 128}
+								src={application.img}
+								alt={application.name}
+							/>
+						</a>
+					</div>
+					<p>{@html application.description}</p>
+				</article>
+			</AnimatedInView>
 		{/each}
 	</div>
 </div>
+
+<style>
+	@keyframes -global-from-bottom {
+		0% {
+			transform: translateY(100vh);
+			opacity: 0;
+		}
+		50% {
+			opacity: 0;
+			transform: translateY(20vh);
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>

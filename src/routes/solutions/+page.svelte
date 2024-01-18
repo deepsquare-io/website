@@ -11,18 +11,22 @@
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section
-	data-theme="dark"
-	id="technology-banner"
-	style="background-color: var(--background-color);"
->
+<section data-theme="dark" id="technology-banner" class="relative">
+	<div
+		class="absolute inset-0 -z-10"
+		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(63,7,96,1) 31%, rgba(63,7,96,1) 67%, rgba(187,50,169,1) 100%);"
+	></div>
 	<main>
-		<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
+		<div class="grid lg:grid-cols-3">
+			<div class="lg:col-span-2">
+				<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
 
-		<p>
-			Build your projects with ease on <b>DeepSquare</b> – the platform built by builders for builders.
-			Say goodbye to hardware optimization and infrastructure maintenance hassle.
-		</p>
+				<p>
+					Speed up your projects with ease on <b>DeepSquare</b> – the platform built by builders for
+					builders.
+				</p>
+			</div>
+		</div>
 	</main>
 </section>
 

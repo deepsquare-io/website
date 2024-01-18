@@ -121,7 +121,7 @@
 <section data-theme="dark" id="introduction" class="relative">
 	<div
 		class="absolute inset-0 -z-10"
-		style="background: rgb(16,19,93); background: radial-gradient(circle, rgba(16,19,93,1) 0%, rgba(2,0,36,1) 100%);"
+		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(187,50,169,1) 100%);"
 	></div>
 	<BackgroundParticles class="absolute inset-0 -z-10" />
 	<DeepSquareLogoParticles class="absolute inset-0 -z-10" />
