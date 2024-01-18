@@ -39,7 +39,7 @@
 		},
 		{
 			name: 'Blog',
-			href: base + '/blog'
+			href: 'https://medium.com/@DeepSquare.io'
 		},
 		{
 			name: 'FAQ',

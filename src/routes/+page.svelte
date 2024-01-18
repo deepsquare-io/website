@@ -1,8 +1,6 @@
 <script lang="ts">
 	const title = 'DeepSquare';
 
-	import IntroductionBg from '$lib/assets/media/Group-180-min.jpg';
-
 	import YData from '$lib/assets/media/YData.svg';
 	import Openfabric from '$lib/assets/media/openfabric-logo-black-1.png';
 	import SquareFactory from '$lib/assets/media/squarefactory-logo-neg.svg';
@@ -19,6 +17,14 @@
 	import CryptoValleyAssociation from '$lib/assets/media/CVA.png';
 	import EcoCloud from '$lib/assets/media/EcoCloud.png';
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
+
+	import { base } from '$app/paths';
+	import type { Engine, IOptions, IRgba, RecursivePartial } from '@tsparticles/engine';
+	import { loadCanvasMaskPlugin } from '@tsparticles/plugin-canvas-mask';
+	import { loadPolygonMaskPlugin } from '@tsparticles/plugin-polygon-mask';
+	import { loadSlim } from '@tsparticles/slim';
+	import { particlesInit } from '@tsparticles/svelte';
+	import { onMount, type ComponentType } from 'svelte';
 
 	const builders = [
 		{
@@ -108,6 +114,114 @@
 			href: 'https://www.blockchaingamealliance.org/'
 		}
 	];
+
+	let ParticlesComponent: ComponentType;
+	let ParticlesComponentBg: ComponentType;
+	let particlesConfig: RecursivePartial<IOptions>;
+	let particlesConfigBg: RecursivePartial<IOptions>;
+	onMount(async () => {
+		const module = await import('@tsparticles/svelte');
+
+		ParticlesComponent = module.default;
+		ParticlesComponentBg = module.default;
+
+		particlesConfig = {
+			fullScreen: false,
+			particles: {
+				shape: {
+					type: 'circle'
+				},
+				links: {
+					color: 'random',
+					distance: 100,
+					enable: true,
+					opacity: 1,
+					width: 1,
+					triangles: {
+						enable: true
+					}
+				},
+				size: {
+					value: {
+						min: 1,
+						max: 4
+					}
+				},
+				move: {
+					enable: true,
+					speed: 0.1,
+					distance: 10
+				},
+				number: {
+					value: (window.innerHeight * window.innerWidth) / 10000
+				},
+				effect: {
+					close: false,
+					fill: true,
+					options: {}
+				}
+			},
+			fpsLimit: 12,
+			canvasMask: {
+				enable: true,
+				scale: 2,
+				pixels: {
+					filter: (pixel: IRgba) => pixel.a > 0
+				},
+				image: {
+					src: base + `/favicon.png`
+				},
+				position: {
+					x: 65,
+					y: 50
+				}
+			}
+		};
+
+		particlesConfigBg = {
+			fullScreen: false,
+			particles: {
+				shape: {
+					type: 'circle'
+				},
+				color: {
+					value: ['#FFFFFF']
+				},
+				links: {
+					color: '#C945FF',
+					distance: 75,
+					enable: true,
+					opacity: 1,
+					width: 1
+				},
+				size: {
+					value: {
+						min: 1,
+						max: 2
+					}
+				},
+				move: {
+					enable: true,
+					speed: 0.1
+				},
+				number: {
+					value: (window.innerHeight * window.innerWidth) / 10000
+				},
+				effect: {
+					close: true,
+					fill: true,
+					options: {}
+				}
+			},
+			fpsLimit: 12
+		};
+	});
+
+	void particlesInit(async (engine: Engine) => {
+		await loadSlim(engine);
+		await loadPolygonMaskPlugin(engine);
+		await loadCanvasMaskPlugin(engine);
+	});
 </script>
 
 <svelte:head>
@@ -117,12 +231,20 @@
 <section data-theme="dark" id="introduction" class="relative flex items-center">
 	<div
 		class="absolute inset-0 -z-10"
-		style="background-image: url({IntroductionBg}); background-position: 25% center; background-size: cover; background-repeat: no-repeat;"
+		style="background: rgb(16,19,93); background: radial-gradient(circle, rgba(16,19,93,1) 0%, rgba(2,0,36,1) 100%);"
 	></div>
-	<div
+	<svelte:component
+		this={ParticlesComponentBg}
+		id="tsparticles-bg"
 		class="absolute inset-0 -z-10"
-		style="background-color: #000; background-size: cover; opacity: 0.2;"
-	></div>
+		options={particlesConfigBg}
+	/>
+	<svelte:component
+		this={ParticlesComponent}
+		id="tsparticles"
+		class="absolute inset-0 -z-10"
+		options={particlesConfig}
+	/>
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
