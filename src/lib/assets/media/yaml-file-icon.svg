@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   shape-rendering="geometricPrecision"
+   text-rendering="geometricPrecision"
+   image-rendering="optimizeQuality"
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   viewBox="0 0 480 511.65"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="yaml-file-icon.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ca46ff;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#6459f6;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="0"
+       y1="255.825"
+       x2="480"
+       y2="255.825"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.6886544"
+     inkscape:cx="240.13203"
+     inkscape:cy="255.825"
+     inkscape:window-width="1920"
+     inkscape:window-height="1061"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M84.68 237.33H375.8v-81.86h-86.02c-9.02 0-21.62-4.88-27.56-10.83-5.95-5.95-9.6-16.68-9.6-25.7V31.81H33.92c-.77 0-1.34.39-1.72.77-.58.38-.77.96-.77 1.73v443.23c0 .58.38 1.34.77 1.73.38.57 1.15.77 1.72.77h339.39c.76 0 .72-.39 1.1-.77.58-.39 1.39-1.15 1.39-1.73v-46.46H84.68c-17.25 0-31.47-14.16-31.47-31.47V268.79c0-17.31 14.16-31.46 31.47-31.46zm1.86 52.82h29.79l17.57 29.23 17.48-29.23h29.63l-33.71 50.47v36.36h-26.92v-36.36l-33.84-50.47zm143.04 72.52h-30.4l-4.36 14.31h-27.39l32.68-86.83h29.37l32.54 86.83h-28.09l-4.35-14.31zm-5.68-18.79-9.48-31.21-9.52 31.21h19zm44.32-53.73h35.4l13.48 52.84 13.52-52.84h35.23v86.83H343.9v-66.19l-16.94 66.19h-19.89l-16.9-66.19v66.19h-21.95v-86.83zm109.98 0H405v65.49h41.96v21.34H378.2v-86.83zm28.98-52.82h41.36c17.3 0 31.46 14.2 31.46 31.46v130.82c0 17.26-14.2 31.47-31.46 31.47h-41.36v56.4c0 6.72-2.69 12.66-7.1 17.08-4.41 4.41-10.36 7.09-17.07 7.09H24.17c-6.71 0-12.66-2.68-17.07-7.09C2.69 500.14 0 494.2 0 487.48V24.37C0 17.65 2.69 11.7 7.1 7.29 11.51 2.88 17.65.19 24.17.19h244.49c.58-.19 1.16-.19 1.73-.19 2.69 0 5.37 1.15 7.29 2.88h.38c.39.19.58.38.96.77l124.9 126.43c2.11 2.1 3.64 4.98 3.64 8.24 0 .96-.19 1.73-.38 2.69v96.32zM281.13 116.45V37.22l89.22 90.36h-78.09c-3.07 0-5.75-1.34-7.86-3.26-1.92-1.92-3.27-4.8-3.27-7.87z"
+     id="path1"
+     style="fill:url(#linearGradient2)" />
+</svg>

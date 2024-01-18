@@ -20,6 +20,10 @@
 	import EcoCloud from '$lib/assets/media/EcoCloud.png';
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
 
+	import ContainerIcon from '$lib/assets/media/container-registry-svgrepo-com.svg';
+	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
+	import YAMLIcon from '$lib/assets/media/yaml-file-icon.svg';
+
 	const builders = [
 		{
 			name: 'SquareFactory',
@@ -157,6 +161,15 @@
 	<main>
 		<div class="grid md:grid-cols-3 gap-4 justify-items-center">
 			<div>
+				<div class="mb-2">
+					<img
+						height="64"
+						width="64"
+						style="max-height: 64px; max-width: 64px;"
+						src={YAMLIcon}
+						alt="YAML Icon"
+					/>
+				</div>
 				<h3>Easy to Use and Deploy</h3>
 				<p>
 					DeepSquare simplifies job submission by abstracting runtimes from specifications,
@@ -165,6 +178,15 @@
 				</p>
 			</div>
 			<div>
+				<div class="mb-2">
+					<img
+						style="max-height: 64px; max-width: 64px;"
+						height="64"
+						width="64"
+						src={ContainerIcon}
+						alt="Container Icon"
+					/>
+				</div>
 				<h3>Containers on HPC</h3>
 				<p>
 					DeepSquare provides comprehensive HPC and containerization functionalities, granting
@@ -173,6 +195,15 @@
 				</p>
 			</div>
 			<div>
+				<div class="mb-2">
+					<img
+						style="max-height: 64px; max-width: 64px;"
+						height="64"
+						width="64"
+						src={HandshakeIcon}
+						alt="Handshake Icon"
+					/>
+				</div>
 				<h3>Transparent, Fair, Accessible to everyone</h3>
 				<p>
 					Through its advanced scheduling system, DeepSquare ensures transparent, fair and equitable
