@@ -66,11 +66,18 @@ body {
 #root > main > section:not(.mini-section) {
   padding-left: 2em;
   padding-right: 2em;
+  margin-bottom: 0;
+  margin-top: 0;
   padding-top: 4em;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
 
   // Force the sections to fill a significant part of the screen.
-  min-height: 70vh;
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #root > main > section.mini-section {
@@ -181,11 +188,11 @@ $transition-len: 0.20s;
   padding-left: 2em;
 }
 
-[data-theme=light] #root > footer, :root:not([data-theme=dark]) #root > footer {
+[data-theme="light"] #root > footer, :root:not([data-theme=dark]) #root > footer {
   background-color: #120641;
 }
 
-[data-theme=light] #root > footer p, [data-theme=light] #root > footer a, :root:not([data-theme=dark]) #root > footer p {
+[data-theme="light"] #root > footer p, [data-theme="light"] #root > footer a, :root:not([data-theme=dark]) #root > footer p {
   color: #fff;
 }
 
@@ -272,8 +279,8 @@ details > summary {
   font-weight: 600;
 }
 
-:root:not([data-theme=dark]) .bg-section-a {
-  background-color: hsl(0, 0%, 98%);
+[data-theme="light"] .bg-section-a, :root:not([data-theme="dark"]) .bg-section-a {
+  background-color: hsl(0, 0%, 95%);
 }
 
 [data-theme="dark"] .bg-section-a {
@@ -281,7 +288,7 @@ details > summary {
 }
 
 /* Add a white aura on hover */
-[data-theme=light] .aura:hover, :root:not([data-theme='dark']) .aura:hover {
+[data-theme="light"] .aura:hover, :root:not([data-theme='dark']) .aura:hover {
   animation: aura 0.2s ease normal forwards;
 }
 

@@ -14,7 +14,6 @@
 <section
 	data-theme="dark"
 	id="technology-banner"
-	class="flex items-center"
 	style="background-color: var(--background-color);"
 >
 	<main>
@@ -125,7 +124,7 @@
 	</main>
 </section>
 
-<section id="sustainability">
+<section id="sustainability" class="bg-section-a">
 	<header>
 		<center><h1>Sustainability</h1> </center>
 	</header>

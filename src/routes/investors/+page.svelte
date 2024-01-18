@@ -13,7 +13,7 @@
 <section
 	data-theme="dark"
 	id="investors-banner"
-	class="relative -z-10 flex items-center"
+	class="relative -z-10"
 	style="background-image: radial-gradient(at center center, #000 0%, #120641 100%);"
 >
 	<!-- Overlay image -->

@@ -134,7 +134,7 @@
 	<title>{title} - DeepSquare</title>
 </svelte:head>
 
-<section data-theme="dark" id="what-is-deepsquare" class="relative flex items-center">
+<section data-theme="dark" id="what-is-deepsquare" class="relative">
 	<div
 		class="absolute inset-0 -z-10"
 		style="background-image: url({WhatIsDeepSquareBg}); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
@@ -156,7 +156,7 @@
 	</main>
 </section>
 
-<section id="description">
+<section id="description" class="bg-section-a">
 	<main data-theme="dark" class="m-0">
 		<article
 			class="grid md:grid-cols-4 justify-around place-items-center relative"
