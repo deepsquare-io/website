@@ -90,7 +90,7 @@
 		>
 			<ul>
 				<li>
-					<a href={base}
+					<a href={base + '/'}
 						><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
 					>
 				</li>

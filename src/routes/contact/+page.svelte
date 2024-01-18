@@ -44,7 +44,7 @@
 			</p>
 		</div>
 		<center>
-			<a href={base}><img height="45" width="216" src={logo} alt="DeepSquare Logo" /></a>
+			<a href={base + '/'}><img height="45" width="216" src={logo} alt="DeepSquare Logo" /></a>
 		</center>
 	</footer>
 </section>
