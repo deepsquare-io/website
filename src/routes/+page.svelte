@@ -249,7 +249,7 @@
 							<main>
 								<div
 									style="min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4"
+									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={builder.href}>
 										<img
@@ -276,7 +276,7 @@
 							<main>
 								<div
 									style="min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4"
+									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={incubator.href}>
 										<img style="max-height: 100px;" src={incubator.img} alt={incubator.name} />
@@ -297,7 +297,7 @@
 							<main>
 								<div
 									style="min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4"
+									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={partner.href}>
 										<img style="max-height: 100px;" src={partner.img} alt={partner.name} />
@@ -318,7 +318,7 @@
 							<main>
 								<div
 									style="min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4"
+									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={organizationOrAssociation.href}>
 										<img
