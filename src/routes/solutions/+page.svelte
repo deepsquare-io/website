@@ -8,6 +8,14 @@
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
 	import AnimatedInView from '$lib/components/AnimatedInView.svelte';
 
+	import MetaMask from '$lib/assets/media/metamask.png';
+
+	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
+
+	import CS2LoginVideo from '$lib/assets/media/cs2_login.mp4';
+	import CS2Login from '$lib/assets/media/cs2_login.svg';
+
+	import BrowserWindow from '$components/BrowserWindow.svelte';
 	import Price1 from '$lib/assets/media/price-part-1.png';
 	import Price2 from '$lib/assets/media/price-part-2.png';
 </script>
@@ -150,7 +158,7 @@
 	</header>
 
 	<main>
-		<section class="grid md:grid-cols-2">
+		<section class="grid md:grid-cols-2 gap-4 justify-items-center content-center">
 			<div>
 				<h2>Get your fair share of compute.</h2>
 				<p>
@@ -159,9 +167,18 @@
 					equitable distribution and fairness.
 				</p>
 			</div>
-			TODO: image demo
+			<center>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<img
+						style="max-width: 50%; max-height: 50%;"
+						class="drop-shadow-a rounded-lg"
+						src={MetaMask}
+						alt="MetaMask"
+					/>
+				</AnimatedInView>
+			</center>
 		</section>
-		<section class="grid md:grid-cols-2">
+		<section class="grid md:grid-cols-2 gap-4">
 			<div>
 				<h2>Mix HPC techniques with the stability of containers.</h2>
 				<p>
@@ -169,20 +186,48 @@
 					technologies and hardware accelerators such as GPUs, Infiniband, and more.
 				</p>
 			</div>
-			TODO: image demo
+			<center>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<img class="drop-shadow-a rounded-lg" src={StableDiffusion} alt="Stable Diffusion" />
+				</AnimatedInView>
+			</center>
 		</section>
-		<section class="grid md:grid-cols-2">
+		<section class="grid md:grid-cols-2 gap-4">
 			<div>
 				<h2>Compatible with interactive Workflows.</h2>
 				<p>
-					DeepSquare jobs possess external network access, enabling users to execute interactive
-					tasks without compromising infrastructure provider security, thanks to the implementation
-					of a zero-trust infrastructure and strict firewall requirements.
+					DeepSquare jobs have external network access, enabling users to execute interactive tasks
+					without compromising infrastructure provider security, thanks to the implementation of a
+					zero-trust infrastructure and strict firewall requirements.
 				</p>
 			</div>
-			TODO: image demo
+			<div class="relative" style="height: 50vh;">
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<img
+						class="absolute drop-shadow-a top-0 left-0 rounded-lg"
+						src={CS2Login}
+						alt="Interative mode"
+					/>
+				</AnimatedInView>
+				<AnimatedInView animation={`from-bottom-slow 0.5s ease-out 2s both`}>
+					<BrowserWindow
+						class="absolute drop-shadow-a left-[0px] sm:left-[50px] top-[50px] rounded-lg"
+						style="overflow: hidden;"
+						url="https://068ac8.bore.deepsquare.run"
+						><video
+							autoplay
+							playsinline
+							muted
+							class="max-w-[50vh] sm:max-w-[70vh]"
+							style="max-height: 50vh; width: auto; height: auto;"
+							width="692"
+							height="322"><source src={CS2LoginVideo} type="video/mp4; codes=avc1" /></video
+						></BrowserWindow
+					>
+				</AnimatedInView>
+			</div>
 		</section>
-		<section class="grid md:grid-cols-2">
+		<section class="grid md:grid-cols-2 gap-4">
 			<div>
 				<h2>Billed per use.</h2>
 				<p>
@@ -191,12 +236,18 @@
 					they use.
 				</p>
 			</div>
-			<div class="relative" style="height: 226px;">
-				<img src={Price1} class="absolute drop-shadow-a top-0 left-0" alt="Price duration" />
+			<div class="relative" style="height: 226px; overflow: hidden;">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<img
+						src={Price1}
+						class="absolute drop-shadow-a top-0 left-0 rounded-lg"
+						alt="Price duration"
+					/>
+				</AnimatedInView>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
+					<img
 						src={Price2}
-						class="absolute drop-shadow-a top-[112px] left-[0px] sm:left-[122px]"
+						class="absolute drop-shadow-a top-[112px] left-[0px] sm:left-[122px] rounded-lg"
 						alt="Price computation"
 					/>
 				</AnimatedInView>
