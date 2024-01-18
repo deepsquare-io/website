@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import type { Engine, IOptions, IRgba, RecursivePartial } from '@tsparticles/engine';
-	import { loadCanvasMaskPlugin } from '@tsparticles/plugin-canvas-mask';
+	import Lightbulb from '$lib/assets/media/lightbulb-regular.svg';
+	import type { Engine, IOptions, RecursivePartial } from '@tsparticles/engine';
+	import { loadPolygonMaskPlugin } from '@tsparticles/plugin-polygon-mask';
 	import { loadSlim } from '@tsparticles/slim';
 	import { particlesInit } from '@tsparticles/svelte';
 	import { onMount, type ComponentType } from 'svelte';
@@ -20,57 +20,75 @@
 				shape: {
 					type: 'circle'
 				},
+				color: {
+					value: ['#C945FF', '#bb6cda']
+				},
 				links: {
 					color: 'random',
-					distance: 100,
+					distance: 50,
 					enable: true,
 					opacity: 1,
-					width: 1,
-					triangles: {
-						enable: true
-					}
+					width: 1
 				},
 				size: {
-					value: {
-						min: 1,
-						max: 4
-					}
+					value: 1
 				},
 				move: {
 					enable: true,
-					speed: 0.1,
-					distance: 10
+					speed: 0.2,
+					outModes: 'bounce'
 				},
 				number: {
 					value: (window.innerHeight * window.innerWidth) / 10000
 				},
 				effect: {
-					close: false,
+					close: true,
 					fill: true,
 					options: {}
+				},
+				opacity: {
+					animation: {
+						enable: true,
+						speed: 2,
+						sync: false
+					},
+					value: {
+						min: 0.05,
+						max: 0.4
+					}
 				}
 			},
-			fpsLimit: 12,
-			canvasMask: {
-				enable: true,
-				scale: 2,
-				pixels: {
-					filter: (pixel: IRgba) => pixel.a > 0
+			fpsLimit: 24,
+			polygon: {
+				draw: {
+					enable: false,
+					stroke: {
+						color: '#fff',
+						width: 1,
+						opacity: 0.2
+					}
 				},
-				image: {
-					src: base + `/favicon.png`
+				enable: true,
+				move: {
+					radius: 10
 				},
 				position: {
 					x: 65,
-					y: 50
-				}
+					y: 25
+				},
+				inline: {
+					arrangement: 'equidistant'
+				},
+				scale: 1,
+				type: 'inline',
+				url: Lightbulb
 			}
 		};
 	});
 
 	void particlesInit(async (engine: Engine) => {
 		await loadSlim(engine);
-		await loadCanvasMaskPlugin(engine);
+		await loadPolygonMaskPlugin(engine);
 	});
 </script>
 

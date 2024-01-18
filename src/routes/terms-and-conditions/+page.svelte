@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
+	<meta name="description" content="DeepSquare's Terms of Use." />
 </svelte:head>
 
 <h1>{title}</h1>

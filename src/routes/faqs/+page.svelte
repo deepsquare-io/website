@@ -46,6 +46,10 @@ of all sizes.`
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
+	<meta
+		name="description"
+		content="Find answers to common questions about DeepSquare and its products and services."
+	/>
 </svelte:head>
 
 <section id="faqs" class="m-0">

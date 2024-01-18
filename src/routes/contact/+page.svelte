@@ -10,6 +10,10 @@
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
+	<meta
+		name="description"
+		content="Contact DeepSquare for more information about our products and services."
+	/>
 </svelte:head>
 
 <section

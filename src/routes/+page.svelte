@@ -116,6 +116,11 @@
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
+	<meta
+		name="description"
+		content="DeepSquare is a pioneering technology company dedicated to making high-performance computing (HPC)
+	accessible to everyone."
+	/>
 </svelte:head>
 
 <section data-theme="dark" id="introduction" class="relative">

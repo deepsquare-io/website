@@ -59,6 +59,6 @@
 <svelte:component
 	this={ParticlesComponent}
 	class={$$props.class}
-	id="tsparticles-bg"
+	id={`tsparticles-${Math.random()}`}
 	options={particlesConfig}
 />

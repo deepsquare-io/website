@@ -8,6 +8,7 @@
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
+	<meta name="description" content="Invest in DeepSquare and join the future of cloud computing." />
 </svelte:head>
 
 <section
