@@ -20,6 +20,8 @@
 	import BrowserWindow from '$components/BrowserWindow.svelte';
 	import Price1 from '$lib/assets/media/price-part-1.png';
 	import Price2 from '$lib/assets/media/price-part-2.png';
+
+	import ImmersionCooling from '$lib/assets/media/grc-cold-wars-part-2-single-phase-immersion-cooling-process-graphic.png';
 </script>
 
 <svelte:head>
@@ -284,11 +286,11 @@
 
 <section id="sustainability">
 	<header>
-		<center><h1>Sustainable infrastructure</h1> </center>
+		<center><h1>Sustainable Infrastructure</h1> </center>
 	</header>
 
 	<main>
-		<div class="grid md:grid-cols-4 gap-4">
+		<div class="grid md:grid-cols-4 gap-4 justify-items-center content-center">
 			<div class="md:col-span-3">
 				<p>
 					DeepSquare's sustainability strategy revolves around <b
@@ -306,11 +308,14 @@
 					directly be reused for heating purposes or industrial processes.
 				</p>
 			</div>
+			<div>
+				<img src={ImmersionCooling} alt="Immersion Cooling" />
+			</div>
 		</div>
 		<center>
 			<a
 				role="button"
-				class="outline"
+				class="outline mt-4"
 				style="text-transform: uppercase;"
 				href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
 				><span>Learn more</span></a
