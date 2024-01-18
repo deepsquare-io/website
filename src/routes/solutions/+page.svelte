@@ -7,6 +7,9 @@
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
 	import AnimatedInView from '$lib/components/AnimatedInView.svelte';
+
+	import Price1 from '$lib/assets/media/price-part-1.png';
+	import Price2 from '$lib/assets/media/price-part-2.png';
 </script>
 
 <svelte:head>
@@ -27,7 +30,7 @@
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
-				<h1 style="font-size: 64px;">Accelerate your Innovation</h1>
+				<h1 class="text-4xl md:text-6xl">Accelerate your Innovation</h1>
 
 				<p>
 					Speed up your projects with ease on <b>DeepSquare</b> – the platform crafted by builders, for
@@ -188,7 +191,16 @@
 					they use.
 				</p>
 			</div>
-			TODO: image demo
+			<div class="relative" style="height: 226px;">
+				<img src={Price1} class="absolute drop-shadow-a top-0 left-0" alt="Price duration" />
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<img
+						src={Price2}
+						class="absolute drop-shadow-a top-[112px] left-[0px] sm:left-[122px]"
+						alt="Price computation"
+					/>
+				</AnimatedInView>
+			</div>
 		</section>
 	</main>
 </section>
@@ -260,6 +272,19 @@
 		50% {
 			opacity: 0;
 			transform: translateY(20vh);
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes -global-from-bottom-slow {
+		0% {
+			opacity: 0;
+			transform: translateY(1vh);
+		}
+		50% {
+			opacity: 0;
 		}
 		100% {
 			opacity: 1;
