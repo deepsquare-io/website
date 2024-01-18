@@ -1,4 +1,4 @@
-import{s as v,a as u,e as m,t as w,l as P,f as a,g as f,c as y,b as k,d as q,m as T,i as p,h as S,n as g}from"../chunks/scheduler.bjAnSu7O.js";import{S as D,i as U}from"../chunks/index.XT9iQYEc.js";function _(b){let s,r,i,c,n,t,h=`<p></p> <p>DeepSquare complies with statutory data protection regulations. Personal data is treated with
+import{s as v,a as u,e as m,t as w,l as P,f as a,g as f,c as y,b as k,d as q,m as T,i as p,h as S,n as g}from"../chunks/scheduler.tSL1IkK9.js";import{S as D,i as U}from"../chunks/index._7ohGjss.js";function _(b){let s,r,i,c,n,t,h=`<p></p> <p>DeepSquare complies with statutory data protection regulations. Personal data is treated with
 		confidentiality. It is only disclosed to third-parties to the extent permitted by data
 		protection regulations or if the person provides their consent.</p> <p></p> <p></p> <p>This Data Privacy Policy outlines how personal data is processed when this website is used.</p> <p></p> <p></p> <p><b>Personal data</b> is any information relating to an identified or identifiable natural person
 		(Article 4(1) of the EU General Data Protection Regulation (“GDPR”)). This includes information such
