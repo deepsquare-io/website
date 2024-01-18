@@ -28,35 +28,37 @@
 	const inDuration = 200;
 	const outDuration = 200;
 
-	const routes = [
+	type Route = {
+		name: string;
+		href?: string;
+		children?: Route[];
+		icon?: string;
+	};
+
+	const routes: Route[] = [
 		{
 			name: 'Home',
 			href: base + '/'
 		},
 		{
-			name: 'Tech',
-			href: base + '/technology'
+			name: 'Solutions',
+			href: base + '/solutions'
 		},
 		{
-			name: 'Blog',
+			name: 'Our Story',
+			href: base + '/story'
+		},
+		{
+			name: 'Contact',
+			href: base + '/contact'
+		},
+		// {
+		// 	name: 'FAQ',
+		// 	href: base + '/faqs'
+		// },
+		{
+			name: 'Blog &#129133;',
 			href: 'https://medium.com/@DeepSquare.io'
-		},
-		{
-			name: 'FAQ',
-			href: base + '/faqs'
-		},
-		{
-			name: 'Company',
-			children: [
-				{
-					name: 'About',
-					href: base + '/about'
-				},
-				{
-					name: 'Contact',
-					href: base + '/contact'
-				}
-			]
 		},
 		{
 			name: 'GitHub',
