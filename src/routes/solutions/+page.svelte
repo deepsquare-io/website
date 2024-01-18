@@ -8,6 +8,8 @@
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
 	import AnimatedInView from '$lib/components/AnimatedInView.svelte';
 
+	import FileSmartContract from '$lib/assets/media/file-smart-contract.svg';
+	import JobDefinition from '$lib/assets/media/jobdefinition.svg';
 	import MetaMask from '$lib/assets/media/metamask.png';
 
 	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
@@ -168,14 +170,38 @@
 				</p>
 			</div>
 			<center>
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-					<img
-						style="max-width: 50%; max-height: 50%;"
-						class="drop-shadow-a rounded-lg"
-						src={MetaMask}
-						alt="MetaMask"
-					/>
-				</AnimatedInView>
+				<div class="flex items-center content-center">
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+						<img
+							style="width: 170px; height: auto;"
+							class="drop-shadow-a rounded-lg"
+							src={MetaMask}
+							alt="MetaMask"
+						/>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
+						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1.5s both`}>
+						<img
+							style="width: 600px; height: auto;"
+							class="drop-shadow-a"
+							src={JobDefinition}
+							alt="Job Definition"
+						/>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2s both`}>
+						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2.5s both`}>
+						<img
+							style="width: 64px; height: auto;"
+							class="drop-shadow-a"
+							src={FileSmartContract}
+							alt="File Smart Contract"
+						/>
+					</AnimatedInView>
+				</div>
 			</center>
 		</section>
 		<section class="grid md:grid-cols-2 gap-4">
