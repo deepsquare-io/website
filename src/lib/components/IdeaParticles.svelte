@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Lightbulb from '$lib/assets/media/lightbulb-regular.svg';
-	import type { Engine, IOptions, RecursivePartial } from '@tsparticles/engine';
-	import { loadPolygonMaskPlugin } from '@tsparticles/plugin-polygon-mask';
+	import Lightbulb from '$lib/assets/media/lightbulb-regular.png';
+	import type { Engine, IOptions, IRgba, RecursivePartial } from '@tsparticles/engine';
+	import { loadCanvasMaskPlugin } from '@tsparticles/plugin-canvas-mask';
 	import { loadSlim } from '@tsparticles/slim';
 	import { particlesInit } from '@tsparticles/svelte';
 	import { onMount, type ComponentType } from 'svelte';
@@ -25,7 +25,7 @@
 				},
 				links: {
 					color: 'random',
-					distance: 50,
+					distance: 60,
 					enable: true,
 					opacity: 1,
 					width: 1
@@ -36,13 +36,13 @@
 				move: {
 					enable: true,
 					speed: 0.2,
-					outModes: 'bounce'
+					distance: 10
 				},
 				number: {
-					value: (window.innerHeight * window.innerWidth) / 10000
+					value: (window.innerHeight * window.innerWidth) / 7000
 				},
 				effect: {
-					close: true,
+					close: false,
 					fill: true,
 					options: {}
 				},
@@ -59,36 +59,26 @@
 				}
 			},
 			fpsLimit: 24,
-			polygon: {
-				draw: {
-					enable: false,
-					stroke: {
-						color: '#fff',
-						width: 1,
-						opacity: 0.2
-					}
-				},
+			canvasMask: {
 				enable: true,
-				move: {
-					radius: 10
+				scale: 6,
+				pixels: {
+					filter: (pixel: IRgba) => pixel.a > 0
+				},
+				image: {
+					src: Lightbulb
 				},
 				position: {
-					x: 65,
-					y: 25
-				},
-				inline: {
-					arrangement: 'equidistant'
-				},
-				scale: 1,
-				type: 'inline',
-				url: Lightbulb
+					x: 75,
+					y: 52
+				}
 			}
 		};
 	});
 
 	void particlesInit(async (engine: Engine) => {
 		await loadSlim(engine);
-		await loadPolygonMaskPlugin(engine);
+		await loadCanvasMaskPlugin(engine);
 	});
 </script>
 
