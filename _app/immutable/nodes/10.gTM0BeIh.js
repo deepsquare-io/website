@@ -1,4 +1,4 @@
-import{s as w,a as p,e as f,t as v,l as S,f as a,g as y,c as m,b as k,d as T,m as U,i as l,h as D,n as g}from"../chunks/scheduler.j08FIYkr.js";import{S as x,i as P}from"../chunks/index.18HkDL6P.js";function A(b){let o,n,r,h,s,t,u=`<p>These DeepSquare Terms of Use govern your use of the DeepSquare Project website and its contents
+import{s as w,a as p,e as f,t as v,l as S,f as a,g as y,c as m,b as k,d as T,m as U,i as l,h as D,n as g}from"../chunks/scheduler.bjAnSu7O.js";import{S as x,i as P}from"../chunks/index.XT9iQYEc.js";function A(b){let o,n,r,h,s,t,u=`<p>These DeepSquare Terms of Use govern your use of the DeepSquare Project website and its contents
 		(collectively – the “Site”). By using the site, you agree to the provided terms of use and data
 		protection policy, and to transact with us electronically. If you do not agree, please do not
 		use our website. By using, sending, receiving, buying or selling the DeepSquare Token you accept
