@@ -3,7 +3,6 @@
 	export let options: Options = {};
 
 	export let animation = 'none';
-	export let animation_out = 'none; opacity: 0';
 	export let once = false;
 
 	let isInView = false;
@@ -28,7 +27,7 @@
 			<slot />
 		</div>
 	{:else}
-		<div style="animation: {animation_out};">
+		<div style="visibility: hidden;">
 			<slot />
 		</div>
 	{/if}
