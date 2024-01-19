@@ -8,9 +8,11 @@
 	import DeepSquareGrid from '$lib/assets/media/DeepSquareGrid-min-scaled.jpg';
 	import AnimatedInView from '$lib/components/AnimatedInView.svelte';
 
-	import FileSmartContract from '$lib/assets/media/file-smart-contract.svg';
-	import JobDefinition from '$lib/assets/media/jobdefinition.svg';
-	import MetaMask from '$lib/assets/media/metamask.png';
+	import MetaScheduler from '$lib/assets/media/metascheduler.drawio.svg';
+
+	import CompiledJob from '$lib/assets/media/compiled-job.svg';
+	import Gears from '$lib/assets/media/gears-solid.svg';
+	import Job from '$lib/assets/media/job.svg';
 
 	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
 
@@ -70,9 +72,9 @@
 							<img src={DeepSquareGrid} alt="DeepSquare Grid" />
 						</div>
 
-						<p class="lg:min-h-80 xl:min-h-60">
-							The <b>network of HPC clusters</b> forming the pool of compute required to process
-							users’ workloads. Or, as we love to call it, <b>The Grid</b>.
+						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
+							The <b>network of HPC clusters</b> forming the pool of compute required to process users’
+							workloads. The DeepSquare Grid is composed of clusters from various providers.
 						</p>
 					</main>
 
@@ -99,7 +101,7 @@
 						<div>
 							<img src={ClusterFactory} alt="DeepSquare ClusterFactory" />
 						</div>
-						<p class="lg:min-h-80 xl:min-h-60">
+						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
 							The <b>open-source Kubernetes-based infrastructure orchestrator</b> that automates the
 							process of deploying, managing and monitoring compute-optimized clusters from bare metal
 							servers to VMs and containers.
@@ -129,7 +131,7 @@
 						<div>
 							<img src={DeepSquareCommunity} alt="DeepSquare Community" />
 						</div>
-						<p class="lg:min-h-80 xl:min-h-60">
+						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
 							The <b
 								>builders, developers, AI engineers, artists, blockchain enthusiasts, disruptors,
 								innovators and visionaries</b
@@ -164,6 +166,45 @@
 	<main>
 		<section class="grid md:grid-cols-2 gap-4 justify-items-center content-center">
 			<div>
+				<h2>Fully featured, safe and simplified.</h2>
+				<p class="mr-16">
+					DeepSquare uses YAML for defining a job's workflow, which is subsequently translated into
+					a sophisticated script compatible with job schedulers. This approach facilitates the
+					creation of intricate Directed Acyclic Graphs (DAGs) and workflows in a straightforward
+					and comprehensible manner, ensuring not only simplicity and clarity but also promoting
+					repeatability and safety within a consistent framework.
+				</p>
+			</div>
+			<center>
+				<div class="flex items-center content-center">
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
+						<span>30 lines</span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
+						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
+						<img class="drop-shadow-a rounded-lg" src={Gears} alt="Compiler" />
+						<span>Compiler</span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1.5s both`}>
+						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2s both`}>
+						<img
+							class="drop-shadow-a rounded-lg"
+							style="max-width: 45vh; mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 95%);"
+							src={CompiledJob}
+							alt="Compiled Job"
+						/>
+						<span>Compiled script: &gt;200 Lines!</span>
+					</AnimatedInView>
+				</div>
+			</center>
+		</section>
+		<section class="grid md:grid-cols-2 gap-4 justify-items-center content-center">
+			<div>
 				<h2>Get your fair share of compute.</h2>
 				<p>
 					DeepSquare deploys its Meta-Scheduler on the Blockchain for transparency, and employs
@@ -174,34 +215,7 @@
 			<center>
 				<div class="flex items-center content-center">
 					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-						<img
-							style="width: 170px; height: auto;"
-							class="drop-shadow-a rounded-lg"
-							src={MetaMask}
-							alt="MetaMask"
-						/>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
-						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1.5s both`}>
-						<img
-							style="width: 600px; height: auto;"
-							class="drop-shadow-a"
-							src={JobDefinition}
-							alt="Job Definition"
-						/>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2s both`}>
-						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2.5s both`}>
-						<img
-							style="width: 64px; height: auto;"
-							class="drop-shadow-a"
-							src={FileSmartContract}
-							alt="File Smart Contract"
-						/>
+						<img class="drop-shadow-a rounded-lg" src={MetaScheduler} alt="MetaScheduler" />
 					</AnimatedInView>
 				</div>
 			</center>
@@ -268,7 +282,7 @@
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<img
 						src={Price1}
-						class="absolute drop-shadow-a top-0 left-0 rounded-lg"
+						class="absolute drop-shadow-a top-0 right-0 left-0 rounded-lg"
 						alt="Price duration"
 					/>
 				</AnimatedInView>
@@ -343,7 +357,11 @@
 	}
 
 	#stack article > main > p {
-		padding: calc(var(--block-spacing-vertical) * 0.66) var(--block-spacing-horizontal);
+		padding-top: calc(var(--block-spacing-vertical) * 0.66);
+		padding-bottom: calc(var(--block-spacing-vertical) * 0.11);
+		padding-left: var(--block-spacing-horizontal);
+		padding-right: var(--block-spacing-horizontal);
+		margin-bottom: 0;
 	}
 
 	@keyframes -global-from-bottom {
@@ -363,7 +381,7 @@
 	@keyframes -global-from-bottom-slow {
 		0% {
 			opacity: 0;
-			transform: translateY(1vh);
+			transform: translateY(10vh);
 		}
 		50% {
 			opacity: 0;
