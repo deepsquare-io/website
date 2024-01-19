@@ -134,7 +134,7 @@
 	<title>{title} - DeepSquare</title>
 	<meta
 		name="description"
-		content="Learn our story and how we are building the future of cloud computing."
+		content="The story of DeepSquare. Learn our story and how we are building the future of cloud computing."
 	/>
 </svelte:head>
 

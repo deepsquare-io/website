@@ -118,7 +118,7 @@
 	<title>{title} - DeepSquare</title>
 	<meta
 		name="description"
-		content="DeepSquare is a pioneering technology company dedicated to making high-performance computing (HPC)
+		content="DeepSquare is a pioneering technology company dedicated to build the Decentralized Cloud Ecosystem and to High-Performance Computing (HPC)
 	accessible to everyone."
 	/>
 </svelte:head>

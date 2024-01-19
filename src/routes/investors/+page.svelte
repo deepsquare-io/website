@@ -8,7 +8,10 @@
 
 <svelte:head>
 	<title>{title} - DeepSquare</title>
-	<meta name="description" content="Invest in DeepSquare and join the future of cloud computing." />
+	<meta
+		name="description"
+		content="Invest in DeepSquare and join the future of cloud computing. Flash Sale is open on the TOZEX Platform since December 27, 2023!"
+	/>
 </svelte:head>
 
 <section
