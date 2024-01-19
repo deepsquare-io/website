@@ -23,7 +23,7 @@
 	<!-- Overlay image -->
 	<div
 		class="absolute inset-0 -z-10"
-		style="background-image: url({InvestorsBg}); background-position: bottom center; background-repeat: no-repeat; background-size: contain;"
+		style="background-image: url(&quot;{InvestorsBg}&quot;); background-position: bottom center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<header>
 		<h1 class="text-4xl md:text-6xl">Flash Sale</h1>
@@ -76,7 +76,7 @@
 	<footer class="py-20 relative">
 		<div
 			class="absolute inset-0"
-			style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+			style="background-image: url(&quot;{Glos}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
 		></div>
 		<center>
 			<h4>Join our Community</h4>

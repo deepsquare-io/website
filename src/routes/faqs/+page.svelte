@@ -76,7 +76,7 @@ of all sizes.`
 <section class="py-4 relative mini-section">
 	<div
 		class="absolute inset-0"
-		style="background-image: url({Glos}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+		style="background-image: url(&quot;{Glos}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<center>
 		<h4>Join our Community</h4>

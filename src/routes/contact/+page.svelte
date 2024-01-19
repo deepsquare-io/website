@@ -19,7 +19,7 @@
 <section
 	data-theme="dark"
 	id="contact"
-	style="background-image: url({ContactBg}); background-size: cover; background-repeat: no-repeat;"
+	style="background-image: url(&quot;{ContactBg}&quot;); background-size: cover; background-repeat: no-repeat;"
 >
 	<header><h1>{title}</h1></header>
 
@@ -56,7 +56,7 @@
 <section id="newsletter" class="py-20 relative">
 	<div
 		class="absolute inset-0"
-		style="background-image: url({Glos}); background-position: 76% center; background-repeat: no-repeat; background-size: contain;"
+		style="background-image: url(&quot;{Glos}&quot;); background-position: 76% center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<header>
 		<h2>Sign up for our Newsletter</h2>

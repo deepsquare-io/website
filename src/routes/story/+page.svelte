@@ -141,7 +141,7 @@
 <section data-theme="dark" id="what-is-deepsquare" class="relative">
 	<div
 		class="absolute inset-0 -z-10"
-		style="background-image: url({WhatIsDeepSquareBg}); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
+		style="background-image: url(&quot;{WhatIsDeepSquareBg}&quot;); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
 	></div>
 	<main>
 		<div class="grid md:grid-cols-3">
@@ -164,11 +164,11 @@
 	<main data-theme="dark" class="m-0">
 		<article
 			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url({Pozadina3}); background-position: center right; background-size: cover;"
+			style="background-image: url(&quot;{Pozadina3}&quot;); background-position: center right; background-size: cover;"
 		>
 			<div
 				class="absolute inset-0"
-				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
 			></div>
 			<div class="md:col-span-3">
 				<h2>Governance</h2>
@@ -184,11 +184,11 @@
 		</article>
 		<article
 			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url({Pozadina1}); background-position: center right; background-size: cover;"
+			style="background-image: url(&quot;{Pozadina1}&quot;); background-position: center right; background-size: cover;"
 		>
 			<div
 				class="absolute inset-0"
-				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
 			></div>
 			<div class="md:col-span-3">
 				<h2>Our Mission</h2>
@@ -204,11 +204,11 @@
 		</article>
 		<article
 			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url({Pozadina2}); background-position: center right; background-size: cover;"
+			style="background-image: url(&quot;{Pozadina2}&quot;); background-position: center right; background-size: cover;"
 		>
 			<div
 				class="absolute inset-0"
-				style="background-image: url({Glos1}); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
 			></div>
 			<div class="md:col-span-3">
 				<h2>Vision</h2>
@@ -286,7 +286,7 @@
 <section id="reach-out" class="relative mini-section">
 	<div
 		class="absolute inset-0"
-		style="background-image: url({Glos4}); background-position: center center; background-repeat: no-repeat; background-size: contain;"
+		style="background-image: url(&quot;{Glos4}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<main>
 		<center>
