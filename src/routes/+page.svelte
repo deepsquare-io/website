@@ -238,17 +238,39 @@
 	</main>
 </section>
 
-<section id="partners" class="m-0 bg-section-a">
+<section id="demo" class="bg-section-a">
+	<header>
+		<center>
+			<h2>Demo</h2>
+			<p>The live demo of the DeepSquare platform.</p>
+		</center>
+
+		<main>
+			<center></center>
+		</main>
+	</header>
+
+	<main>
+		<center>TODO</center>
+	</main>
+</section>
+
+<section id="partners" class="m-0">
+	<header>
+		<center>
+			<h2>Partners</h2>
+		</center>
+	</header>
 	<main>
 		<center>
 			<section id="builders">
-				<h2>Builders</h2>
+				<h3>Builders</h3>
 				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
 					{#each builders as builder}
-						<div style="max-width: 512px">
+						<div>
 							<main>
 								<div
-									style="min-height: 172px; max-height: 100px;"
+									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={builder.href}>
@@ -269,13 +291,13 @@
 				</div>
 			</section>
 			<section id="incubators-accelerators">
-				<h2>Incubators &amp; Accelerators</h2>
-				<div class="grid sm:grid-cols-2 justify-items-center content-stretch">
+				<h3>Incubators &amp; Accelerators</h3>
+				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
 					{#each incubatorsAndAccelerators as incubator}
-						<div style="max-width: 512px">
+						<div>
 							<main>
 								<div
-									style="min-height: 172px; max-height: 100px;"
+									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={incubator.href}>
@@ -290,13 +312,13 @@
 				</div>
 			</section>
 			<section id="technology-partners">
-				<h2>Technology Partners</h2>
-				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center content-stretch">
+				<h3>Technology Partners</h3>
+				<div class="grid justify-items-center content-stretch">
 					{#each technologyPartners as partner}
-						<div style="max-width: 512px">
+						<div>
 							<main>
 								<div
-									style="min-height: 172px; max-height: 100px;"
+									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={partner.href}>
@@ -311,13 +333,13 @@
 				</div>
 			</section>
 			<section id="organisations-associations">
-				<h2>Organizations and Associations</h2>
-				<div class="grid sm:grid-cols-2 justify-items-center content-stretch">
+				<h3>Organizations and Associations</h3>
+				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
 					{#each organizationsAndAssociations as organizationOrAssociation}
-						<div style="max-width: 512px">
+						<div>
 							<main>
 								<div
-									style="min-height: 172px; max-height: 100px;"
+									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
 									<a href={organizationOrAssociation.href}>
