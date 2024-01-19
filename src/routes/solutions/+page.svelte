@@ -11,7 +11,6 @@
 	import MetaScheduler from '$lib/assets/media/metascheduler.drawio.svg';
 
 	import CompiledJob from '$lib/assets/media/compiled-job.svg';
-	import Gears from '$lib/assets/media/gears-solid.svg';
 	import Job from '$lib/assets/media/job.svg';
 
 	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
@@ -177,20 +176,6 @@
 			</div>
 			<center>
 				<div class="flex items-center content-center">
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
-						<span>30 lines</span>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
-						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
-						<img class="drop-shadow-a rounded-lg" src={Gears} alt="Compiler" />
-						<span>Compiler</span>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1.5s both`}>
-						<span style="font-size: 64px" class="material-symbols-outlined"> arrow_right_alt </span>
-					</AnimatedInView>
 					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2s both`}>
 						<img
 							class="drop-shadow-a rounded-lg"
@@ -198,7 +183,11 @@
 							src={CompiledJob}
 							alt="Compiled Job"
 						/>
-						<span>Compiled script: &gt;200 Lines!</span>
+						<span>Before with SLURM</span>
+					</AnimatedInView>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
+						<span>After with DeepSquare</span>
 					</AnimatedInView>
 				</div>
 			</center>

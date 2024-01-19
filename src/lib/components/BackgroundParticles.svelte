@@ -39,7 +39,7 @@
 					speed: 0.1
 				},
 				number: {
-					value: (window.innerHeight * window.innerWidth) / 10000
+					value: 200
 				},
 				effect: {
 					close: true,

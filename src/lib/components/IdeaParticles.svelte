@@ -39,7 +39,7 @@
 					distance: 10
 				},
 				number: {
-					value: (window.innerHeight * window.innerWidth) / 7000
+					value: 200
 				},
 				effect: {
 					close: false,

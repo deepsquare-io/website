@@ -25,10 +25,7 @@
 					distance: 100,
 					enable: true,
 					opacity: 1,
-					width: 1,
-					triangles: {
-						enable: true
-					}
+					width: 1
 				},
 				size: {
 					value: {
@@ -42,7 +39,7 @@
 					distance: 10
 				},
 				number: {
-					value: (window.innerHeight * window.innerWidth) / 10000
+					value: 200
 				},
 				effect: {
 					close: false,
