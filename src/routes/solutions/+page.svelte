@@ -215,7 +215,7 @@
 			</AnimatedInView>
 			<center>
 				<div class="flex items-center content-center">
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" src={MetaScheduler} alt="MetaScheduler" />
 					</AnimatedInView>
 				</div>
