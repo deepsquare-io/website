@@ -2,7 +2,6 @@
 	import { base } from '$app/paths';
 	import { navigating } from '$app/stores';
 	import DeepSquareLogo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
-	import DarkThemeButton from '$lib/components/DarkThemeButton.svelte';
 	import { quintInOut } from 'svelte/easing';
 	import { fade, slide } from 'svelte/transition';
 
@@ -33,6 +32,7 @@
 		href?: string;
 		children?: Route[];
 		icon?: string;
+		isButton?: boolean;
 	};
 
 	const routes: Route[] = [
@@ -59,6 +59,11 @@
 		{
 			name: 'Blog &#129133;',
 			href: 'https://medium.com/@DeepSquare.io'
+		},
+		{
+			name: 'Get Started',
+			href: 'https://docs.deepsquare.run/workflow/overview',
+			isButton: true
 		},
 		{
 			name: 'GitHub',
@@ -89,15 +94,17 @@
 				: 'bg-nav-scrolled shadow-lg'}"
 		>
 			<ul>
-				<li>
+				<li class="lg:hidden">
 					<a href={base + '/'}
 						><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
 					>
 				</li>
 			</ul>
-			<ul class="hidden md:flex">
+			<ul class="hidden lg:flex">
 				<li>
-					<a role="button" href="https://docs.deepsquare.run/workflow/overview">Get Started</a>
+					<a href={base + '/'}
+						><img height="100" width="200" src={DeepSquareLogo} alt="DeepSquare Logo" /></a
+					>
 				</li>
 				{#each routes as route}
 					{#if route.href}
@@ -105,7 +112,9 @@
 							{#if route.icon}
 								<a href={route.href}>{@html route.icon}</a>
 							{:else}
-								<a href={route.href}>{@html route.name}</a>
+								<a role={route.isButton ? 'button' : undefined} href={route.href}
+									>{@html route.name}</a
+								>
 							{/if}
 						</li>
 					{:else if route.children}
@@ -120,12 +129,13 @@
 						</li>
 					{/if}
 				{/each}
-				<li class="flex justify-end">
+				<!-- <li class="flex justify-end">
 					<DarkThemeButton />
-				</li>
+				</li> -->
 			</ul>
+			<ul></ul>
 
-			<ul class="md:hidden">
+			<ul class="lg:hidden">
 				<li>
 					<!-- svelte-ignore a11y-invalid-attribute -->
 					<a href="#" on:click={toggle}>
@@ -154,7 +164,7 @@
 		<div
 			in:fade={{ duration: inDuration }}
 			out:fade={{ delay: outDuration, duration: outDuration }}
-			class="md:hidden fixed inset-0 z-50 relative"
+			class="lg:hidden fixed inset-0 z-50 relative"
 		>
 			<!-- Fading screen -->
 			<div class="fixed bg-black inset-0 opacity-75 h-screen w-screen"></div>
@@ -203,7 +213,9 @@
 									{#each routes as route}
 										<li class="flex justify-end">
 											{#if route.href}
-												<a href={route.href}>{@html route.name} {@html route.icon ?? ''}</a>
+												<a role={route.isButton ? 'button' : undefined} href={route.href}
+													>{@html route.name} {@html route.icon ?? ''}</a
+												>
 											{:else if route.children}
 												<details>
 													<summary>{route.name}</summary>
@@ -217,9 +229,9 @@
 										</li>
 									{/each}
 
-									<li class="flex justify-end">
+									<!-- <li class="flex justify-end">
 										<DarkThemeButton />
-									</li>
+									</li> -->
 								</ul>
 							</nav>
 						</aside>

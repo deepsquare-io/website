@@ -20,6 +20,7 @@
 	import EcoCloud from '$lib/assets/media/EcoCloud.png';
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
 
+	import AnimatedInView from '$components/AnimatedInView.svelte';
 	import ContainerIcon from '$lib/assets/media/container-registry-svgrepo-com.svg';
 	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
 	import YAMLIcon from '$lib/assets/media/yaml-file-icon.svg';
@@ -159,13 +160,15 @@
 <section id="presentation" class="min-h-screen bg-section-a">
 	<header>
 		<center>
-			<h2>Accelerate Your Projects and Scale on HPC with Ease and Trust</h2>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<h2>Accelerate Your Projects and Scale on HPC with Ease and Trust</h2>
+			</AnimatedInView>
 		</center>
 	</header>
 
 	<main>
 		<div class="grid md:grid-cols-3 gap-4 justify-items-center">
-			<div>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
 				<div class="mb-2">
 					<img
 						height="64"
@@ -181,8 +184,8 @@
 					presenting a user-friendly standard — encapsulated within a concise, straightforward YAML
 					format instead of a busy shell script.
 				</p>
-			</div>
-			<div>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out 0.5s both`}>
 				<div class="mb-2">
 					<img
 						style="max-height: 64px; max-width: 64px;"
@@ -198,8 +201,8 @@
 					widespread accessibility to low-level optimization, parallelization, precise resource
 					scheduling, and hardware accelerators within a decentralized infrastructure.
 				</p>
-			</div>
-			<div>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out 1s both`}>
 				<div class="mb-2">
 					<img
 						style="max-height: 64px; max-width: 64px;"
@@ -215,7 +218,7 @@
 					access for all users, irrespective of their status or skills, guaranteeing that every
 					demand is met on the decentralized infrastructure.
 				</p>
-			</div>
+			</AnimatedInView>
 		</div>
 	</main>
 </section>
@@ -223,13 +226,19 @@
 <section id="applications">
 	<header>
 		<center>
-			<h2>For AI, Rendering, Simulations...</h2>
-			<p>
-				DeepSquare supports a wide range of computing needs. From GPU-intensive applications to
-				parallelized workflows, DeepSquare is perfect to speed up your projects. We provide examples
-				that you can test and deploy in one click.
-			</p>
-			<p>Try them out!</p>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<h2>For AI, Rendering, Simulations...</h2>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<p>
+					DeepSquare supports a wide range of computing needs. From GPU-intensive applications to
+					parallelized workflows, DeepSquare is perfect to speed up your projects. We provide
+					examples that you can test and deploy in one click.
+				</p>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<p>Try them out!</p>
+			</AnimatedInView>
 		</center>
 	</header>
 
@@ -241,8 +250,12 @@
 <section id="demo" class="bg-section-a">
 	<header>
 		<center>
-			<h2>Demo</h2>
-			<p>The live demo of the DeepSquare platform.</p>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<h2>Demo</h2>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<p>The live demo of the DeepSquare platform.</p>
+			</AnimatedInView>
 		</center>
 
 		<main>
@@ -258,16 +271,20 @@
 <section id="partners" class="m-0">
 	<header>
 		<center>
-			<h2>Partners</h2>
+			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+				<h2>Partners</h2>
+			</AnimatedInView>
 		</center>
 	</header>
 	<main>
 		<center>
 			<section id="builders">
-				<h3>Builders</h3>
+				<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+					<h3>Builders</h3>
+				</AnimatedInView>
 				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-					{#each builders as builder}
-						<div>
+					{#each builders as builder, index}
+						<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 2}s both`}>
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
@@ -286,15 +303,17 @@
 								<!-- <h4>{builder.name}</h4> -->
 								<p>{builder.description}</p>
 							</main>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</section>
 			<section id="incubators-accelerators">
-				<h3>Incubators &amp; Accelerators</h3>
+				<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+					<h3>Incubators &amp; Accelerators</h3>
+				</AnimatedInView>
 				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
-					{#each incubatorsAndAccelerators as incubator}
-						<div>
+					{#each incubatorsAndAccelerators as incubator, index}
+						<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 2}s both`}>
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
@@ -307,15 +326,17 @@
 								<!-- <h4>{incubator.name}</h4> -->
 								<p>{incubator.description}</p>
 							</main>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</section>
 			<section id="technology-partners">
-				<h3>Technology Partners</h3>
+				<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+					<h3>Technology Partners</h3>
+				</AnimatedInView>
 				<div class="grid justify-items-center content-stretch">
-					{#each technologyPartners as partner}
-						<div>
+					{#each technologyPartners as partner, index}
+						<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 2}s both`}>
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
@@ -328,15 +349,17 @@
 								<!-- <h4>{partner.name}</h4> -->
 								<p>{partner.description}</p>
 							</main>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</section>
 			<section id="organisations-associations">
-				<h3>Organizations and Associations</h3>
+				<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
+					<h3>Organizations and Associations</h3>
+				</AnimatedInView>
 				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
-					{#each organizationsAndAssociations as organizationOrAssociation}
-						<div>
+					{#each organizationsAndAssociations as organizationOrAssociation, index}
+						<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 2}s both`}>
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
@@ -353,7 +376,7 @@
 								<!-- <h4>{organizationOrAssociation.name}</h4> -->
 								<p>{organizationOrAssociation.description}</p>
 							</main>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</section>
@@ -368,5 +391,19 @@
 
 	section h2 {
 		font-size: 2.5rem;
+	}
+
+	@keyframes -global-from-bottom {
+		0% {
+			transform: translateY(100vh);
+			opacity: 0;
+		}
+		50% {
+			opacity: 0;
+			transform: translateY(20vh);
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 </style>
