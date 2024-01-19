@@ -220,9 +220,9 @@
 				</div>
 				<h3>Transparent, Fair, Accessible to everyone</h3>
 				<p>
-					Through its advanced scheduling system, DeepSquare ensures transparent, fair and equitable
-					access for all users, irrespective of their status or skills, guaranteeing that every
-					demand is met on the decentralized infrastructure.
+					Through its advanced scheduling system deployed on Blockchain, DeepSquare ensures
+					transparent, fair and equitable access for all users, irrespective of their status or
+					skills, guaranteeing that every demand is met on the decentralized infrastructure.
 				</p>
 			</AnimatedInView>
 		</div>
@@ -401,12 +401,11 @@
 
 	@keyframes -global-from-bottom {
 		0% {
-			transform: translateY(100vh);
 			opacity: 0;
+			transform: translateY(10vh);
 		}
 		50% {
 			opacity: 0;
-			transform: translateY(20vh);
 		}
 		100% {
 			opacity: 1;
