@@ -163,36 +163,40 @@
 	</header>
 
 	<main>
-		<section class="grid md:grid-cols-2 gap-4 justify-items-center content-center">
+		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
 			<div>
 				<h2>Fully featured, safe and simplified.</h2>
 				<p class="mr-16">
-					DeepSquare uses YAML for defining a job's workflow, which is subsequently translated into
-					a sophisticated script compatible with job schedulers. This approach facilitates the
-					creation of intricate Directed Acyclic Graphs (DAGs) and workflows in a straightforward
-					and comprehensible manner, ensuring not only simplicity and clarity but also promoting
-					repeatability and safety within a consistent framework.
+					DeepSquare uses YAML for defining a job's workflow.
+
+					<br /><br />
+
+					DeepSquare is able to compile and validate the YAML workflow into a sophisticated script
+					compatible with job schedulers. This approach facilitates the creation of intricate
+					Directed Acyclic Graphs (DAGs) and workflows in a straightforward and comprehensible
+					manner, ensuring not only simplicity and clarity but also promoting repeatability and
+					safety within a consistent framework.
+
+					<br /><br />
+
+					Moreover, with the YAML language server, users can benefit from the auto-completion for a
+					better IDE experience.
 				</p>
 			</div>
 			<center>
-				<div class="flex items-center content-center">
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 2s both`}>
-						<img
-							class="drop-shadow-a rounded-lg"
-							style="max-width: 45vh; mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 95%);"
-							src={CompiledJob}
-							alt="Compiled Job"
-						/>
-						<span>Before with SLURM</span>
+				<div class="flex space-x-4 items-center content-center">
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+						<img class="drop-shadow-a rounded-lg" src={CompiledJob} alt="Compiled Job" />
+						<div><span>Before with SLURM</span></div>
 					</AnimatedInView>
 					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
-						<span>After with DeepSquare</span>
+						<div><span>After with DeepSquare</span></div>
 					</AnimatedInView>
 				</div>
 			</center>
 		</section>
-		<section class="grid md:grid-cols-2 gap-4 justify-items-center content-center">
+		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
 			<div>
 				<h2>Get your fair share of compute.</h2>
 				<p>
@@ -209,7 +213,7 @@
 				</div>
 			</center>
 		</section>
-		<section class="grid md:grid-cols-2 gap-4">
+		<section class="grid lg:grid-cols-2 gap-4">
 			<div>
 				<h2>Mix HPC techniques with the stability of containers.</h2>
 				<p>
@@ -224,7 +228,7 @@
 				</AnimatedInView>
 			</center>
 		</section>
-		<section class="grid md:grid-cols-2 gap-4">
+		<section class="grid lg:grid-cols-2 gap-4">
 			<div>
 				<h2>Compatible with interactive Workflows.</h2>
 				<p>
@@ -259,7 +263,7 @@
 				</AnimatedInView>
 			</div>
 		</section>
-		<section class="grid md:grid-cols-2 gap-4">
+		<section class="grid lg:grid-cols-2 gap-4">
 			<div>
 				<h2>Billed per use.</h2>
 				<p>
