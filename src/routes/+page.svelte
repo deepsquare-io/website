@@ -134,24 +134,30 @@
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
-				<h1 class="text-4xl md:text-6xl">Decentralized compute power in one click</h1>
-				<p class="text-xl">
-					The first and only <b>sustainable</b> <b>professional</b> decentralized
-					<b>High Performance Computing</b> Ecosystem.
-				</p>
+				<AnimatedInView once={true} animation={`from-bottom 0.5s ease-out both`}>
+					<h1 class="text-4xl md:text-6xl">Decentralized compute power in one click</h1>
+				</AnimatedInView>
+				<AnimatedInView once={true} animation={`from-bottom 0.5s ease-out 0.5s both`}>
+					<p class="text-xl">
+						The first and only <b>sustainable</b> <b>professional</b> decentralized
+						<b>High Performance Computing</b> Ecosystem.
+					</p>
+				</AnimatedInView>
 
-				<a
-					role="button"
-					href="https://docs.deepsquare.run/workflow/overview"
-					style="text-transform: uppercase"
-					class="my-2">Get started</a
-				>
-				<a
-					role="button"
-					href="https://discord.com/invite/3PQkJGvUGB"
-					style="text-transform: uppercase"
-					class="outline my-2"><span>Join our Discord</span></a
-				>
+				<AnimatedInView once={true} animation={`from-bottom 0.5s ease-out 1s both`}>
+					<a
+						role="button"
+						href="https://docs.deepsquare.run/workflow/overview"
+						style="text-transform: uppercase"
+						class="my-2">Get started</a
+					>
+					<a
+						role="button"
+						href="https://discord.com/invite/3PQkJGvUGB"
+						style="text-transform: uppercase"
+						class="outline my-2"><span>Join our Discord</span></a
+					>
+				</AnimatedInView>
 			</div>
 		</div>
 	</main>

@@ -43,7 +43,7 @@
 				},
 				effect: {
 					close: false,
-					fill: true,
+					fill: false,
 					options: {}
 				}
 			},

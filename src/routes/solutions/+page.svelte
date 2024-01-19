@@ -43,12 +43,16 @@
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
-				<h1 class="text-4xl md:text-6xl">Accelerate your Innovation</h1>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<h1 class="text-4xl md:text-6xl">Accelerate your Innovation</h1>
+				</AnimatedInView>
 
-				<p>
-					Speed up your projects with ease on <b>DeepSquare</b> – the platform crafted by builders, for
-					builders.
-				</p>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
+					<p>
+						Speed up your projects with ease on <b>DeepSquare</b> – the platform crafted by builders,
+						for builders.
+					</p>
+				</AnimatedInView>
 			</div>
 		</div>
 	</main>
@@ -56,7 +60,9 @@
 
 <section id="technology">
 	<header>
-		<center><h1>The Foundation Pillars of DeepSquare</h1></center>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+			<center><h1>The Foundation Pillars of DeepSquare</h1></center>
+		</AnimatedInView>
 	</header>
 	<main>
 		<div id="stack" class="grid lg:grid-cols-3 gap-4 justify-items-center place-items-stretch">
@@ -156,15 +162,17 @@
 
 <section id="features" class="bg-section-a">
 	<header>
-		<center
-			><small>Features</small>
-			<h1 class="text-5xl">The decentralized platform that step up your workflow.</h1></center
-		>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+			<center
+				><small>Features</small>
+				<h1 class="text-5xl">The decentralized platform that step up your workflow.</h1></center
+			>
+		</AnimatedInView>
 	</header>
 
 	<main>
 		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
-			<div>
+			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Fully featured, safe and simplified.</h2>
 				<p class="mr-16">
 					DeepSquare uses YAML for defining a job's workflow.
@@ -182,14 +190,14 @@
 					Moreover, with the YAML language server, users can benefit from the auto-completion for a
 					better IDE experience.
 				</p>
-			</div>
+			</AnimatedInView>
 			<center>
 				<div class="flex space-x-4 items-center content-center">
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" src={CompiledJob} alt="Compiled Job" />
 						<div><span>Before with SLURM</span></div>
 					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
 						<div><span>After with DeepSquare</span></div>
 					</AnimatedInView>
@@ -197,14 +205,14 @@
 			</center>
 		</section>
 		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
-			<div>
+			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Get your fair share of compute.</h2>
 				<p>
 					DeepSquare deploys its Meta-Scheduler on the Blockchain for transparency, and employs
 					scheduling algorithms that consider in various factors to optimize compute allocation for
 					equitable distribution and fairness.
 				</p>
-			</div>
+			</AnimatedInView>
 			<center>
 				<div class="flex items-center content-center">
 					<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
@@ -214,38 +222,38 @@
 			</center>
 		</section>
 		<section class="grid lg:grid-cols-2 gap-4">
-			<div>
+			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Mix HPC techniques with the stability of containers.</h2>
 				<p>
 					DeepSquare is able to run any OCI containers with seamless support parallization
 					technologies (MPI, NCCL, ...), and hardware accelerators such as GPUs, Infiniband, and
 					more.
 				</p>
-			</div>
+			</AnimatedInView>
 			<center>
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 					<img class="drop-shadow-a rounded-lg" src={StableDiffusion} alt="Stable Diffusion" />
 				</AnimatedInView>
 			</center>
 		</section>
 		<section class="grid lg:grid-cols-2 gap-4">
-			<div>
+			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Compatible with interactive Workflows.</h2>
 				<p>
 					DeepSquare jobs have external network access, enabling users to execute interactive tasks
 					without compromising infrastructure provider security, thanks to the implementation of a
 					zero-trust infrastructure and strict firewall requirements.
 				</p>
-			</div>
+			</AnimatedInView>
 			<div class="relative" style="height: 50vh;">
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 					<img
 						class="absolute drop-shadow-a top-0 left-0 rounded-lg"
 						src={CS2Login}
 						alt="Interative mode"
 					/>
 				</AnimatedInView>
-				<AnimatedInView animation={`from-bottom-slow 0.5s ease-out 2s both`}>
+				<AnimatedInView animation={`from-right-slow 0.5s ease-out 2s both`}>
 					<BrowserWindow
 						class="absolute drop-shadow-a left-[0px] sm:left-[50px] top-[50px] rounded-lg"
 						style="overflow: hidden;"
@@ -264,23 +272,23 @@
 			</div>
 		</section>
 		<section class="grid lg:grid-cols-2 gap-4">
-			<div>
+			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Billed per use.</h2>
 				<p>
 					DeepSquare charges users based on the actual usage of compute resources down to the
 					minute, and not periodically. This allows users to save on costs and only pay for what
 					they use.
 				</p>
-			</div>
+			</AnimatedInView>
 			<div class="relative" style="height: 226px; overflow: hidden;">
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 					<img
 						src={Price1}
 						class="absolute drop-shadow-a top-0 right-0 left-0 rounded-lg"
 						alt="Price duration"
 					/>
 				</AnimatedInView>
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 1s both`}>
+				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out 1s both`}>
 					<img
 						src={Price2}
 						class="absolute drop-shadow-a top-[112px] left-[0px] sm:left-[122px] rounded-lg"
@@ -294,40 +302,46 @@
 
 <section id="sustainability">
 	<header>
-		<center><h1>Sustainable Infrastructure</h1> </center>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+			<center><h1>Sustainable Infrastructure</h1> </center>
+		</AnimatedInView>
 	</header>
 
 	<main>
-		<div class="grid md:grid-cols-4 gap-4 justify-items-center content-center">
-			<div class="md:col-span-3">
-				<p>
-					DeepSquare's sustainability strategy revolves around <b
-						>providing a readily deployable, eco-friendly configuration</b
-					> that minimizes the environmental footprint of compute resources. By integrating cutting-edge
-					technologies and prioritizing renewable energy sources, DeepSquare aims to reduce electrical
-					consumption while making high-performance processing accessible to small businesses, researchers,
-					and academic institutions.
-				</p>
-				<p>
-					We advocate <b>Immersion Cooling</b>, a practice of placing electronic equipment into a
-					thermally conductive, and electronically resistive liquid that is 1,200 times more
-					efficient than air at capturing heat. The heat captured through immersion cooling can be
-					exchanged in a simple, but efficient liquid-to-liquid heat exchanger. The heat then can
-					directly be reused for heating purposes or industrial processes.
-				</p>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+			<div class="grid md:grid-cols-4 gap-4 justify-items-center content-center">
+				<div class="md:col-span-3">
+					<p>
+						DeepSquare's sustainability strategy revolves around <b
+							>providing a readily deployable, eco-friendly configuration</b
+						> that minimizes the environmental footprint of compute resources. By integrating cutting-edge
+						technologies and prioritizing renewable energy sources, DeepSquare aims to reduce electrical
+						consumption while making high-performance processing accessible to small businesses, researchers,
+						and academic institutions.
+					</p>
+					<p>
+						We advocate <b>Immersion Cooling</b>, a practice of placing electronic equipment into a
+						thermally conductive, and electronically resistive liquid that is 1,200 times more
+						efficient than air at capturing heat. The heat captured through immersion cooling can be
+						exchanged in a simple, but efficient liquid-to-liquid heat exchanger. The heat then can
+						directly be reused for heating purposes or industrial processes.
+					</p>
+				</div>
+				<div>
+					<img src={ImmersionCooling} alt="Immersion Cooling" />
+				</div>
 			</div>
-			<div>
-				<img src={ImmersionCooling} alt="Immersion Cooling" />
-			</div>
-		</div>
+		</AnimatedInView>
 		<center>
-			<a
-				role="button"
-				class="outline mt-4"
-				style="text-transform: uppercase;"
-				href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
-				><span>Learn more</span></a
-			>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+				<a
+					role="button"
+					class="outline mt-4"
+					style="text-transform: uppercase;"
+					href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
+					><span>Learn more</span></a
+				>
+			</AnimatedInView>
 		</center>
 	</main>
 </section>
@@ -376,6 +390,32 @@
 		0% {
 			opacity: 0;
 			transform: translateY(10vh);
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes -global-from-left-slow {
+		0% {
+			opacity: 0;
+			transform: translateX(-10vw);
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes -global-from-right-slow {
+		0% {
+			opacity: 0;
+			transform: translateX(10vw);
 		}
 		50% {
 			opacity: 0;
