@@ -225,7 +225,8 @@
 				<h2>Mix HPC techniques with the stability of containers.</h2>
 				<p>
 					DeepSquare is able to run any OCI containers with seamless support parallization
-					technologies and hardware accelerators such as GPUs, Infiniband, and more.
+					technologies (MPI, NCCL, ...), and hardware accelerators such as GPUs, Infiniband, and
+					more.
 				</p>
 			</div>
 			<center>
