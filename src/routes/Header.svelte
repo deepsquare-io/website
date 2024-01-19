@@ -243,3 +243,9 @@
 </header>
 
 <svelte:window bind:scrollY />
+
+<style>
+	header {
+		z-index: 50;
+	}
+</style>

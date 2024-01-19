@@ -209,6 +209,7 @@ nav details[role=list] summary, nav li[role=list] a {
   align-self: center;
 }
 
+// TODO: view transition disable for heade
 header nav a, header nav a[role="button"], header nav summary[role="link"] {
   color: #fff;
   font-weight: 600;
@@ -324,4 +325,13 @@ details > summary {
 
 [data-theme='dark'] .drop-shadow-a {
   filter: drop-shadow(0 4px 3px rgba(255, 255, 255, 0.212)) drop-shadow(0 2px 2px rgba(255, 255, 255, 0.212));
+}
+
+/** ViewTransitions */
+@media (prefers-reduced-motion) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
 }

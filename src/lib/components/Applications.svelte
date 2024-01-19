@@ -74,19 +74,3 @@
 		{/each}
 	</div>
 </div>
-
-<style>
-	@keyframes -global-from-bottom {
-		0% {
-			transform: translateY(100vh);
-			opacity: 0;
-		}
-		50% {
-			opacity: 0;
-			transform: translateY(20vh);
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-</style>
