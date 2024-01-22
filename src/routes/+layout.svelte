@@ -5,8 +5,6 @@
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 
-	const year = new Date().getFullYear();
-
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
@@ -21,7 +19,7 @@
 
 <Header />
 
-<main in:fade={{ duration: 100, delay: 200 }} out:fade={{ duration: 100 }}>
+<main in:fade={{ duration: 50, delay: 50 }} out:fade={{ duration: 50 }}>
 	<slot />
 </main>
 

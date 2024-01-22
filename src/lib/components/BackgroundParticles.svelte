@@ -19,7 +19,7 @@
 					type: 'circle'
 				},
 				color: {
-					value: ['#FFFFFF']
+					value: ['#C945FF']
 				},
 				links: {
 					color: '#C945FF',
@@ -39,7 +39,10 @@
 					speed: 0.1
 				},
 				number: {
-					value: 200
+					value:
+						(window.innerHeight * window.innerWidth) / 10000 > 200
+							? 200
+							: (window.innerHeight * window.innerWidth) / 10000
 				},
 				effect: {
 					close: true,
