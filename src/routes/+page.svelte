@@ -296,7 +296,7 @@
 					{#each builders as builder, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 4}s both`}
 						>
 							<main>
 								<div
@@ -328,7 +328,7 @@
 					{#each incubatorsAndAccelerators as incubator, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 4}s both`}
 						>
 							<main>
 								<div
@@ -354,7 +354,7 @@
 					{#each technologyPartners as partner, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 4}s both`}
 						>
 							<main>
 								<div
@@ -380,7 +380,7 @@
 					{#each organizationsAndAssociations as organizationOrAssociation, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 4}s both`}
 						>
 							<main>
 								<div
