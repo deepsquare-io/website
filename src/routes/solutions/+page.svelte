@@ -54,7 +54,7 @@
 				</AnimatedInView>
 
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
-					<p>
+					<p class="text-xl">
 						Speed up your projects with ease on <b>DeepSquare</b> – the platform crafted by builders,
 						for builders.
 					</p>
