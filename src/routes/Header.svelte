@@ -45,25 +45,24 @@
 			href: base + '/solutions'
 		},
 		{
-			name: 'Our Story',
+			name: 'About Us',
 			href: base + '/story'
 		},
-		{
-			name: 'Contact',
-			href: base + '/contact'
-		},
+		// {
+		// 	name: 'Contact',
+		// 	href: 'https://share-eu1.hsforms.com/1uKsDKrlhRnGk3UeUEz7DLgev6gi'
+		// },
 		// {
 		// 	name: 'FAQ',
 		// 	href: base + '/faqs'
 		// },
 		{
-			name: 'Blog &#129133;',
+			name: 'Blog <span class="material-symbols-outlined">arrow_outward</span>',
 			href: 'https://medium.com/@DeepSquare.io'
 		},
 		{
-			name: 'Get Started',
-			href: 'https://docs.deepsquare.run/workflow/overview',
-			isButton: true
+			name: 'Get Started <span class="material-symbols-outlined">arrow_outward</span>',
+			href: 'https://docs.deepsquare.run/workflow/overview'
 		},
 		{
 			name: 'GitHub',

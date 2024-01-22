@@ -6,6 +6,33 @@
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg.svg';
 	import ContactBg from '$lib/assets/media/fv-min.jpg';
 	import Glos from '$lib/assets/media/glos4-tamniji-4-min.png';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		await hbspt.forms.create({
+			region: 'eu1',
+			portalId: '24969330',
+			formId: 'b8ab032a-b961-4671-a4dd-4794133ec32e',
+			target: '#contact-form'
+		});
+
+		await hbspt.forms.create({
+			region: 'eu1',
+			portalId: '24969330',
+			formId: 'f00e3666-1e87-43af-b1f7-d303e09f24c8',
+			target: '#newsletter-form'
+		});
+
+		const contactIFrame: HTMLElement = document
+			.getElementById('contact-form')!
+			.querySelector('iframe')!;
+		contactIFrame.style.backgroundColor = 'transparent';
+
+		const newsletterIFrame: any = document
+			.getElementById('newsletter-form')!
+			.querySelector('iframe')!;
+		newsletterIFrame.style.backgroundColor = 'transparent';
+	});
 </script>
 
 <svelte:head>
@@ -14,6 +41,11 @@
 		name="description"
 		content="Contact DeepSquare for more information about our products and services."
 	/>
+	<script
+		charset="utf-8"
+		type="text/javascript"
+		src="//js-eu1.hsforms.net/forms/embed/v2.js"
+	></script>
 </svelte:head>
 
 <section
@@ -28,7 +60,7 @@
 			<h3 style="font-weight: 400;">DeepSquare</h3>
 			<p>Gotthardstrasse 26<br />6300 Zug<br />Switzerland</p>
 		</div>
-		[TODO: Hubspot Form]
+		<div id="contact-form"></div>
 	</main>
 
 	<footer>
@@ -55,7 +87,7 @@
 
 <section id="newsletter" class="py-20 relative">
 	<div
-		class="absolute inset-0"
+		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Glos}&quot;); background-position: 76% center; background-repeat: no-repeat; background-size: contain;"
 	></div>
 	<header>
@@ -67,5 +99,5 @@
 		</small>
 	</header>
 
-	<main>[TODO: Hubspot Form]</main>
+	<main><div id="newsletter-form"></div></main>
 </section>

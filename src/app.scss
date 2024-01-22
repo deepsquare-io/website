@@ -45,9 +45,9 @@ $enable-grid: false;
     "Segoe UI Symbol", "Noto Color Emoji";
   --mono-img-filter: saturate(0%) brightness(0%) invert(100%);
   --border-radius: 0;
-  --background-color: hsl(250, 70%, 16%);
-  --card-sectionning-background-color: hsl(250, 70%, 26%);
-  --card-background-color: hsl(250, 70%, 20%);
+  --background-color: #160c45;
+  --card-sectionning-background-color: #2b2567;
+  --card-background-color: #231c5b;
   --dropdown-background-color: hsla(252, 83%, 10%, 0.819);
   --dropdown-hover-background-color: #C247FF;
   --color: #fff;
@@ -334,4 +334,8 @@ details > summary {
 	::view-transition-new(*) {
 		animation: none !important;
 	}
+}
+
+#root > main > section:not(:first-child):not(.bg-section-a) {
+  background-color: var(--background-color);
 }

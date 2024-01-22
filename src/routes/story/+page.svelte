@@ -1,7 +1,6 @@
 <script lang="ts">
 	const title = 'About';
 
-	import Share from '$components/Share.svelte';
 	import Governance from '$lib/assets/media/community_icon-1.svg';
 	import Mission from '$lib/assets/media/Group-129.svg';
 	import Vision from '$lib/assets/media/icon1.svg';
@@ -25,13 +24,11 @@
 
 	import WhatIsDeepSquareBg from '$lib/assets/media/b5-min.png';
 	import Glos1 from '$lib/assets/media/glos1-15-min.png';
-	import Glos4 from '$lib/assets/media/glos4-tamniji-4-min.png';
 
 	import Pozadina1 from '$lib/assets/media/pozadina01.svg';
 	import Pozadina2 from '$lib/assets/media/pozadina02.svg';
 	import Pozadina3 from '$lib/assets/media/pozadina03.svg';
 
-	import { base } from '$app/paths';
 	import Portrait from '$lib/components/Portrait.svelte';
 
 	const coreTeam = [
@@ -150,11 +147,6 @@
 				<p class="text-xl">
 					A platform to seamlessly interconnect users with decentralized supercomputing resources.
 				</p>
-				<Share
-					title="DeepSquare"
-					text="DeepSquare is a pioneering technology company dedicated to making high-performance computing (HPC) accessible to everyone."
-					url="https://deepsquare.io"
-				/>
 			</div>
 		</div>
 	</main>
@@ -280,19 +272,5 @@
 				</div>
 			</main>
 		</section>
-	</main>
-</section>
-
-<section id="reach-out" class="relative mini-section">
-	<div
-		class="absolute inset-0"
-		style="background-image: url(&quot;{Glos4}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
-	></div>
-	<main>
-		<center>
-			<h2>Reach out to us</h2>
-
-			<a role="button" class="outline" href="{base}/contact"><span>Contact</span></a>
-		</center>
 	</main>
 </section>

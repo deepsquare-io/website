@@ -1,6 +1,8 @@
 <script lang="ts">
 	const title = 'DeepSquare';
 
+	import Background from '$lib/assets/media/Group-180-min.jpg';
+
 	import YData from '$lib/assets/media/YData.svg';
 	import Openfabric from '$lib/assets/media/openfabric-logo-black-1.png';
 	import SquareFactory from '$lib/assets/media/squarefactory-logo-neg.svg';
@@ -13,14 +15,13 @@
 	import Submer from '$lib/assets/media/Submer.svg';
 
 	import Applications from '$components/Applications.svelte';
-	import BackgroundParticles from '$components/BackgroundParticles.svelte';
-	import DeepSquareLogoParticles from '$components/DeepSquareLogoParticles.svelte';
 	import BlockchainGameAlliance from '$lib/assets/media/BGA.png';
 	import CryptoValleyAssociation from '$lib/assets/media/CVA.png';
 	import EcoCloud from '$lib/assets/media/EcoCloud.png';
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
 
 	import AnimatedInView from '$components/AnimatedInView.svelte';
+	import Parallax from '$components/Parallax.svelte';
 	import ContainerIcon from '$lib/assets/media/container-registry-svgrepo-com.svg';
 	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
 	import YAMLIcon from '$lib/assets/media/yaml-file-icon.svg';
@@ -125,12 +126,22 @@
 </svelte:head>
 
 <section data-theme="dark" id="introduction" class="relative">
+	<Parallax
+		factor={-0.5}
+		class="absolute inset-x-0 -z-10"
+		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
+	></Parallax>
 	<div
 		class="absolute inset-0 -z-10"
-		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(187,50,169,1) 100%);"
+		style="backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0);"
 	></div>
-	<BackgroundParticles class="absolute inset-0 -z-10" />
-	<DeepSquareLogoParticles class="absolute inset-0 -z-10" />
+	<!-- <div
+		class="absolute inset-0 -z-10"
+		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(187,50,169,1) 100%);"
+	></div> -->
+	<!-- <BackgroundParticles class="absolute inset-0 -z-10" />
+	<DeepSquareLogoParticles class="absolute inset-0 -z-10" /> -->
+
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
@@ -166,7 +177,7 @@
 <section id="presentation" class="min-h-screen bg-section-a">
 	<header>
 		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<h2>Accelerate Your Projects and Scale on HPC with Ease and Trust</h2>
 			</AnimatedInView>
 		</center>
@@ -174,7 +185,7 @@
 
 	<main>
 		<div class="grid md:grid-cols-3 gap-4 justify-items-center">
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<div class="mb-2">
 					<img
 						height="64"
@@ -191,7 +202,7 @@
 					format instead of a busy shell script.
 				</p>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out 0.5s both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.2s both`}>
 				<div class="mb-2">
 					<img
 						style="max-height: 64px; max-width: 64px;"
@@ -208,7 +219,7 @@
 					scheduling, and hardware accelerators within a decentralized infrastructure.
 				</p>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out 1s both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.4s both`}>
 				<div class="mb-2">
 					<img
 						style="max-height: 64px; max-width: 64px;"
@@ -232,17 +243,17 @@
 <section id="applications">
 	<header>
 		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<h2>For AI, Rendering, Simulations...</h2>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<p>
 					DeepSquare supports a wide range of computing needs. From GPU-intensive applications to
 					parallelized workflows, DeepSquare is perfect to speed up your projects. We provide
 					examples that you can test and deploy in one click.
 				</p>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<p>Try them out!</p>
 			</AnimatedInView>
 		</center>
@@ -253,13 +264,13 @@
 	</main>
 </section>
 
-<section id="demo" class="bg-section-a">
+<!-- <section id="demo" class="bg-section-a">
 	<header>
 		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<h2>Demo</h2>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<p>The live demo of the DeepSquare platform.</p>
 			</AnimatedInView>
 		</center>
@@ -272,12 +283,12 @@
 	<main>
 		<center>TODO</center>
 	</main>
-</section>
+</section> -->
 
-<section id="partners" class="m-0">
+<section id="partners" class="m-0 bg-section-a">
 	<header>
 		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<h2>Partners</h2>
 			</AnimatedInView>
 		</center>
@@ -285,14 +296,14 @@
 	<main>
 		<center>
 			<section id="builders">
-				<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h3>Builders</h3>
 				</AnimatedInView>
-				<div class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+				<div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
 					{#each builders as builder, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 1s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
 						>
 							<main>
 								<div
@@ -317,14 +328,14 @@
 				</div>
 			</section>
 			<section id="incubators-accelerators">
-				<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h3>Incubators &amp; Accelerators</h3>
 				</AnimatedInView>
-				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
+				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
 					{#each incubatorsAndAccelerators as incubator, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 1s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
 						>
 							<main>
 								<div
@@ -343,14 +354,14 @@
 				</div>
 			</section>
 			<section id="technology-partners">
-				<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h3>Technology Partners</h3>
 				</AnimatedInView>
-				<div class="grid justify-items-center content-stretch">
+				<div class="grid gap-4 justify-items-center content-stretch">
 					{#each technologyPartners as partner, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 1s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
 						>
 							<main>
 								<div
@@ -369,14 +380,14 @@
 				</div>
 			</section>
 			<section id="organisations-associations">
-				<AnimatedInView once={true} animation={`from-bottom-slow 1s ease-out both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h3>Organizations and Associations</h3>
 				</AnimatedInView>
-				<div class="grid sm:grid-cols-2 md:grid-cols-4 justify-items-center content-stretch">
+				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
 					{#each organizationsAndAssociations as organizationOrAssociation, index}
 						<AnimatedInView
 							once={true}
-							animation={`from-bottom-slow 1s ease-out ${index / 2}s both`}
+							animation={`from-bottom-slow 0.4s ease-out ${index / 2}s both`}
 						>
 							<main>
 								<div

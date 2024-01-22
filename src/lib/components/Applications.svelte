@@ -1,8 +1,8 @@
 <script lang="ts">
 	import AnimatedInView from '$components/AnimatedInView.svelte';
 	import DevApp from '$lib/assets/media/Circle-icons-dev.svg';
-	import Unity from '$lib/assets/media/U_Logo_Black_RGB.svg';
-	import Blender from '$lib/assets/media/blender_logo.svg';
+	import Unity from '$lib/assets/media/U_Logo_White_RGB.svg';
+	import Blender from '$lib/assets/media/blender_logo_no_socket_white.png';
 	import TextToImage from '$lib/assets/media/texttoimage.svg';
 	import Upscaling from '$lib/assets/media/upscale_icon.svg';
 	import Community from '$lib/assets/media/users-solid.svg';
@@ -67,7 +67,7 @@
 								alt={application.name}
 							/>
 						</div>
-						<p>{@html application.description}</p>
+						<p style="color: #FFF;">{@html application.description}</p>
 					</article>
 				</a>
 			</AnimatedInView>
