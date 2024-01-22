@@ -127,7 +127,7 @@
 
 <section data-theme="dark" id="introduction" class="relative">
 	<Parallax
-		factor={-0.5}
+		factor={-0.75}
 		class="absolute inset-x-0 -z-10"
 		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
 	></Parallax>

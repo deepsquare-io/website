@@ -177,6 +177,20 @@ $transition-len: 0.20s;
   --border-color: var(--primary-inverse);
 }
 
+// Buttons
+:is(button, input[type=submit], input[type=button], [role=button]), input[type=reset] {
+  --color: var(--primary-inverse);
+  --border-color: var(--primary-hover);
+  --background-color: var(--primary-hover);
+}
+
+// Hover
+:is(button, input[type=submit], input[type=button], [role=button]):is(:hover, :active, :focus), input[type=reset]:is(:hover, :active, :focus) {
+  --color: var(--primary-hover);
+  --border-color: var(--primary-inverse);
+  --background-color: var(--primary-inverse);
+}
+
 /** Footer */
 #root > footer p, #root > footer a {
   font-size: 14px;

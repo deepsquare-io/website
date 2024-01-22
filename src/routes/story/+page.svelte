@@ -29,6 +29,8 @@
 	import Pozadina2 from '$lib/assets/media/pozadina02.svg';
 	import Pozadina3 from '$lib/assets/media/pozadina03.svg';
 
+	import AnimatedInView from '$components/AnimatedInView.svelte';
+	import Parallax from '$components/Parallax.svelte';
 	import Portrait from '$lib/components/Portrait.svelte';
 
 	const coreTeam = [
@@ -136,17 +138,26 @@
 </svelte:head>
 
 <section data-theme="dark" id="what-is-deepsquare" class="relative">
-	<div
+	<Parallax
+		factor={-0.75}
 		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{WhatIsDeepSquareBg}&quot;); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
+	></Parallax>
+	<div
+		class="absolute inset-0 -z-10"
+		style="backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0);"
 	></div>
 	<main>
 		<div class="grid md:grid-cols-3">
 			<div class="md:col-span-2">
-				<h1 class="text-4xl md:text-6xl">What is DeepSquare?</h1>
-				<p class="text-xl">
-					A platform to seamlessly interconnect users with decentralized supercomputing resources.
-				</p>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+					<h1 class="text-4xl md:text-6xl">What is DeepSquare?</h1>
+				</AnimatedInView>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
+					<p class="text-xl">
+						A platform to seamlessly interconnect users with decentralized supercomputing resources.
+					</p>
+				</AnimatedInView>
 			</div>
 		</div>
 	</main>
@@ -154,65 +165,75 @@
 
 <section id="description" class="bg-section-a">
 	<main data-theme="dark" class="m-0">
-		<article
-			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url(&quot;{Pozadina3}&quot;); background-position: center right; background-size: cover;"
-		>
-			<div
-				class="absolute inset-0"
-				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
-			></div>
-			<div class="md:col-span-3">
-				<h2>Governance</h2>
-				<p>
-					The DeepSquare project is a community led project, meaning that the community actively
-					participates in streaming the decision making process with a system modelled on a
-					community-owned smart contract protocol.
-				</p>
-			</div>
-			<center>
-				<img src={Governance} alt="Governance" />
-			</center>
-		</article>
-		<article
-			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url(&quot;{Pozadina1}&quot;); background-position: center right; background-size: cover;"
-		>
-			<div
-				class="absolute inset-0"
-				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
-			></div>
-			<div class="md:col-span-3">
-				<h2>Our Mission</h2>
-				<p>
-					DeepSquare aims to support innovation in Europe and beyond and to offer a true alternative
-					to the hyperscalers by providing world-class decentralised, responsible, sustainable, and
-					managed High-Performance Computing (HPC) as an Ecosystem.
-				</p>
-			</div>
-			<center>
-				<img style="filter: saturate(0%) brightness(2) opacity(0.5);" src={Mission} alt="Mission" />
-			</center>
-		</article>
-		<article
-			class="grid md:grid-cols-4 justify-around place-items-center relative"
-			style="background-image: url(&quot;{Pozadina2}&quot;); background-position: center right; background-size: cover;"
-		>
-			<div
-				class="absolute inset-0"
-				style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
-			></div>
-			<div class="md:col-span-3">
-				<h2>Vision</h2>
-				<p>
-					Empowering the professional cloud with the DeepSquare decentralised interoperable
-					heterogeneous network in a sustainable and environmentally beneficial way.
-				</p>
-			</div>
-			<center>
-				<img src={Vision} alt="Vision" />
-			</center>
-		</article>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+			<article
+				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				style="background-image: url(&quot;{Pozadina3}&quot;); background-position: center right; background-size: cover;"
+			>
+				<div
+					class="absolute inset-0"
+					style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				></div>
+				<div class="md:col-span-3">
+					<h2>Governance</h2>
+					<p>
+						The DeepSquare project is a community led project, meaning that the community actively
+						participates in streaming the decision making process with a system modelled on a
+						community-owned smart contract protocol.
+					</p>
+				</div>
+				<center>
+					<img src={Governance} alt="Governance" />
+				</center>
+			</article>
+		</AnimatedInView>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+			<article
+				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				style="background-image: url(&quot;{Pozadina1}&quot;); background-position: center right; background-size: cover;"
+			>
+				<div
+					class="absolute inset-0"
+					style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				></div>
+				<div class="md:col-span-3">
+					<h2>Our Mission</h2>
+					<p>
+						DeepSquare aims to support innovation in Europe and beyond and to offer a true
+						alternative to the hyperscalers by providing world-class decentralised, responsible,
+						sustainable, and managed High-Performance Computing (HPC) as an Ecosystem.
+					</p>
+				</div>
+				<center>
+					<img
+						style="filter: saturate(0%) brightness(2) opacity(0.5);"
+						src={Mission}
+						alt="Mission"
+					/>
+				</center>
+			</article>
+		</AnimatedInView>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+			<article
+				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				style="background-image: url(&quot;{Pozadina2}&quot;); background-position: center right; background-size: cover;"
+			>
+				<div
+					class="absolute inset-0"
+					style="background-image: url(&quot;{Glos1}&quot;); background-position: bottom center; background-size: cover; opacity: 0.56;"
+				></div>
+				<div class="md:col-span-3">
+					<h2>Vision</h2>
+					<p>
+						Empowering the professional cloud with the DeepSquare decentralised interoperable
+						heterogeneous network in a sustainable and environmentally beneficial way.
+					</p>
+				</div>
+				<center>
+					<img src={Vision} alt="Vision" />
+				</center>
+			</article>
+		</AnimatedInView>
 	</main>
 </section>
 
@@ -221,8 +242,10 @@
 		<section id="core-team">
 			<header>
 				<center>
-					<small>Team</small>
-					<h1>Core Team</h1>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+						<small>Team</small>
+						<h1>Core Team</h1>
+					</AnimatedInView>
 				</center>
 			</header>
 
@@ -230,18 +253,20 @@
 				<div
 					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
 				>
-					{#each coreTeam as { name, role, description, avatar }}
-						<div class="p-0 m-0" style="max-width: 256px">
-							<Portrait src={avatar} alt={name} />
+					{#each coreTeam as { name, role, description, avatar }, index}
+						<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.5s both`}>
+							<div class="p-0 m-0" style="max-width: 256px">
+								<Portrait src={avatar} alt={name} />
 
-							<div class="my-4 mx-2">
-								<div style="height: 4em;"><h4>{name}</h4></div>
+								<div class="my-4 mx-2">
+									<div style="height: 4em;"><h4>{name}</h4></div>
 
-								<div style="height: 3em;"><p>{role}</p></div>
+									<div style="height: 3em;"><p>{role}</p></div>
 
-								<p>{description}</p>
+									<p>{description}</p>
+								</div>
 							</div>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</main>
@@ -249,8 +274,10 @@
 		<section id="advisors">
 			<header>
 				<center>
-					<small>Team</small>
-					<h1>Advisors</h1>
+					<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+						<small>Team</small>
+						<h1>Advisors</h1>
+					</AnimatedInView>
 				</center>
 			</header>
 
@@ -259,15 +286,17 @@
 					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
 				>
 					{#each advisorTeam as { name, description, avatar }}
-						<div class="p-0 m-0" style="max-width: 256px">
-							<Portrait src={avatar} alt={name} />
+						<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.5s both`}>
+							<div class="p-0 m-0" style="max-width: 256px">
+								<Portrait src={avatar} alt={name} />
 
-							<div class="my-4 mx-2">
-								<div style="height: 4em;"><h4>{name}</h4></div>
+								<div class="my-4 mx-2">
+									<div style="height: 4em;"><h4>{name}</h4></div>
 
-								<p>{description}</p>
+									<p>{description}</p>
+								</div>
 							</div>
-						</div>
+						</AnimatedInView>
 					{/each}
 				</div>
 			</main>
