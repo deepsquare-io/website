@@ -45,7 +45,7 @@
 			href: base + '/solutions'
 		},
 		{
-			name: 'About Us',
+			name: 'About us',
 			href: base + '/story'
 		},
 		// {
