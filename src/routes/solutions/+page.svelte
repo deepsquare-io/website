@@ -1,7 +1,8 @@
 <script lang="ts">
-	import IdeaParticles from '$components/IdeaParticles.svelte';
-
 	const title = 'Solutions';
+
+	import Parallax from '$components/Parallax.svelte';
+	import Background from '$lib/assets/media/fv-min.jpg';
 
 	import ClusterFactory from '$lib/assets/media/ClusterFactory-min-scaled.jpg';
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
@@ -35,11 +36,16 @@
 </svelte:head>
 
 <section data-theme="dark" id="technology-banner" class="relative">
+	<Parallax
+		factor={-0.75}
+		class="absolute inset-x-0 -z-10"
+		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
+	></Parallax>
 	<div
 		class="absolute inset-0 -z-10"
-		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(63,7,96,1) 31%, rgba(63,7,96,1) 67%, rgba(187,50,169,1) 100%);"
+		style="backdrop-filter: blur(12px); background: rgba(32,14,81, 0.2);"
 	></div>
-	<IdeaParticles class="absolute inset-0 -z-10" />
+	<!-- <IdeaParticles class="absolute inset-0 -z-10" /> -->
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">

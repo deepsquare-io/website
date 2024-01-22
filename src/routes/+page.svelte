@@ -286,18 +286,11 @@
 </section> -->
 
 <section id="partners" class="m-0 bg-section-a">
-	<header>
-		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<h2>Partners</h2>
-			</AnimatedInView>
-		</center>
-	</header>
 	<main>
 		<center>
 			<section id="builders">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-					<h3>Builders</h3>
+					<h2>Builders</h2>
 				</AnimatedInView>
 				<div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
 					{#each builders as builder, index}
@@ -329,7 +322,7 @@
 			</section>
 			<section id="incubators-accelerators">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-					<h3>Incubators &amp; Accelerators</h3>
+					<h2>Incubators &amp; Accelerators</h2>
 				</AnimatedInView>
 				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
 					{#each incubatorsAndAccelerators as incubator, index}
@@ -355,7 +348,7 @@
 			</section>
 			<section id="technology-partners">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-					<h3>Technology Partners</h3>
+					<h2>Technology Partners</h2>
 				</AnimatedInView>
 				<div class="grid gap-4 justify-items-center content-stretch">
 					{#each technologyPartners as partner, index}
@@ -381,7 +374,7 @@
 			</section>
 			<section id="organisations-associations">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-					<h3>Organizations and Associations</h3>
+					<h2>Organizations and Associations</h2>
 				</AnimatedInView>
 				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
 					{#each organizationsAndAssociations as organizationOrAssociation, index}
@@ -420,5 +413,9 @@
 
 	section h2 {
 		font-size: 2.5rem;
+	}
+
+	section h3 {
+		font-size: 1.75rem;
 	}
 </style>
