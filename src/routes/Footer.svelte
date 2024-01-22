@@ -49,6 +49,8 @@
 								<li>
 									<a
 										style="text-decoration: underline; color: #FFF;"
+										target="_blank"
+										rel="noopener"
 										href="https://docs.deepsquare.run/workflow/overview">Documentation</a
 									>
 								</li>
@@ -79,6 +81,8 @@
 			<p>
 				<a
 					style="color: #FFF;"
+					target="_blank"
+					rel="noopener noreferrer"
 					href="https://www.google.com/maps/place/Gotthardstrasse+26,+6300+Zug,+Switzerland"
 					><span class="material-symbols-outlined"> location_on </span> DeepSquare Association, Gotthardstrasse
 					26, 6300 Zug, Switzerland</a
@@ -86,7 +90,11 @@
 			</p>
 
 			<p>
-				<a style="color: #FFF;" href="https://share-eu1.hsforms.com/1uKsDKrlhRnGk3UeUEz7DLgev6gi"
+				<a
+					target="_blank"
+					rel="noopener"
+					style="color: #FFF;"
+					href="https://share-eu1.hsforms.com/1uKsDKrlhRnGk3UeUEz7DLgev6gi"
 					><span class="material-symbols-outlined"> contact_page </span> External Contact Form
 					<span class="material-symbols-outlined"> arrow_outward </span></a
 				>

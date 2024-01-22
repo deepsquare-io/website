@@ -192,7 +192,7 @@
 	<p></p>
 	<p></p>
 	<p>
-		Contact us on Telegram: <a href="https://t.me/DeepSquareProject."
+		Contact us on Telegram: <a target="_blank" rel="noopener" href="https://t.me/DeepSquareProject."
 			>https://t.me/DeepSquareProject</a
 		>
 	</p>

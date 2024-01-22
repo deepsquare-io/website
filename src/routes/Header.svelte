@@ -32,6 +32,7 @@
 		href?: string;
 		children?: Route[];
 		icon?: string;
+		isExternal?: boolean;
 		isButton?: boolean;
 	};
 
@@ -58,26 +59,31 @@
 		// },
 		{
 			name: 'Blog <span class="material-symbols-outlined">arrow_outward</span>',
-			href: 'https://medium.com/@DeepSquare.io'
+			href: 'https://medium.com/@DeepSquare.io',
+			isExternal: true
 		},
 		{
 			name: 'Get Started <span class="material-symbols-outlined">arrow_outward</span>',
-			href: 'https://docs.deepsquare.run/workflow/overview'
+			href: 'https://docs.deepsquare.run/workflow/overview',
+			isExternal: true
 		},
 		{
 			name: 'GitHub',
 			icon: '<i class="fa-brands fa-github"></i>',
-			href: 'https://github.com/deepsquare-io/grid'
+			href: 'https://github.com/deepsquare-io/grid',
+			isExternal: true
 		},
 		{
 			name: 'Telegram',
 			icon: '<i class="fa-brands fa-telegram"></i>',
-			href: 'https://t.me/DeepSquareProject'
+			href: 'https://t.me/DeepSquareProject',
+			isExternal: true
 		},
 		{
 			name: 'Discord',
 			icon: '<i class="fa-brands fa-discord"></i>',
-			href: 'https://discord.com/invite/3PQkJGvUGB'
+			href: 'https://discord.com/invite/3PQkJGvUGB',
+			isExternal: true
 		}
 	];
 </script>
@@ -109,10 +115,17 @@
 					{#if route.href}
 						<li>
 							{#if route.icon}
-								<a href={route.href}>{@html route.icon}</a>
+								<a
+									href={route.href}
+									target={route.isExternal ? '_blank' : undefined}
+									rel={route.isExternal ? 'noopener noreferrer' : undefined}>{@html route.icon}</a
+								>
 							{:else}
-								<a role={route.isButton ? 'button' : undefined} href={route.href}
-									>{@html route.name}</a
+								<a
+									role={route.isButton ? 'button' : undefined}
+									href={route.href}
+									target={route.isExternal ? '_blank' : undefined}
+									rel={route.isExternal ? 'noopener noreferrer' : undefined}>{@html route.name}</a
 								>
 							{/if}
 						</li>
@@ -122,7 +135,14 @@
 							<a>{@html route.name}</a>
 							<ul role="listbox">
 								{#each route.children as child}
-									<li><a href={child.href}>{@html child.name}</a></li>
+									<li>
+										<a
+											href={child.href}
+											target={child.isExternal ? '_blank' : undefined}
+											rel={child.isExternal ? 'noopener noreferrer' : undefined}
+											>{@html child.name}</a
+										>
+									</li>
 								{/each}
 							</ul>
 						</li>
@@ -212,15 +232,25 @@
 									{#each routes as route}
 										<li class="flex justify-end">
 											{#if route.href}
-												<a role={route.isButton ? 'button' : undefined} href={route.href}
-													>{@html route.name} {@html route.icon ?? ''}</a
+												<a
+													role={route.isButton ? 'button' : undefined}
+													target={route.isExternal ? '_blank' : undefined}
+													rel={route.isExternal ? 'noopener noreferrer' : undefined}
+													href={route.href}>{@html route.name} {@html route.icon ?? ''}</a
 												>
 											{:else if route.children}
 												<details>
 													<summary>{route.name}</summary>
 													<ul style="text-align: end;">
 														{#each route.children as child}
-															<li><a href={child.href}>{@html child.name}</a></li>
+															<li>
+																<a
+																	href={child.href}
+																	target={child.isExternal ? '_blank' : undefined}
+																	rel={child.isExternal ? 'noopener noreferrer' : undefined}
+																	>{@html child.name}</a
+																>
+															</li>
 														{/each}
 													</ul>
 												</details>

@@ -67,7 +67,11 @@
 		</p>
 
 		<center class="my-4">
-			<a role="button" href="https://share-eu1.hsforms.com/1qf0dlM_XSwe8s_1c6cvrqgev6gi"
+			<a
+				target="_blank"
+				rel="noopener"
+				role="button"
+				href="https://share-eu1.hsforms.com/1qf0dlM_XSwe8s_1c6cvrqgev6gi"
 				>Secure Your Spot in the Flash Sale</a
 			>
 		</center>

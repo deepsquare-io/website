@@ -81,7 +81,7 @@ of all sizes.`
 	<center>
 		<h4>Join our Community</h4>
 		<div>
-			<a href="https://t.me/DeepSquareProject" target="_blank">
+			<a target="_blank" rel="noopener" href="https://t.me/DeepSquareProject">
 				<img style="filter: var(--mono-img-filter);" id="telegram" src={Telegram} alt="Telegram" />
 			</a>
 		</div>

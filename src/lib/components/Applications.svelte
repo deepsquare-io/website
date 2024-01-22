@@ -57,7 +57,7 @@
 	<div class="grid md:grid-cols-2 gap-4 lg:grid-cols-3 justify-items-center place-content-around">
 		{#each applications as application, index}
 			<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 10}s both`}>
-				<a href={application.href}>
+				<a href={application.href} target="_blank" rel="noopener noreferrer">
 					<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col aura px-4">
 						<div class="flex justify-center items-center flex-col" style="height: 200px;">
 							<img

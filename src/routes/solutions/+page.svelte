@@ -95,6 +95,8 @@
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
+								target="_blank"
+								rel="noopener"
 								href="https://share-eu1.hsforms.com/186i4x9HOQAyEAboeeRaBCwev6gi"
 								><span>Become a grid partner</span></a
 							>
@@ -125,6 +127,8 @@
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
+								target="_blank"
+								rel="noopener"
 								href="https://docs.deepsquare.run/deepsquare-grid/clusterfactory/overview"
 								><span>Learn more</span></a
 							>
@@ -156,6 +160,8 @@
 								role="button"
 								class="outline"
 								style="text-transform: uppercase;"
+								target="_blank"
+								rel="noopener"
 								href="https://t.me/DeepSquareProject"><span>Join us</span></a
 							>
 						</center>
@@ -344,6 +350,8 @@
 					role="button"
 					class="outline mt-4"
 					style="text-transform: uppercase;"
+					target="_blank"
+					rel="noopener noreferrer"
 					href="https://metaverseinsider.tech/2023/01/12/data-scientists-and-artist-heating-up-homes-in-basel/"
 					><span>Learn more</span></a
 				>

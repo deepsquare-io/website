@@ -159,12 +159,16 @@
 					<a
 						role="button"
 						href="https://docs.deepsquare.run/workflow/overview"
+						target="_blank"
+						rel="noopener"
 						style="text-transform: uppercase"
 						class="my-2">Get started</a
 					>
 					<a
 						role="button"
 						href="https://discord.com/invite/3PQkJGvUGB"
+						target="_blank"
+						rel="noopener"
 						style="text-transform: uppercase"
 						class="outline my-2"><span>Join our Discord</span></a
 					>
@@ -303,7 +307,7 @@
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
-									<a href={builder.href}>
+									<a href={builder.href} target="_blank" rel="noopener noreferrer">
 										<img
 											style="max-height: 100px;"
 											height="172"
@@ -335,7 +339,7 @@
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
-									<a href={incubator.href}>
+									<a href={incubator.href} target="_blank" rel="noopener noreferrer">
 										<img style="max-height: 100px;" src={incubator.img} alt={incubator.name} />
 									</a>
 								</div>
@@ -361,7 +365,7 @@
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
-									<a href={partner.href}>
+									<a href={partner.href} target="_blank" rel="noopener noreferrer">
 										<img style="max-height: 100px;" src={partner.img} alt={partner.name} />
 									</a>
 								</div>
@@ -387,7 +391,11 @@
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
 									class="flex justify-center items-center my-4 aura"
 								>
-									<a href={organizationOrAssociation.href}>
+									<a
+										href={organizationOrAssociation.href}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										<img
 											style="max-height: 100px;"
 											src={organizationOrAssociation.img}
