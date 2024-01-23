@@ -1,6 +1,8 @@
 <script lang="ts">
 	const title = 'Solutions';
 
+	import { inview } from 'svelte-inview';
+
 	import Parallax from '$components/Parallax.svelte';
 	import Background from '$lib/assets/media/fv-min.jpg';
 
@@ -16,14 +18,17 @@
 
 	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
 
-	import CS2LoginVideo from '$lib/assets/media/cs2_login.mp4';
-	import CS2Login from '$lib/assets/media/cs2_login.svg';
+	import JupyterCode from '$lib/assets/media/jupyter-code.svg';
+	import JupyterVideo from '$lib/assets/media/jupyter-term.mp4';
+	import JupyterWindow from '$lib/assets/media/jupyter-window.mp4';
 
-	import BrowserWindow from '$components/BrowserWindow.svelte';
 	import Price1 from '$lib/assets/media/price-part-1.png';
 	import Price2 from '$lib/assets/media/price-part-2.png';
 
 	import ImmersionCooling from '$lib/assets/media/grc-cold-wars-part-2-single-phase-immersion-cooling-process-graphic.png';
+
+	let jupyterWindowVideo: HTMLVideoElement;
+	let jupyterCodeVideo: HTMLVideoElement;
 </script>
 
 <svelte:head>
@@ -259,26 +264,56 @@
 			</AnimatedInView>
 			<div class="relative" style="height: 50vh;">
 				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
-					<img
-						class="absolute drop-shadow-a top-0 left-0 rounded-lg"
-						src={CS2Login}
-						alt="Interative mode"
-					/>
+					<img class="drop-shadow-a rounded-lg" src={JupyterCode} alt="Interative mode" />
 				</AnimatedInView>
-				<AnimatedInView animation={`from-right-slow 0.5s ease-out 2s both`}>
-					<BrowserWindow
-						class="absolute drop-shadow-a left-[0px] sm:left-[50px] top-[50px] rounded-lg"
-						style="overflow: hidden;"
-						url="https://068ac8.bore.deepsquare.run"
-						><video
-							autoplay
-							playsinline
-							muted
-							class="max-w-[50vh] sm:max-w-[70vh]"
-							style="max-height: 50vh; width: auto; height: auto;"
-							width="692"
-							height="322"><source src={CS2LoginVideo} type="video/mp4; codes=avc1" /></video
-						></BrowserWindow
+				<AnimatedInView
+					class="absolute top-4 left-4 z-10"
+					animation={`from-right-slow 0.5s ease-out 2s both`}
+				>
+					<video
+						use:inview={{}}
+						bind:this={jupyterCodeVideo}
+						autoplay
+						playsinline
+						muted
+						on:inview_enter={(event) => {
+							const { inView } = event.detail;
+							if (inView) {
+								setTimeout(() => {
+									jupyterCodeVideo.load();
+									jupyterCodeVideo.play();
+								}, 2000);
+							}
+						}}
+						class="max-w-[50vh] sm:max-w-[70vh] drop-shadow-a rounded-lg"
+						style="max-height: 50vh; width: auto; height: auto;"
+						width={1920 / 4}
+						height={1080 / 4}><source src={JupyterVideo} type="video/mp4; codes=avc1" /></video
+					>
+				</AnimatedInView>
+				<AnimatedInView
+					class="absolute top-8 left-8 z-20"
+					animation={`from-right-slow 0.5s ease-out 6s both`}
+				>
+					<video
+						use:inview={{}}
+						bind:this={jupyterWindowVideo}
+						autoplay
+						playsinline
+						muted
+						on:inview_enter={(event) => {
+							const { inView } = event.detail;
+							if (inView) {
+								setTimeout(() => {
+									jupyterWindowVideo.load();
+									jupyterWindowVideo.play();
+								}, 6000);
+							}
+						}}
+						class="max-w-[50vh] sm:max-w-[70vh] drop-shadow-a rounded-lg"
+						style="max-height: 50vh; width: auto; height: auto;"
+						width={1920 / 4}
+						height={1080 / 4}><source src={JupyterWindow} type="video/mp4; codes=avc1" /></video
 					>
 				</AnimatedInView>
 			</div>
