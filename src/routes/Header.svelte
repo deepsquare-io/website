@@ -62,6 +62,12 @@
 			href: 'https://medium.com/@DeepSquare.io',
 			isExternal: true
 		},
+
+		{
+			name: 'Invest <span class="material-symbols-outlined">arrow_outward</span>',
+			href: 'https://app.deepsquare.io',
+			isExternal: true
+		},
 		{
 			name: 'Get Started <span class="material-symbols-outlined">arrow_outward</span>',
 			href: 'https://docs.deepsquare.run/workflow/overview',
