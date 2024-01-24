@@ -163,7 +163,7 @@
 	</main>
 </section>
 
-<section id="description" class="bg-section-a">
+<section id="description">
 	<main data-theme="dark" class="m-0">
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article

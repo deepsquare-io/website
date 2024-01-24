@@ -177,7 +177,7 @@
 	</main>
 </section>
 
-<section id="features" class="bg-section-a">
+<section id="features">
 	<header>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 			<center

@@ -178,7 +178,7 @@
 	</main>
 </section>
 
-<section id="presentation" class="min-h-screen bg-section-a">
+<section id="presentation" class="min-h-screen">
 	<header>
 		<center>
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
@@ -289,7 +289,7 @@
 	</main>
 </section> -->
 
-<section id="partners" class="m-0 bg-section-a">
+<section id="partners" class="m-0">
 	<main>
 		<center>
 			<section id="builders">

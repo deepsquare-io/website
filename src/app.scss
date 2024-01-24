@@ -293,12 +293,16 @@ details > summary {
   font-weight: 600;
 }
 
-[data-theme="light"] .bg-section-a, :root:not([data-theme="dark"]) .bg-section-a {
+[data-theme="light"] #root > main > section:nth-child(even):not(:first-child), :root:not([data-theme="dark"]) #root > main > section:nth-child(even):not(:first-child) {
   background-color: hsl(0, 0%, 95%);
 }
 
-[data-theme="dark"] .bg-section-a {
+[data-theme="dark"] #root > main > section:nth-child(even):not(:first-child) {
   background-color: #0E0535;
+}
+
+#root > main > section:nth-child(odd):not(:first-child) {
+  background-color: var(--background-color);
 }
 
 /** Add a white aura on hover */
@@ -348,8 +352,4 @@ details > summary {
 	::view-transition-new(*) {
 		animation: none !important;
 	}
-}
-
-#root > main > section:not(:first-child):not(.bg-section-a) {
-  background-color: var(--background-color);
 }
