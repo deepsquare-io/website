@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"postbuild": "pnpm dlx svelte-sitemap --domain https://deepsquare-io.github.io",
+		"postbuild": "pnpm dlx svelte-sitemap --domain https://deepsquare.io",
 		"test": "pnpm run test:integration && pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
