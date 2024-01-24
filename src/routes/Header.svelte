@@ -47,7 +47,7 @@
 		},
 		{
 			name: 'About us',
-			href: base + '/story'
+			href: base + '/about'
 		},
 		// {
 		// 	name: 'Contact',
