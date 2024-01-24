@@ -3,6 +3,8 @@
 
 	import Background from '$lib/assets/media/Group-180-min.jpg';
 
+	import DPS from '$lib/assets/media/dps.png';
+
 	import YData from '$lib/assets/media/YData.svg';
 	import Openfabric from '$lib/assets/media/openfabric-logo-black-1.png';
 	import SquareFactory from '$lib/assets/media/squarefactory-logo-neg.svg';
@@ -268,7 +270,38 @@
 	</main>
 </section>
 
-<!-- <section id="demo" class="bg-section-a">
+<section id="dps">
+	<header>
+		<center>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+				<small>Powered by</small>
+				<h2>The DPS Token</h2>
+			</AnimatedInView>
+		</center>
+	</header>
+
+	<main>
+		<center>
+			<div class="max-w-2xl">
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.4s both`}>
+					<center><img height="386" width="386" src={DPS} alt="DPS token" /></center>
+				</AnimatedInView>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.8s both`}>
+					<p>
+						The DeepSquare ecosystem is powered by the <a
+							href="https://snowtrace.io/token/0xf192caE2e7Cd4048Bea307368015E3647c49338e"
+							>DPS token</a
+						>
+						on the <a href="https://www.avax.network">Avalanche Network</a>, which is used to reward
+						infrastructure providers and consume compute resources on DeepSquare.
+					</p>
+				</AnimatedInView>
+			</div>
+		</center>
+	</main>
+</section>
+
+<!-- <section id="demo">
 	<header>
 		<center>
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
@@ -278,10 +311,6 @@
 				<p>The live demo of the DeepSquare platform.</p>
 			</AnimatedInView>
 		</center>
-
-		<main>
-			<center></center>
-		</main>
 	</header>
 
 	<main>
