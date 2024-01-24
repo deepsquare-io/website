@@ -284,7 +284,7 @@
 		<center>
 			<div class="max-w-2xl">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-					<center><img height="386" width="386" src={DPS} alt="DPS token" /></center>
+					<center><img height="386" width="386" class="aura" src={DPS} alt="DPS token" /></center>
 				</AnimatedInView>
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<p>
