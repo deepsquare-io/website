@@ -168,11 +168,11 @@
 					>
 					<a
 						role="button"
-						href="https://discord.com/invite/3PQkJGvUGB"
+						href="https://t.me/DeepSquareProject"
 						target="_blank"
 						rel="noopener"
 						style="text-transform: uppercase"
-						class="outline my-2"><span>Join our Discord</span></a
+						class="outline my-2"><span>Join our Telegram</span></a
 					>
 				</AnimatedInView>
 			</div>
