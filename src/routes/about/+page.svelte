@@ -167,7 +167,7 @@
 	<main data-theme="dark" class="m-0">
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
 				style="background-image: url(&quot;{Pozadina3}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
@@ -189,7 +189,7 @@
 		</AnimatedInView>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
 				style="background-image: url(&quot;{Pozadina1}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
@@ -215,7 +215,7 @@
 		</AnimatedInView>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative"
+				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
 				style="background-image: url(&quot;{Pozadina2}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
