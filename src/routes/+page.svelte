@@ -273,7 +273,7 @@
 <section id="dps">
 	<header>
 		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 				<small>Powered by</small>
 				<h2>The DPS Token</h2>
 			</AnimatedInView>
@@ -283,10 +283,10 @@
 	<main>
 		<center>
 			<div class="max-w-2xl">
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.4s both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<center><img height="386" width="386" src={DPS} alt="DPS token" /></center>
 				</AnimatedInView>
-				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.8s both`}>
+				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<p>
 						The DeepSquare ecosystem is powered by the <a
 							href="https://snowtrace.io/token/0xf192caE2e7Cd4048Bea307368015E3647c49338e"
