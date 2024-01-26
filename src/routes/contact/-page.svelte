@@ -85,7 +85,7 @@
 	</footer>
 </section>
 
-<section id="newsletter" class="py-20 relative">
+<section id="newsletter" class="relative py-20">
 	<div
 		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Glos}&quot;); background-position: 76% center; background-repeat: no-repeat; background-size: contain;"

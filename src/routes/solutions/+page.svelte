@@ -42,8 +42,7 @@
 
 <section data-theme="dark" id="technology-banner" class="relative">
 	<Parallax
-		factor={-0.75}
-		class="absolute inset-x-0 -z-10"
+		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
 	></Parallax>
 	<div
@@ -76,7 +75,7 @@
 		</AnimatedInView>
 	</header>
 	<main>
-		<div id="stack" class="grid lg:grid-cols-3 gap-4 justify-items-center place-items-stretch">
+		<div id="stack" class="grid place-items-stretch justify-items-center gap-4 lg:grid-cols-3">
 			<AnimatedInView once={true} animation={`from-bottom 1s ease-out both`}>
 				<article class="aura">
 					<header>
@@ -88,7 +87,7 @@
 							<img src={DeepSquareGrid} alt="DeepSquare Grid" />
 						</div>
 
-						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
+						<p class="2xl:min-h-50 lg:min-h-80 xl:min-h-60">
 							The <b>network of HPC clusters</b> forming the pool of compute required to process users’
 							workloads. The DeepSquare Grid is composed of clusters from various providers.
 						</p>
@@ -119,7 +118,7 @@
 						<div>
 							<img src={ClusterFactory} alt="DeepSquare ClusterFactory" />
 						</div>
-						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
+						<p class="2xl:min-h-50 lg:min-h-80 xl:min-h-60">
 							The <b>open-source Kubernetes-based infrastructure orchestrator</b> that automates the
 							process of deploying, managing and monitoring compute-optimized clusters from bare metal
 							servers to VMs and containers.
@@ -151,7 +150,7 @@
 						<div>
 							<img src={DeepSquareCommunity} alt="DeepSquare Community" />
 						</div>
-						<p class="lg:min-h-80 xl:min-h-60 2xl:min-h-50">
+						<p class="2xl:min-h-50 lg:min-h-80 xl:min-h-60">
 							The <b
 								>builders, developers, AI engineers, artists, blockchain enthusiasts, disruptors,
 								innovators and visionaries</b
@@ -188,7 +187,7 @@
 	</header>
 
 	<main>
-		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
+		<section class="grid content-center justify-items-center gap-4 lg:grid-cols-2">
 			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Fully featured, safe and simplified.</h2>
 				<p class="mr-16">
@@ -209,7 +208,7 @@
 				</p>
 			</AnimatedInView>
 			<center>
-				<div class="flex space-x-4 items-center content-center">
+				<div class="flex content-center items-center space-x-4">
 					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" src={CompiledJob} alt="Compiled Job" />
 						<div><span>Before with SLURM</span></div>
@@ -221,7 +220,7 @@
 				</div>
 			</center>
 		</section>
-		<section class="grid lg:grid-cols-2 gap-4 justify-items-center content-center">
+		<section class="grid content-center justify-items-center gap-4 lg:grid-cols-2">
 			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Get your fair share of compute.</h2>
 				<p>
@@ -231,14 +230,14 @@
 				</p>
 			</AnimatedInView>
 			<center>
-				<div class="flex items-center content-center">
+				<div class="flex content-center items-center">
 					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 						<img class="drop-shadow-a rounded-lg" src={MetaScheduler} alt="MetaScheduler" />
 					</AnimatedInView>
 				</div>
 			</center>
 		</section>
-		<section class="grid lg:grid-cols-2 gap-4">
+		<section class="grid gap-4 lg:grid-cols-2">
 			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Mix HPC techniques with the stability of containers.</h2>
 				<p>
@@ -253,7 +252,7 @@
 				</AnimatedInView>
 			</center>
 		</section>
-		<section class="grid lg:grid-cols-2 gap-4">
+		<section class="grid gap-4 lg:grid-cols-2">
 			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Compatible with interactive Workflows.</h2>
 				<p>
@@ -267,7 +266,7 @@
 					<img class="drop-shadow-a rounded-lg" src={JupyterCode} alt="Interative mode" />
 				</AnimatedInView>
 				<AnimatedInView
-					class="absolute top-4 left-4 z-10"
+					class="absolute left-4 top-4 z-10"
 					animation={`from-right-slow 0.5s ease-out 2s both`}
 				>
 					<video
@@ -285,14 +284,14 @@
 								}, 2000);
 							}
 						}}
-						class="max-w-[50vh] sm:max-w-[70vh] drop-shadow-a rounded-lg"
+						class="drop-shadow-a max-w-[50vh] rounded-lg sm:max-w-[70vh]"
 						style="max-height: 50vh; width: auto; height: auto;"
 						width={1920 / 4}
 						height={1080 / 4}><source src={JupyterVideo} type="video/mp4; codes=avc1" /></video
 					>
 				</AnimatedInView>
 				<AnimatedInView
-					class="absolute top-8 left-8 z-20"
+					class="absolute left-8 top-8 z-20"
 					animation={`from-right-slow 0.5s ease-out 6s both`}
 				>
 					<video
@@ -310,7 +309,7 @@
 								}, 6000);
 							}
 						}}
-						class="max-w-[50vh] sm:max-w-[70vh] drop-shadow-a rounded-lg"
+						class="drop-shadow-a max-w-[50vh] rounded-lg sm:max-w-[70vh]"
 						style="max-height: 50vh; width: auto; height: auto;"
 						width={1920 / 4}
 						height={1080 / 4}><source src={JupyterWindow} type="video/mp4; codes=avc1" /></video
@@ -318,7 +317,7 @@
 				</AnimatedInView>
 			</div>
 		</section>
-		<section class="grid lg:grid-cols-2 gap-4">
+		<section class="grid gap-4 lg:grid-cols-2">
 			<AnimatedInView once={true} animation={`from-left-slow 0.5s ease-out both`}>
 				<h2>Billed per use.</h2>
 				<p>
@@ -331,14 +330,14 @@
 				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
 					<img
 						src={Price1}
-						class="absolute drop-shadow-a top-0 right-0 left-0 rounded-lg"
+						class="drop-shadow-a absolute left-0 right-0 top-0 rounded-lg"
 						alt="Price duration"
 					/>
 				</AnimatedInView>
 				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out 1s both`}>
 					<img
 						src={Price2}
-						class="absolute drop-shadow-a top-[112px] left-[0px] sm:left-[122px] rounded-lg"
+						class="drop-shadow-a absolute left-[0px] top-[112px] rounded-lg sm:left-[122px]"
 						alt="Price computation"
 					/>
 				</AnimatedInView>
@@ -356,7 +355,7 @@
 
 	<main>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-			<div class="grid md:grid-cols-4 gap-4 justify-items-center content-center">
+			<div class="grid content-center justify-items-center gap-4 md:grid-cols-4">
 				<div class="md:col-span-3">
 					<p>
 						DeepSquare's sustainability strategy revolves around <b
@@ -383,7 +382,7 @@
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 				<a
 					role="button"
-					class="outline mt-4"
+					class="mt-4 outline"
 					style="text-transform: uppercase;"
 					target="_blank"
 					rel="noopener noreferrer"

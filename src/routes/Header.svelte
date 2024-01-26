@@ -166,7 +166,7 @@
 					<a href="#" on:click={toggle}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-6 h-6"
+							class="h-6 w-6"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -189,12 +189,12 @@
 		<div
 			in:fade={{ duration: inDuration }}
 			out:fade={{ delay: outDuration, duration: outDuration }}
-			class="lg:hidden fixed inset-0 z-50 relative"
+			class="fixed relative inset-0 z-50 lg:hidden"
 		>
 			<!-- Fading screen -->
-			<div class="fixed bg-black inset-0 opacity-75 h-screen w-screen"></div>
+			<div class="fixed inset-0 h-screen w-screen bg-black opacity-75"></div>
 			<!-- Pane -->
-			<div class="fixed inset-0 flex flex-row-reverse h-screen">
+			<div class="fixed inset-0 flex h-screen flex-row-reverse">
 				<div
 					in:slide={{
 						delay: inDuration,
@@ -207,12 +207,12 @@
 						easing: quintInOut,
 						axis: 'x'
 					}}
-					class="w-full grid sm:grid-cols-2"
+					class="grid w-full sm:grid-cols-2"
 				>
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<div class="hidden sm:block" on:click={toggle}></div>
-					<article class="m-0 bg-nav-floating">
+					<article class="bg-nav-floating m-0">
 						<aside>
 							<nav data-theme="dark">
 								<ul>
@@ -220,7 +220,7 @@
 										<!-- svelte-ignore a11y-invalid-attribute -->
 										<a href="#" on:click={toggle}
 											><svg
-												class="w-6 h-6"
+												class="h-6 w-6"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"

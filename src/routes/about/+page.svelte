@@ -139,9 +139,8 @@
 
 <section data-theme="dark" id="what-is-deepsquare" class="relative">
 	<Parallax
-		factor={-0.75}
 		class="absolute inset-0 -z-10"
-		style="background-image: url(&quot;{WhatIsDeepSquareBg}&quot;); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
+		style="background-image: url(&quot;{WhatIsDeepSquareBg}&quot;); background-position: center 20%; background-size: cover;"
 	></Parallax>
 	<div
 		class="absolute inset-0 -z-10"
@@ -167,7 +166,7 @@
 	<main data-theme="dark" class="m-0">
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
+				class="aura relative grid place-items-center justify-around md:grid-cols-4"
 				style="background-image: url(&quot;{Pozadina3}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
@@ -189,7 +188,7 @@
 		</AnimatedInView>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
+				class="aura relative grid place-items-center justify-around md:grid-cols-4"
 				style="background-image: url(&quot;{Pozadina1}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
@@ -215,7 +214,7 @@
 		</AnimatedInView>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 			<article
-				class="grid md:grid-cols-4 justify-around place-items-center relative aura"
+				class="aura relative grid place-items-center justify-around md:grid-cols-4"
 				style="background-image: url(&quot;{Pozadina2}&quot;); background-position: center right; background-size: cover;"
 			>
 				<div
@@ -251,14 +250,14 @@
 
 			<main>
 				<div
-					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
+					class="grid place-content-around justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4"
 				>
 					{#each coreTeam as { name, role, description, avatar }, index}
 						<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.5s both`}>
-							<div class="p-0 m-0" style="max-width: 256px">
+							<div class="m-0 p-0" style="max-width: 256px">
 								<Portrait src={avatar} alt={name} />
 
-								<div class="my-4 mx-2">
+								<div class="mx-2 my-4">
 									<div style="height: 4em;"><h4>{name}</h4></div>
 
 									<div style="height: 3em;"><p>{role}</p></div>
@@ -283,14 +282,14 @@
 
 			<main>
 				<div
-					class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center place-content-around"
+					class="grid place-content-around justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4"
 				>
 					{#each advisorTeam as { name, description, avatar }}
 						<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out 0.5s both`}>
-							<div class="p-0 m-0" style="max-width: 256px">
+							<div class="m-0 p-0" style="max-width: 256px">
 								<Portrait src={avatar} alt={name} />
 
-								<div class="my-4 mx-2">
+								<div class="mx-2 my-4">
 									<div style="height: 4em;"><h4>{name}</h4></div>
 
 									<p>{description}</p>

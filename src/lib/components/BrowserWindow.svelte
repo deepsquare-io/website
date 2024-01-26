@@ -3,7 +3,7 @@
 </script>
 
 <div class={`container-browser ${$$props.class}`} style={$$props.style}>
-	<div class="flex row-browser justify-center items-center">
+	<div class="row-browser flex items-center justify-center">
 		<div class="flex-none">
 			<span class="dot-browser" style="background:#ED594A;"></span>
 			<span class="dot-browser" style="background:#FDD800;"></span>

@@ -129,20 +129,13 @@
 
 <section data-theme="dark" id="introduction" class="relative">
 	<Parallax
-		factor={-0.75}
-		class="absolute inset-x-0 -z-10"
-		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
+		class="absolute inset-0 -z-10"
+		style="background-image: url(&quot;{Background}&quot;); background-position: center; background-repeat: no-repeat; background-size: cover;"
 	></Parallax>
 	<div
 		class="absolute inset-0 -z-10"
 		style="backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0);"
 	></div>
-	<!-- <div
-		class="absolute inset-0 -z-10"
-		style="background: rgb(32,14,81); background: linear-gradient(135deg, rgba(32,14,81,1) 0%, rgba(187,50,169,1) 100%);"
-	></div> -->
-	<!-- <BackgroundParticles class="absolute inset-0 -z-10" />
-	<DeepSquareLogoParticles class="absolute inset-0 -z-10" /> -->
 
 	<main>
 		<div class="grid lg:grid-cols-3">
@@ -172,7 +165,7 @@
 						target="_blank"
 						rel="noopener"
 						style="text-transform: uppercase"
-						class="outline my-2"><span>Join our Telegram</span></a
+						class="my-2 outline"><span>Join our Telegram</span></a
 					>
 				</AnimatedInView>
 			</div>
@@ -190,7 +183,7 @@
 	</header>
 
 	<main>
-		<div class="grid md:grid-cols-3 gap-4 justify-items-center">
+		<div class="grid justify-items-center gap-4 md:grid-cols-3">
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<div class="mb-2">
 					<img
@@ -325,7 +318,7 @@
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h2>Builders</h2>
 				</AnimatedInView>
-				<div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+				<div class="grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
 					{#each builders as builder, index}
 						<AnimatedInView
 							once={true}
@@ -334,7 +327,7 @@
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4 aura"
+									class="aura my-4 flex items-center justify-center"
 								>
 									<a href={builder.href} target="_blank" rel="noopener noreferrer">
 										<img
@@ -357,7 +350,7 @@
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h2>Incubators &amp; Accelerators</h2>
 				</AnimatedInView>
-				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
+				<div class="grid content-stretch justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					{#each incubatorsAndAccelerators as incubator, index}
 						<AnimatedInView
 							once={true}
@@ -366,7 +359,7 @@
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4 aura"
+									class="aura my-4 flex items-center justify-center"
 								>
 									<a href={incubator.href} target="_blank" rel="noopener noreferrer">
 										<img style="max-height: 100px;" src={incubator.img} alt={incubator.name} />
@@ -383,7 +376,7 @@
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h2>Technology Partners</h2>
 				</AnimatedInView>
-				<div class="grid gap-4 justify-items-center content-stretch">
+				<div class="grid content-stretch justify-items-center gap-4">
 					{#each technologyPartners as partner, index}
 						<AnimatedInView
 							once={true}
@@ -392,7 +385,7 @@
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4 aura"
+									class="aura my-4 flex items-center justify-center"
 								>
 									<a href={partner.href} target="_blank" rel="noopener noreferrer">
 										<img style="max-height: 100px;" src={partner.img} alt={partner.name} />
@@ -409,7 +402,7 @@
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 					<h2>Organizations and Associations</h2>
 				</AnimatedInView>
-				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-items-center content-stretch">
+				<div class="grid content-stretch justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					{#each organizationsAndAssociations as organizationOrAssociation, index}
 						<AnimatedInView
 							once={true}
@@ -418,7 +411,7 @@
 							<main>
 								<div
 									style="max-width: 256px; min-height: 172px; max-height: 100px;"
-									class="flex justify-center items-center my-4 aura"
+									class="aura my-4 flex items-center justify-center"
 								>
 									<a
 										href={organizationOrAssociation.href}

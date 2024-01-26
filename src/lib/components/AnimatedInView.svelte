@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { inview, type Options } from 'svelte-inview';
-	export let options: Options = {};
+	export let options: Options = {
+		threshold: 0.2
+	};
 
 	export let animation = 'none';
 	export let once = false;

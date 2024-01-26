@@ -9,7 +9,7 @@
 </script>
 
 <footer class="pt-4">
-	<div class="grid md:grid-cols-4 justify-around content-start place-items-center">
+	<div class="grid place-items-center content-start justify-around md:grid-cols-4">
 		<div class="md:col-span-2">
 			<div>
 				<div class="py-4">
@@ -30,7 +30,7 @@
 		<div>
 			<div>
 				<div>
-					<h5 class="py-4 m-0">Resources</h5>
+					<h5 class="m-0 py-4">Resources</h5>
 				</div>
 				<div>
 					<aside>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<div>
-			<h5 class="py-4 m-0">Contact Us</h5>
+			<h5 class="m-0 py-4">Contact Us</h5>
 
 			<p>
 				<a

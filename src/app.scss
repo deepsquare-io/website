@@ -18,331 +18,372 @@ $enable-grid: false;
 
 @import '@picocss/pico/scss/pico';
 
+// Ref: https://codepen.io/russgossett/pen/gMNrOQ
+$transition-bezier: 1, 0, 0, 1;
+$transition-len: 0.2s;
+
 /** Custom styles */
 /** General */
-[data-theme=light], :root:not([data-theme=dark]) {
-  --font-family: "Montserrat", "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --mono-img-filter: saturate(0%) brightness(0%);
-  --border-radius: 0;
-  --primary: #6753FF;
-  --primary-hover: #C247FF;
-  --primary-focus: #C247FF;
-  --primary-inverse: #FFF;
-  --color: #120641;
-  --h1-color: hsl(252, 83%, 14%);
-  --h2-color: hsl(252, 81%, 18%);
-  --h3-color: hsl(252, 78%, 23%);
-  --h4-color: hsl(252, 75%, 28%);
-  --h5-color: hsl(252, 73%, 33%);
-  --h6-color: hsl(252, 71%, 38%);
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+	--font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--mono-img-filter: saturate(0%) brightness(0%);
+	--border-radius: 0;
+	--primary: #6753ff;
+	--primary-hover: #c247ff;
+	--primary-focus: #c247ff;
+	--primary-inverse: #fff;
+	--color: #120641;
+	--h1-color: hsl(252, 83%, 14%);
+	--h2-color: hsl(252, 81%, 18%);
+	--h3-color: hsl(252, 78%, 23%);
+	--h4-color: hsl(252, 75%, 28%);
+	--h5-color: hsl(252, 73%, 33%);
+	--h6-color: hsl(252, 71%, 38%);
+
+	.drop-shadow-a {
+		filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.212)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.212));
+	}
+
+	// Add accent aura on hover
+	.aura:hover {
+		animation: aura 0.2s ease normal forwards;
+	}
+
+	@keyframes aura {
+		0% {
+			-webkit-filter: drop-shadow(0 0 0rem var(--primary-hover));
+			filter: drop-shadow(0 0 0rem var(--primary-hover));
+		}
+		100% {
+			-webkit-filter: drop-shadow(0 0 0.75rem var(--primary-hover));
+			filter: drop-shadow(0 0 0.75rem var(--primary-hover));
+		}
+	}
+
+	// Footer
+	#root > footer {
+		background-color: #120641;
+	}
+
+	#root > footer p,
+	#root > footer a,
+	#root > footer p {
+		color: #fff;
+	}
+
+	// Navbar
+	.bg-nav-floating {
+		background-color: #120641;
+	}
+
+	.bg-nav-top {
+		background-color: rgba(18, 6, 65, 0.8);
+		backdrop-filter: blur(12px);
+	}
+
+	.bg-nav-scrolled {
+		background-color: rgba(18, 6, 65, 0.819);
+		backdrop-filter: blur(12px);
+	}
+
+	// Section altnernate background
+	#root > main > section:nth-child(even):not(:first-child) {
+		background-color: hsl(0, 0%, 95%);
+	}
 }
 
-[data-theme=dark] {
-  --font-family: "Montserrat", "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --mono-img-filter: saturate(0%) brightness(0%) invert(100%);
-  --border-radius: 0;
-  --background-color: #160c45;
-  --card-sectionning-background-color: #2b2567;
-  --card-background-color: #231c5b;
-  --dropdown-background-color: hsla(252, 83%, 10%, 0.819);
-  --dropdown-hover-background-color: #C247FF;
-  --color: #fff;
-  --primary: #6753FF;
-  --primary-hover: #C247FF;
-  --primary-focus: #C247FF;
-  --primary-inverse: #FFF;
+[data-theme='dark'] {
+	--font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--mono-img-filter: saturate(0%) brightness(0%) invert(100%);
+	--border-radius: 0;
+	--background-color: #160c45;
+	--card-sectionning-background-color: #2b2567;
+	--card-background-color: #231c5b;
+	--dropdown-background-color: hsla(252, 83%, 10%, 0.819);
+	--dropdown-hover-background-color: #c247ff;
+	--color: #fff;
+	--primary: #6753ff;
+	--primary-hover: #c247ff;
+	--primary-focus: #c247ff;
+	--primary-inverse: #fff;
+
+	.drop-shadow-a {
+		filter: drop-shadow(0 4px 3px rgba(255, 255, 255, 0.212))
+			drop-shadow(0 2px 2px rgba(255, 255, 255, 0.212));
+	}
+
+	// Add accent aura on hover
+	.aura:hover {
+		animation: aura-dark 0.2s ease normal forwards;
+	}
+
+	@keyframes aura-dark {
+		0% {
+			-webkit-filter: drop-shadow(0 0 0rem #fff);
+			filter: drop-shadow(0 0 0rem #fff);
+		}
+		100% {
+			-webkit-filter: drop-shadow(0 0 0.75rem #fff);
+			filter: drop-shadow(0 0 0.75rem #fff);
+		}
+	}
+
+	:is(button, input[type='submit'], input[type='button'], [role='button']).outline,
+	input[type='reset'].outline {
+		--color: var(--primary-inverse);
+		--border-color: var(--primary-inverse);
+	}
+
+	#root > footer {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	// Navbar
+	.bg-nav-floating {
+		background-color: #120641;
+	}
+
+	.bg-nav-top {
+		background-color: rgba(18, 6, 65, 0.8);
+		backdrop-filter: blur(12px);
+	}
+
+	.bg-nav-scrolled {
+		background-color: hsla(252, 83%, 10%, 0.819);
+		backdrop-filter: blur(12px);
+	}
+
+	#root > main > section:nth-child(even):not(:first-child) {
+		background-color: #0e0535;
+	}
 }
 
 // Remove main margin and prefer section paddings.
 // This is to put the section background in full width.
 body {
-  margin: 0;
+	margin: 0;
 }
 
 #root > main > section:not(.mini-section) {
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-top: 4em;
-  padding-bottom: 4em;
+	padding-left: 2em;
+	padding-right: 2em;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 4em;
+	padding-bottom: 4em;
 
-  // Force the sections to fill a significant part of the screen.
-  min-height: 60vh;
+	// Force the sections to fill a significant part of the screen.
+	min-height: 60vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #root > main > section.mini-section {
-  min-height: 10vh;
+	min-height: 10vh;
 }
 
-#root > main > section > main, #root > main > section > footer, #root > main > section > header {
-  width: 100%;
-  display: block;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+#root > main > section > main,
+#root > main > section > footer,
+#root > main > section > header {
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 @media (min-width: 576px) {
-  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
-    max-width: 510px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	#root > main > section > main,
+	#root > main > section > footer,
+	#root > main > section > header {
+		max-width: 510px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media (min-width: 768px) {
-  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
-    max-width: 730px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	#root > main > section > main,
+	#root > main > section > footer,
+	#root > main > section > header {
+		max-width: 730px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media (min-width: 1050px) {
-  #root > main > section > main, #root > main > section > footer, #root > main > section > header {
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	#root > main > section > main,
+	#root > main > section > footer,
+	#root > main > section > header {
+		max-width: 1500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
-
-// Ref: https://codepen.io/russgossett/pen/gMNrOQ
-$transition-bezier: 1.000, 0.000, 0.000, 1.000;
-$transition-len: 0.20s;
 
 // Button
-:is(button, input[type=submit], input[type=button], [role=button]), input[type=reset] {
-  font-weight: 600;
+:is(button, input[type='submit'], input[type='button'], [role='button']),
+input[type='reset'] {
+	font-weight: 600;
 }
 
-// Outline button
-:is(button, input[type=submit], input[type=button], [role=button]).outline, input[type=reset].outline {
-  position: relative;
+// Outline button logic for hover
+:is(button, input[type='submit'], input[type='button'], [role='button']).outline,
+input[type='reset'].outline {
+	position: relative;
 
-  // Create a background inside the button
-  &::before {
-    content: '';
+	// Create a background inside the button
+	&::before {
+		content: '';
 
-    // Background color
-    background: var(--primary-hover);
+		// Background color
+		background: var(--primary-hover);
 
-    // Position relative to button
-    position: absolute;
+		// Position relative to button
+		position: absolute;
 
-    // Transition after extending the background
-    transition: all $transition-len cubic-bezier($transition-bezier);
+		// Transition after extending the background
+		transition: all $transition-len cubic-bezier($transition-bezier);
 
-    // Stretch so that it superposes the button
-    height: 100%;
-    width: 0;
+		// Stretch so that it superposes the button
+		height: 100%;
+		width: 0;
 
-    // Position so that it superposes the button
-    top: 0;
-    left: 0;
-
-    // Make sure it's behind the text
-    // z-index: -1;
-  }
+		// Position so that it superposes the button
+		top: 0;
+		left: 0;
+	}
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).outline span, input[type=reset].outline span {
-  position: relative;
-  z-index: 2;
+:is(button, input[type='submit'], input[type='button'], [role='button']).outline span,
+input[type='reset'].outline span {
+	position: relative;
+	z-index: 2;
 }
 
 // Hover
-:is(button, input[type=submit], input[type=button], [role=button]).outline:is([aria-current], :hover, :active, :focus), input[type=reset].outline:is([aria-current], :hover, :active, :focus) {
-  --color: var(--primary-inverse);
-  --border-color: var(--primary-hover);
+:is(button, input[type='submit'], input[type='button'], [role='button']).outline:is(
+		[aria-current],
+		:hover,
+		:active,
+		:focus
+	),
+input[type='reset'].outline:is([aria-current], :hover, :active, :focus) {
+	--color: var(--primary-inverse);
+	--border-color: var(--primary-hover);
 
-  // Extend the background to the full width
-  &::before {
-    width: 100%;
-  }
+	// Extend the background to the full width
+	&::before {
+		width: 100%;
+	}
 }
 
 // Outline button on dark
-[data-theme=dark] :is(button,input[type=submit], input[type=button], [role=button]).outline, [data-theme=dark] input[type=reset].outline {
-  --color: var(--primary-inverse);
-  --border-color: var(--primary-inverse);
+[data-theme='dark']
+	:is(button, input[type='submit'], input[type='button'], [role='button']).outline,
+[data-theme='dark'] input[type='reset'].outline {
+	--color: var(--primary-inverse);
+	--border-color: var(--primary-inverse);
 }
 
 // Buttons
-:is(button, input[type=submit], input[type=button], [role=button]), input[type=reset] {
-  --color: var(--primary-inverse);
-  --border-color: var(--primary-hover);
-  --background-color: var(--primary-hover);
+:is(button, input[type='submit'], input[type='button'], [role='button']),
+input[type='reset'] {
+	--color: var(--primary-inverse);
+	--border-color: var(--primary-hover);
+	--background-color: var(--primary-hover);
 }
 
 // Hover
-:is(button, input[type=submit], input[type=button], [role=button]):is(:hover, :active, :focus), input[type=reset]:is(:hover, :active, :focus) {
-  --color: var(--primary-hover);
-  --border-color: var(--primary-inverse);
-  --background-color: var(--primary-inverse);
+:is(button, input[type='submit'], input[type='button'], [role='button']):is(
+		:hover,
+		:active,
+		:focus
+	),
+input[type='reset']:is(:hover, :active, :focus) {
+	--color: var(--primary-hover);
+	--border-color: var(--primary-inverse);
+	--background-color: var(--primary-inverse);
 }
 
 /** Footer */
-#root > footer p, #root > footer a {
-  font-size: 14px;
+#root > footer p,
+#root > footer a {
+	font-size: 14px;
 }
 
 #root > footer {
-  padding-bottom: 4em;
-  padding-right: 2em;
-  padding-left: 2em;
-}
-
-[data-theme="light"] #root > footer, :root:not([data-theme=dark]) #root > footer {
-  background-color: #120641;
-}
-
-[data-theme="light"] #root > footer p, [data-theme="light"] #root > footer a, :root:not([data-theme=dark]) #root > footer p {
-  color: #fff;
-}
-
-[data-theme="dark"] #root > footer {
-  background-color: rgba(0, 0, 0, 0.5);
+	padding-bottom: 4em;
+	padding-right: 2em;
+	padding-left: 2em;
 }
 
 .material-symbols-outlined {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 /** Navbar */
-nav details[role=list] summary, nav li[role=list] a {
-  align-self: center;
+nav details[role='list'] summary,
+nav li[role='list'] a {
+	align-self: center;
 }
 
 // TODO: view transition disable for heade
-header nav a, header nav a[role="button"], header nav summary[role="link"] {
-  color: #fff;
-  font-weight: 600;
-  font-size: medium;
-  line-height: 2;
+header nav a,
+header nav a[role='button'],
+header nav summary[role='link'] {
+	color: #fff;
+	font-weight: 600;
+	font-size: medium;
+	line-height: 2;
 }
 
-header nav a:focus, header nav summary[role="link"]:focus {
-  --background-color: invisible;
+header nav a:focus,
+header nav summary[role='link']:focus {
+	--background-color: invisible;
 }
 
 header nav details {
-  overflow: visible;
+	overflow: visible;
 }
 
-header nav[data-theme="dark"] a:not([role="button"]):hover {
-  color: var(--primary-hover);
+header nav[data-theme='dark'] a:not([role='button']):hover {
+	color: var(--primary-hover);
 }
 
-.bg-nav-floating {
-  background-color: #120641;
+details[role='list'] summary + ul,
+li[role='list'] > ul {
+	backdrop-filter: blur(12px);
 }
-
-[data-theme="dark"] .bg-nav-floating {
-  background-color: #120641;
-}
-
-.bg-nav-top {
-  background-color: rgba(18, 6, 65, 0.8);
-  backdrop-filter: blur(12px);
-}
-
-[data-theme="dark"] .bg-nav-top {
-  background-color: rgba(18, 6, 65, 0.8);
-  backdrop-filter: blur(12px);
-}
-
-
-.bg-nav-scrolled {
-  background-color: rgba(18, 6, 65, 0.819);
-  backdrop-filter: blur(12px);
-}
-
-
-[data-theme="dark"] .bg-nav-scrolled {
-  background-color: hsla(252, 83%, 10%, 0.819);
-  backdrop-filter: blur(12px);
-}
-
-details[role=list] summary + ul, li[role=list] > ul {
-  backdrop-filter: blur(12px);
-}
-
-
 
 // Add padding top for the nav bar
 #root > main > section:first-child {
-  padding-top: 8em;
-  min-height: 100vh;
+	padding-top: 8em;
+	min-height: 100vh;
 }
 
 details {
-  overflow: clip;
+	overflow: clip;
 }
 
 details > summary {
-  font-weight: 600;
+	font-weight: 600;
 }
 
-[data-theme="light"] #root > main > section:nth-child(even):not(:first-child), :root:not([data-theme="dark"]) #root > main > section:nth-child(even):not(:first-child) {
-  background-color: hsl(0, 0%, 95%);
-}
-
-[data-theme="dark"] #root > main > section:nth-child(even):not(:first-child) {
-  background-color: #0E0535;
-}
-
+// Section alternatve background
 #root > main > section:nth-child(odd):not(:first-child) {
-  background-color: var(--background-color);
-}
-
-/** Add a white aura on hover */
-[data-theme="light"] .aura:hover, :root:not([data-theme='dark']) .aura:hover {
-  animation: aura 0.2s ease normal forwards;
-}
-
-[data-theme='dark'] .aura:hover {
-  animation: aura-dark 0.2s ease normal forwards;
-}
-
-@keyframes aura-dark {
-  0% {
-    -webkit-filter: drop-shadow(0 0 0rem #fff);
-    filter: drop-shadow(0 0 0rem #fff);
-  }
-  100% {
-    -webkit-filter: drop-shadow(0 0 0.75rem #fff);
-    filter: drop-shadow(0 0 0.75rem #fff);
-  }
-}
-
-@keyframes aura {
-  0% {
-    -webkit-filter: drop-shadow(0 0 0rem var(--primary-hover));
-    filter: drop-shadow(0 0 0rem var(--primary-hover));
-  }
-  100% {
-    -webkit-filter: drop-shadow(0 0 0.75rem var(--primary-hover));
-    filter: drop-shadow(0 0 0.75rem var(--primary-hover));
-  }
-}
-
-/** Drop Shadow */
-[data-theme="light"] .drop-shadow-a, :root:not([data-theme='dark']) .drop-shadow-a {
-  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.212)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.212));
-}
-
-[data-theme='dark'] .drop-shadow-a {
-  filter: drop-shadow(0 4px 3px rgba(255, 255, 255, 0.212)) drop-shadow(0 2px 2px rgba(255, 255, 255, 0.212));
+	background-color: var(--background-color);
 }
 
 /** ViewTransitions */

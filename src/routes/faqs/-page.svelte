@@ -73,7 +73,7 @@ of all sizes.`
 	</main>
 </section>
 
-<section class="py-4 relative mini-section">
+<section class="mini-section relative py-4">
 	<div
 		class="absolute inset-0"
 		style="background-image: url(&quot;{Glos}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"

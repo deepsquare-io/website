@@ -54,12 +54,12 @@
 </script>
 
 <div>
-	<div class="grid md:grid-cols-2 gap-4 lg:grid-cols-3 justify-items-center place-content-around">
+	<div class="grid place-content-around justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
 		{#each applications as application, index}
 			<AnimatedInView once={true} animation={`from-bottom 1s ease-out ${index / 10}s both`}>
 				<a href={application.href} target="_blank" rel="noopener noreferrer">
-					<article class="m-0 p-1 min-h-80 flex justify-center items-center flex-col aura px-4">
-						<div class="flex justify-center items-center flex-col" style="height: 200px;">
+					<article class="aura m-0 flex min-h-80 flex-col items-center justify-center p-1 px-4">
+						<div class="flex flex-col items-center justify-center" style="height: 200px;">
 							<img
 								width={application.width ?? 128}
 								height={application.height ?? 128}
@@ -67,7 +67,7 @@
 								alt={application.name}
 							/>
 						</div>
-						<p style="color: #FFF;">{@html application.description}</p>
+						<p style="color: var(--h1-color)">{@html application.description}</p>
 					</article>
 				</a>
 			</AnimatedInView>

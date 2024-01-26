@@ -77,7 +77,7 @@
 		</center>
 	</main>
 
-	<footer class="py-20 relative">
+	<footer class="relative py-20">
 		<div
 			class="absolute inset-0"
 			style="background-image: url(&quot;{Glos}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
