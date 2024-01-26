@@ -27,8 +27,8 @@
 	import Portrait from '$lib/components/Portrait.svelte';
 
 	import Blockchain from '$lib/assets/media/blockchain-icon.svg';
+	import Change from '$lib/assets/media/change-svgrepo-com.svg';
 	import DPS2D from '$lib/assets/media/dps_2d.svg';
-	import Ethereum from '$lib/assets/media/ethereum-d.svg';
 	import MachineLearning from '$lib/assets/media/machine-learning-03-svgrepo-com.svg';
 	import People from '$lib/assets/media/people-group-svgrepo-com.svg';
 	import ServerRack from '$lib/assets/media/server-rack-svgrepo-com.svg';
@@ -39,7 +39,7 @@
 			title: 'Our Origins: From Mining to Meaning',
 			content: `<p>In 2020, we ran a powerful 70MW crypto mining farm in Sweden with many GPUs.<p/>
 <p>However, we realized that focusing solely on Ethereum mining contradicted our core principles. This led us to <b>shift towards impactful endeavors with genuine meaning</b>.</p>`,
-			illustration: `<img class="max-h-[35vh] lg:max-h-full" height="256" width="256" src=${Ethereum}>`,
+			illustration: `<img class="max-h-[35vh] lg:max-h-full" height="512" width="512" src=${Change}>`,
 			animation: 'fade 0.5s ease-in-out 0.4s both'
 		},
 		{
