@@ -23,6 +23,7 @@
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
 
 	import AnimatedInView from '$components/AnimatedInView.svelte';
+	import DemoButton from '$components/DemoButton.svelte';
 	import Parallax from '$components/Parallax.svelte';
 	import ContainerIcon from '$lib/assets/media/container-registry-svgrepo-com.svg';
 	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
@@ -236,6 +237,29 @@
 				</p>
 			</AnimatedInView>
 		</div>
+	</main>
+</section>
+
+<section id="live-demo">
+	<header>
+		<center>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+				<h2>Try DeepSquare in 5 minutes!</h2>
+			</AnimatedInView>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
+				<p>Launch LLama on DeepSquare and have your own AI-assisted chat!</p>
+			</AnimatedInView>
+		</center>
+	</header>
+
+	<main>
+		<AnimatedInView
+			class="w-full lg:w-[50vw]"
+			once={true}
+			animation={`from-bottom-slow 0.4s ease-out both`}
+		>
+			<DemoButton />
+		</AnimatedInView>
 	</main>
 </section>
 

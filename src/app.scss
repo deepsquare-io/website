@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'notyf/notyf.min.css';
 
 $material-symbols-font-path: 'material-symbols/';
 @import 'material-symbols/outlined';
