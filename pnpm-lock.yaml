@@ -60,8 +60,8 @@ devDependencies:
     specifier: 2.35.1
     version: 2.35.1(eslint@8.56.0)(svelte@4.2.9)
   material-symbols:
-    specifier: 0.14.5
-    version: 0.14.5
+    specifier: 0.14.7
+    version: 0.14.7
   postcss:
     specifier: 8.4.33
     version: 8.4.33
@@ -2412,8 +2412,8 @@ packages:
     hasBin: true
     dev: true
 
-  /material-symbols@0.14.5:
-    resolution: {integrity: sha512-3fB0MEG93k8C7D7sI0HSQWlKy3rgIQ6HPICkEPs9blsod/nWofSBdDPvUa9XpNRIqciqLA+hZF8DVnA4J19BlQ==}
+  /material-symbols@0.14.7:
+    resolution: {integrity: sha512-65aJAnHtKx98tm41vz9gS6fQfUo+8pCg2sETOC/linpHKEv6gw7U+iHN5Bha6tfM8hDSGfjCwaKOWb+Rs/XyDg==}
     dev: true
 
   /mdn-data@2.0.30:
