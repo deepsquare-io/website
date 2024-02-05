@@ -147,6 +147,11 @@
 			{/each}
 		{/if}
 	</div>
+	{#if urls.length > 0}
+		<small transition:fade={{ duration: 300, easing: quintInOut }}
+			>The session will last 5 minutes.</small
+		>
+	{/if}
 </div>
 
 <svg
