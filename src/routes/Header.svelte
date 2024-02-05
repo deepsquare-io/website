@@ -46,8 +46,8 @@
 			href: base + '/solutions'
 		},
 		{
-			name: 'About us',
-			href: base + '/about'
+			name: 'Our Story',
+			href: base + '/story'
 		},
 		// {
 		// 	name: 'Contact',
