@@ -134,7 +134,7 @@
 			>
 		{/if}
 		{#if urls.length > 0}
-			{#each urls as url}
+			{#each urls as url, index}
 				<a
 					transition:fade={{ duration: 300, easing: quintInOut }}
 					role="button"
@@ -142,7 +142,7 @@
 					target="_blank"
 					rel="noopener"
 					class="blinking-aura"
-					><span>{`Open App${urls.length > 1 ? ` ${urls.length}` : ''}`}</span>
+					><span>{`Open App${index > 1 ? ` ${index}` : ''}`}</span>
 				</a>
 			{/each}
 		{/if}
