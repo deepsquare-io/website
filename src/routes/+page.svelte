@@ -247,7 +247,7 @@
 				<h2>Try DeepSquare in 5 minutes!</h2>
 			</AnimatedInView>
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<p>Launch LLama on DeepSquare and have your own AI-assisted chat!</p>
+				<p>Launch LLama 2 on DeepSquare and have your own AI-assisted chat!</p>
 			</AnimatedInView>
 		</center>
 	</header>
