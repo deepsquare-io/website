@@ -62,7 +62,7 @@
 					lines = [];
 					hasSubmitted = false;
 					if (socket) socket.close();
-					notyf.success('Job has finished!\nThank you for trying DeepSquare!');
+					notyf.success('The session has ended!\nThank you for trying DeepSquare!');
 					break;
 			}
 		}
