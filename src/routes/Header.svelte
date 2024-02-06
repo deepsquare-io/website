@@ -88,7 +88,7 @@
 		{
 			name: 'Discord',
 			icon: '<i class="fa-brands fa-discord"></i>',
-			href: 'https://discord.com/invite/3PQkJGvUGB',
+			href: 'https://discord.gg/KYWh28BkUE',
 			isExternal: true
 		}
 	];
