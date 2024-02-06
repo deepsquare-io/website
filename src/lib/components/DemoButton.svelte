@@ -54,6 +54,16 @@
 				case JobStatus.RUNNING:
 					lines = [...lines, 'Job is starting! Please wait for the application to be ready'];
 					break;
+				default:
+					// Job has ended.
+					jobStatus = JobStatus.UNINITIALIZED;
+					oldJobStatus = JobStatus.UNINITIALIZED;
+					urls = [];
+					lines = [];
+					hasSubmitted = false;
+					if (socket) socket.close();
+					notyf.success('Job has finished!\nThank you for trying DeepSquare!');
+					break;
 			}
 		}
 
@@ -377,7 +387,7 @@
 			aria-label="Running"
 			opacity={jobStatus === JobStatus.RUNNING ? 1 : 0}
 		>
-			{#if jobStatus === JobStatus.RUNNING && urls.length === 0}
+			{#if jobStatus === JobStatus.RUNNING}
 				<animate
 					attributeName="opacity"
 					values="0;1;0"
@@ -429,7 +439,7 @@
 			id="running-icon"
 			style="fill:#00ff00;fill-opacity:1;stroke-width:0.443817"
 			opacity={jobStatus === JobStatus.RUNNING ? 1 : 0}
-			>{#if jobStatus === JobStatus.RUNNING && urls.length === 0}
+			>{#if jobStatus === JobStatus.RUNNING}
 				<animate
 					attributeName="opacity"
 					values="0.5;1;0.5"
