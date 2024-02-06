@@ -247,7 +247,10 @@
 				<h2>Try DeepSquare in one click!</h2>
 			</AnimatedInView>
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<p>Launch LLMs on DeepSquare and have your own AI-assisted chat!</p>
+				<p>
+					Launch Mistral Large Language Model (LLM) on DeepSquare and have your own AI-assisted
+					chat!
+				</p>
 			</AnimatedInView>
 		</center>
 	</header>
