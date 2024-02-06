@@ -246,12 +246,6 @@
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
 				<h2>Try DeepSquare in one click!</h2>
 			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<p>
-					Launch Mistral Large Language Model (LLM) on DeepSquare and have your own AI-assisted
-					chat!
-				</p>
-			</AnimatedInView>
 		</center>
 	</header>
 
@@ -261,7 +255,31 @@
 			once={true}
 			animation={`from-bottom-slow 0.4s ease-out both`}
 		>
-			<DemoButton />
+			<center class="flex flex-col space-y-8">
+				<p>
+					Instantly launch <a href="https://mistral.ai/news/announcing-mistral-7b/"
+						>a Mistral Large Language Model (LLM)</a
+					>, and feel the seamless deployment on DeepSquare.
+				</p>
+
+				<DemoButton />
+
+				<div>
+					<p class="pt-4">
+						<a
+							href="https://github.com/deepsquare-io/workflow-catalog/blob/main/text-generation-inference/text-generation-inference.yaml"
+							>This LLM workflow</a
+						>
+						showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing
+						decentralized HPC resources billed by the minute.
+					</p>
+					<p>
+						Our Platform-as-a-Service (PaaS) environment offers agility, seamlessly integrating AI
+						and high-performance computing into scalable SaaS applications, making deployment easy
+						and cost-efficient.
+					</p>
+				</div>
+			</center>
 		</AnimatedInView>
 	</main>
 </section>

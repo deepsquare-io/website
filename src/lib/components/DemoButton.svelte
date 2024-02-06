@@ -3,6 +3,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { quintInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
+	import Spinner from './Spinner.svelte';
 
 	enum JobStatus {
 		UNINITIALIZED = 'Uninitialized',
@@ -19,10 +20,11 @@
 	const demoApiHost = 'demo-api.deepsquare.run';
 
 	let urls: string[] = [];
-
+	let lines: string[] = [];
 	let socket: WebSocket;
 
 	let hasSubmitted = false;
+	let oldJobStatus: JobStatus = JobStatus.UNINITIALIZED;
 	let jobStatus: JobStatus = JobStatus.UNINITIALIZED;
 	let buttonLabel = 'Submit Job';
 
@@ -34,6 +36,30 @@
 		buttonLabel = 'Running...';
 	} else {
 		buttonLabel = 'Submit Job';
+	}
+
+	$: {
+		if (oldJobStatus !== jobStatus) {
+			oldJobStatus = jobStatus;
+			switch (jobStatus) {
+				case JobStatus.PENDING:
+					lines = [...lines, 'Job submitted to the DeepSquare Grid'];
+					break;
+				case JobStatus.METASCHEDULED:
+					lines = [...lines, 'A cluster has been found!'];
+					break;
+				case JobStatus.SCHEDULED:
+					lines = [...lines, 'Job queued. Allocating resources'];
+					break;
+				case JobStatus.RUNNING:
+					lines = [...lines, 'Job is starting! Please wait for the application to be ready'];
+					break;
+			}
+		}
+
+		if (urls.length > 0) {
+			lines = [...lines, 'Application is ready!'];
+		}
 	}
 
 	async function submitJob() {
@@ -125,34 +151,6 @@
 		}
 	});
 </script>
-
-<div class="mb-8 flex flex-col items-center justify-center">
-	<div class="flex space-x-4">
-		{#if urls.length === 0}
-			<button class="m-0" aria-busy={hasSubmitted} style="width: auto;" on:click={submitJob}
-				>{buttonLabel}</button
-			>
-		{/if}
-		{#if urls.length > 0}
-			{#each urls as url, index}
-				<a
-					transition:fade={{ duration: 300, easing: quintInOut }}
-					role="button"
-					href={url}
-					target="_blank"
-					rel="noopener"
-					class="blinking-aura"
-					><span>{`Open App${index > 1 ? ` ${index}` : ''}`}</span>
-				</a>
-			{/each}
-		{/if}
-	</div>
-	{#if urls.length > 0}
-		<small transition:fade={{ duration: 300, easing: quintInOut }}
-			>The session will last 5 minutes.</small
-		>
-	{/if}
-</div>
 
 <svg
 	width="100%"
@@ -377,9 +375,9 @@
 			id="running"
 			transform="matrix(0.44304601,0,0,0.44304601,83.349011,87.905967)"
 			aria-label="Running"
-			opacity="0"
+			opacity={jobStatus === JobStatus.RUNNING ? 1 : 0}
 		>
-			{#if jobStatus === JobStatus.RUNNING}
+			{#if jobStatus === JobStatus.RUNNING && urls.length === 0}
 				<animate
 					attributeName="opacity"
 					values="0;1;0"
@@ -431,24 +429,67 @@
 			id="running-icon"
 			style="fill:#00ff00;fill-opacity:1;stroke-width:0.443817"
 			opacity={jobStatus === JobStatus.RUNNING ? 1 : 0}
+			>{#if jobStatus === JobStatus.RUNNING && urls.length === 0}
+				<animate
+					attributeName="opacity"
+					values="0.5;1;0.5"
+					dur="1s"
+					repeatCount="indefinite"
+				/>{/if}
+		</path>
+		<path
+			d="m -7.3782494,119.9613 q -0.7196672,0 -1.1006674,-0.39511 -0.3810003,-0.40217 -0.3810003,-1.08655 v -3.73945 h 0.6350004 v 3.73945 q 0,0.42333 0.2046113,0.67027 0.2116668,0.24695 0.642056,0.24695 0.4233336,0 0.6350004,-0.24695 0.2116668,-0.24694 0.2116668,-0.67027 v -3.73945 h 0.6350004 v 3.73945 q 0,0.69144 -0.3810003,1.08655 -0.3739447,0.39511 -1.1006673,0.39511 z m 4.0781165,-0.0141 q -0.6491116,0 -1.0089451,-0.28928 -0.352778,-0.29633 -0.352778,-0.83255 h 0.6350004 q 0,0.26811 0.1905001,0.42333 0.1905001,0.14817 0.5362226,0.14817 h 0.3104446 q 0.352778,0 0.5432781,-0.15522 0.1975557,-0.15523 0.1975557,-0.43745 0,-0.50094 -0.4586114,-0.56444 l -1.0724451,-0.15523 q -0.3951114,-0.0564 -0.6138338,-0.32455 -0.2187223,-0.27517 -0.2187223,-0.71967 0,-0.508 0.3457224,-0.79728 0.352778,-0.28928 0.9666118,-0.28928 h 0.3104446 q 0.5644448,0 0.9172228,0.28223 0.3598336,0.27516 0.3880558,0.72672 h -0.6420559 q -0.014111,-0.20461 -0.1975557,-0.33867 -0.176389,-0.13405 -0.465667,-0.13405 h -0.3104446 q -0.3245558,0 -0.5080004,0.14816 -0.1834445,0.14817 -0.1834445,0.40217 0,0.40922 0.3739447,0.46567 l 1.0018895,0.14111 q 0.9877784,0.14111 0.9877784,1.15711 0,0.54328 -0.3598336,0.84667 -0.352778,0.29633 -1.0018895,0.29633 z m 4.3885611,0.0141 q -0.68438931,0 -1.10772292,-0.40922 -0.41627805,-0.41628 -0.41627805,-1.143 v -0.91722 q 0,-0.72673 0.41627805,-1.13595 0.42333361,-0.41628 1.10772292,-0.41628 0.4586114,0 0.7972783,0.18345 0.3457225,0.18344 0.5362226,0.51505 0.1905001,0.33162 0.1905001,0.78317 v 0.69145 H 0.18531652 v 0.36689 q 0,0.43038 0.24694461,0.68438 0.2469446,0.24695 0.65616707,0.24695 0.352778,0 0.5785559,-0.13406 0.2328335,-0.14111 0.2822225,-0.37394 H 2.584207 q -0.0635,0.48683 -0.4727226,0.77611 -0.4092225,0.28222 -1.0230562,0.28222 z M 0.18531652,117.61886 H 1.9915399 v -0.19756 q 0,-0.45861 -0.239889,-0.70555 -0.2328335,-0.25401 -0.6632227,-0.25401 -0.43038915,0 -0.67027819,0.25401 -0.23283349,0.24694 -0.23283349,0.70555 z m 3.81000478,2.27189 v -3.88056 h 0.6350004 v 0.74083 h 0.014111 q 0.049389,-0.37394 0.3175002,-0.59266 0.2681113,-0.21873 0.7196671,-0.21873 0.6067782,0 0.931334,0.36689 0.3316113,0.35984 0.3316113,1.03011 v 0.33162 H 6.309545 v -0.33162 q 0,-0.84666 -0.8255005,-0.84666 -0.4162781,0 -0.6350005,0.23989 -0.2187223,0.23989 -0.2187223,0.69144 v 2.46945 z"
+			id="text1"
+			style="font-size:7.05556px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffffff;stroke-width:0.443;paint-order:stroke markers fill"
+			aria-label="User"
 		/></g
 	></svg
 >
-
-<style>
-	@keyframes blink {
-		0% {
-			box-shadow: 0 0 10px var(--primary-hover); /* Initial shadow style */
-		}
-		50% {
-			box-shadow: 0 0 20px var(--primary-hover); /* Blinking shadow style */
-		}
-		100% {
-			box-shadow: 0 0 10px var(--primary-hover); /* Back to initial shadow style */
-		}
-	}
-
-	.blinking-aura {
-		animation: blink 1s infinite; /* Blinking animation with a 1-second duration, set to repeat infinitely */
-	}
-</style>
+<div>
+	<div
+		class="relative flex w-full flex-col items-center justify-center p-2"
+		style="background-color: #000; border: var(--primary-hover) solid 1px; min-height: 200px"
+	>
+		{#if jobStatus === JobStatus.UNINITIALIZED}
+			<div
+				transition:fade={{ duration: 300, easing: quintInOut }}
+				class="absolute -inset-1"
+				style="backdrop-filter: blur(8px); background-color: rgba(0, 0, 0, 0);"
+			></div>
+			<div
+				transition:fade={{ duration: 300, easing: quintInOut }}
+				class="absolute inset-0 flex flex-col items-center justify-center"
+			>
+				<button
+					class="m-0"
+					aria-busy={hasSubmitted}
+					style="width: fit-content;"
+					on:click={submitJob}>{buttonLabel}</button
+				>
+			</div>
+		{/if}
+		{#each lines as line, index}
+			<p style="font-family: monospace; text-align: left; margin: 0;">
+				{@html line}
+				{#if index === lines.length - 1 && urls.length === 0}<Spinner
+						style="color: var(--primary-hover)"
+					/>{/if}
+			</p>
+		{/each}
+		{#if urls.length > 0}
+			<div transition:fade={{ duration: 300, easing: quintInOut }}>
+				{#each urls as url, index}
+					<a class="blinking-aura mt-4 underline" role="button" href={url}
+						>OPEN APP{index > 1 ? ` ${index}` : ''}
+						<span class="material-symbols-outlined">arrow_outward</span></a
+					>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	{#if urls.length > 0}
+		<small transition:fade={{ duration: 300, easing: quintInOut }}
+			>The session will last 5 minutes.</small
+		>
+	{/if}
+</div>

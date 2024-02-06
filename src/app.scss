@@ -395,3 +395,23 @@ details > summary {
 		animation: none !important;
 	}
 }
+
+button {
+	text-transform: uppercase;
+}
+
+@keyframes blink {
+	0% {
+		box-shadow: 0 0 10px var(--primary-hover); /* Initial shadow style */
+	}
+	50% {
+		box-shadow: 0 0 15px var(--primary-hover); /* Blinking shadow style */
+	}
+	100% {
+		box-shadow: 0 0 10px var(--primary-hover); /* Back to initial shadow style */
+	}
+}
+
+.blinking-aura {
+	animation: blink 1s infinite; /* Blinking animation with a 1-second duration, set to repeat infinitely */
+}
