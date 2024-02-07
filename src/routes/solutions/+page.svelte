@@ -41,6 +41,7 @@
 </svelte:head>
 
 <section data-theme="dark" id="technology-banner" class="relative">
+	<!-- Overlays -->
 	<Parallax
 		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Background}&quot;); background-size: cover; background-position: center;"
@@ -49,7 +50,8 @@
 		class="absolute inset-0 -z-10"
 		style="backdrop-filter: blur(12px); background: rgba(32,14,81, 0.2);"
 	></div>
-	<!-- <IdeaParticles class="absolute inset-0 -z-10" /> -->
+
+	<!-- Content -->
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">

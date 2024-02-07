@@ -191,6 +191,7 @@
 </svelte:head>
 
 <section data-theme="dark" id="presentation" class="relative">
+	<!-- Overlays -->
 	<Parallax
 		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Background}&quot;); background-position: center 20%; background-repeat: no-repeat; background-size: cover;"
@@ -199,6 +200,8 @@
 		class="absolute inset-0 -z-10"
 		style="backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0);"
 	></div>
+
+	<!-- Content -->
 	<main>
 		<div class="grid md:grid-cols-3">
 			<div class="md:col-span-2">
@@ -243,6 +246,7 @@
 </section>
 
 <section id="story" class="relative" style="background-color: transparent;">
+	<!-- Overlays -->
 	<div
 		class="absolute inset-0 -z-10"
 		style="backdrop-filter: blur(10px); background-color: var(--background-color);"
@@ -256,6 +260,8 @@
 		class="absolute inset-0 -z-10"
 		style="backdrop-filter: blur(0px); background-color: rgba(0, 0, 0, 0);"
 	></div>
+
+	<!-- Content -->
 	<main>
 		{#each story as chapter, index}
 			<OpacityInView

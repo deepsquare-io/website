@@ -42,6 +42,7 @@ $transition-len: 0.2s;
 	--h4-color: hsl(252, 75%, 28%);
 	--h5-color: hsl(252, 73%, 33%);
 	--h6-color: hsl(252, 71%, 38%);
+	--bg-alternate: hsl(0, 0%, 95%);
 
 	.drop-shadow-a {
 		filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.212)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.212));
@@ -91,7 +92,7 @@ $transition-len: 0.2s;
 
 	// Section altnernate background
 	#root > main > section:nth-child(even):not(:first-child) {
-		background-color: hsl(0, 0%, 95%);
+		background-color: var(--bg-alternate);
 	}
 }
 
@@ -110,6 +111,7 @@ $transition-len: 0.2s;
 	--primary-hover: #fff;
 	--primary-focus: #c247ff;
 	--primary-inverse: #fff;
+	--bg-alternate: #0e0535;
 
 	.drop-shadow-a {
 		filter: drop-shadow(0 4px 3px rgba(255, 255, 255, 0.212))
@@ -158,7 +160,7 @@ $transition-len: 0.2s;
 	}
 
 	#root > main > section:nth-child(even):not(:first-child) {
-		background-color: #0e0535;
+		background-color: var(--bg-alternate);
 	}
 }
 

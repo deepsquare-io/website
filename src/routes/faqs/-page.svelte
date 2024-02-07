@@ -74,10 +74,13 @@ of all sizes.`
 </section>
 
 <section class="mini-section relative py-4">
+	<!-- Overlays -->
 	<div
 		class="absolute inset-0"
 		style="background-image: url(&quot;{Glos}&quot;); background-position: center center; background-repeat: no-repeat; background-size: contain;"
 	></div>
+
+	<!-- Content -->
 	<center>
 		<h4>Join our Community</h4>
 		<div>

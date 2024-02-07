@@ -129,6 +129,7 @@
 </svelte:head>
 
 <section data-theme="dark" id="introduction" class="relative">
+	<!-- Overlays -->
 	<Parallax
 		class="absolute inset-0 -z-10"
 		style="background-image: url(&quot;{Background}&quot;); background-position: center; background-repeat: no-repeat; background-size: cover;"
@@ -138,6 +139,7 @@
 		style="backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0);"
 	></div>
 
+	<!-- Content -->
 	<main>
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
@@ -242,7 +244,23 @@
 	</main>
 </section>
 
-<section id="live-demo">
+<section id="live-demo" class="relative" style="background-color: transparent;">
+	<!-- Overlays -->
+	<div
+		class="absolute inset-0 -z-10"
+		style="backdrop-filter: blur(10px); background-color: var(--background-color);"
+	></div>
+	<Parallax
+		factor={0.3}
+		class="absolute inset-0 -z-10"
+		style="background: radial-gradient(circle, rgba(9,4,87,1) 0%, rgba(9,4,87, 0) 50%, rgba(9,4,87,0) 100%); background-position: center center; background-repeat: no-repeat;"
+	></Parallax>
+	<div
+		class="absolute inset-0 -z-10"
+		style="backdrop-filter: blur(0px); background-color: rgba(0, 0, 0, 0);"
+	></div>
+
+	<!-- Content -->
 	<header>
 		<center>
 			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
@@ -341,24 +359,7 @@
 	</main>
 </section>
 
-<!-- <section id="demo">
-	<header>
-		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<h2>Demo</h2>
-			</AnimatedInView>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<p>The live demo of the DeepSquare platform.</p>
-			</AnimatedInView>
-		</center>
-	</header>
-
-	<main>
-		<center>TODO</center>
-	</main>
-</section> -->
-
-<section id="partners" class="m-0">
+<section id="partners" class="relative m-0" style="background-color: transparent;">
 	<main>
 		<center>
 			<section id="builders">
