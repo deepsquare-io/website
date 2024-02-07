@@ -471,7 +471,7 @@
 				class="absolute inset-0 flex flex-col items-center justify-center"
 			>
 				<button
-					class="m-0"
+					class="m-0 {!hasSubmitted ? 'blinking-aura' : ''}"
 					aria-busy={hasSubmitted}
 					style="width: fit-content;"
 					on:click={submitJob}>{buttonLabel}</button
