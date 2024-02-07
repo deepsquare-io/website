@@ -208,16 +208,21 @@
 				</p>
 			</AnimatedInView>
 			<center>
-				<div class="flex content-center items-center space-x-4">
-					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
-						<img class="drop-shadow-a rounded-lg" src={CompiledJob} alt="Compiled Job" />
-						<div><span>Before with SLURM</span></div>
-					</AnimatedInView>
-					<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
-						<img class="drop-shadow-a rounded-lg" style="max-width: 25vh;" src={Job} alt="Job" />
-						<div><span>After with DeepSquare</span></div>
-					</AnimatedInView>
-				</div>
+				<AnimatedInView once={true} animation={`from-right-slow 0.5s ease-out both`}>
+					<div class="flex content-center items-center space-x-4 lg:max-w-[50vw]">
+						<div>
+							<img class="drop-shadow-a rounded-lg" src={CompiledJob} alt="Compiled Job" />
+							<div><span>Before with SLURM</span></div>
+						</div>
+						<div>
+							<span class="material-symbols-outlined" style="font-size: 3rem;">trending_flat</span>
+						</div>
+						<div>
+							<img class="drop-shadow-a rounded-lg" src={Job} alt="Job" />
+							<div><span>After with DeepSquare</span></div>
+						</div>
+					</div>
+				</AnimatedInView>
 			</center>
 		</section>
 		<section class="grid content-center justify-items-center gap-4 lg:grid-cols-2">
