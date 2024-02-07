@@ -415,3 +415,7 @@ button {
 .blinking-aura {
 	animation: blink 1s infinite; /* Blinking animation with a 1-second duration, set to repeat infinitely */
 }
+
+html {
+	scroll-behavior: smooth;
+}
