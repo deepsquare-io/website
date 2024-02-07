@@ -5,6 +5,7 @@
 
 	import Parallax from '$components/Parallax.svelte';
 	import Background from '$lib/assets/media/fv-min.jpg';
+	import Spots2 from '$lib/assets/media/spots2.svg';
 
 	import ClusterFactory from '$lib/assets/media/ClusterFactory-min-scaled.jpg';
 	import DeepSquareCommunity from '$lib/assets/media/DeepSquareCommunity-min-scaled.jpg';
@@ -178,7 +179,23 @@
 	</main>
 </section>
 
-<section id="features">
+<section id="features" class="relative" style="background-color: transparent;">
+	<!-- Overlays -->
+	<div
+		class="absolute inset-0 -z-10"
+		style="backdrop-filter: blur(10px); background-color: var(--background-color);"
+	></div>
+	<Parallax
+		factor={0.2}
+		class="absolute inset-0 -z-10"
+		style="background-image: url(&quot;{Spots2}&quot;); background-position: center center; background-size: cover;"
+	></Parallax>
+	<div
+		class="absolute inset-0 -z-10"
+		style="backdrop-filter: blur(0px); background-color: rgba(0, 0, 0, 0);"
+	></div>
+
+	<!-- Content -->
 	<header>
 		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 			<center
