@@ -31,8 +31,8 @@ $transition-len: 0.2s;
 		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	--mono-img-filter: saturate(0%) brightness(0%);
 	--border-radius: 0;
-	--primary: #6753ff;
-	--primary-hover: #c247ff;
+	--primary: #c247ff;
+	--primary-hover: #fff;
 	--primary-focus: #c247ff;
 	--primary-inverse: #fff;
 	--color: #120641;
@@ -54,12 +54,12 @@ $transition-len: 0.2s;
 
 	@keyframes aura {
 		0% {
-			-webkit-filter: drop-shadow(0 0 0rem var(--primary-hover));
-			filter: drop-shadow(0 0 0rem var(--primary-hover));
+			-webkit-filter: drop-shadow(0 0 0rem var(--primary));
+			filter: drop-shadow(0 0 0rem var(--primary));
 		}
 		100% {
-			-webkit-filter: drop-shadow(0 0 0.75rem var(--primary-hover));
-			filter: drop-shadow(0 0 0.75rem var(--primary-hover));
+			-webkit-filter: drop-shadow(0 0 0.75rem var(--primary));
+			filter: drop-shadow(0 0 0.75rem var(--primary));
 		}
 	}
 
@@ -106,8 +106,8 @@ $transition-len: 0.2s;
 	--dropdown-background-color: hsla(252, 83%, 10%, 0.819);
 	--dropdown-hover-background-color: #c247ff;
 	--color: #fff;
-	--primary: #6753ff;
-	--primary-hover: #c247ff;
+	--primary: #c247ff;
+	--primary-hover: #fff;
 	--primary-focus: #c247ff;
 	--primary-inverse: #fff;
 
@@ -249,7 +249,7 @@ input[type='reset'].outline {
 		content: '';
 
 		// Background color
-		background: var(--primary-hover);
+		background: var(--primary);
 
 		// Position relative to button
 		position: absolute;
@@ -282,7 +282,7 @@ input[type='reset'].outline span {
 	),
 input[type='reset'].outline:is([aria-current], :hover, :active, :focus) {
 	--color: var(--primary-inverse);
-	--border-color: var(--primary-hover);
+	--border-color: var(--primary);
 
 	// Extend the background to the full width
 	&::before {
@@ -299,13 +299,6 @@ input[type='reset'].outline:is([aria-current], :hover, :active, :focus) {
 }
 
 // Buttons
-:is(button, input[type='submit'], input[type='button'], [role='button']),
-input[type='reset'] {
-	--color: var(--primary-inverse);
-	--border-color: var(--primary-hover);
-	--background-color: var(--primary-hover);
-}
-
 // Hover
 :is(button, input[type='submit'], input[type='button'], [role='button']):is(
 		:hover,
@@ -313,9 +306,7 @@ input[type='reset'] {
 		:focus
 	),
 input[type='reset']:is(:hover, :active, :focus) {
-	--color: var(--primary-hover);
-	--border-color: var(--primary-inverse);
-	--background-color: var(--primary-inverse);
+	--color: var(--primary);
 }
 
 /** Footer */
@@ -360,7 +351,7 @@ header nav details {
 }
 
 header nav[data-theme='dark'] a:not([role='button']):hover {
-	color: var(--primary-hover);
+	color: var(--primary);
 }
 
 details[role='list'] summary + ul,
@@ -402,13 +393,13 @@ button {
 
 @keyframes blink {
 	0% {
-		box-shadow: 0 0 10px var(--primary-hover); /* Initial shadow style */
+		box-shadow: 0 0 10px var(--primary); /* Initial shadow style */
 	}
 	50% {
-		box-shadow: 0 0 15px var(--primary-hover); /* Blinking shadow style */
+		box-shadow: 0 0 15px var(--primary); /* Blinking shadow style */
 	}
 	100% {
-		box-shadow: 0 0 10px var(--primary-hover); /* Back to initial shadow style */
+		box-shadow: 0 0 10px var(--primary); /* Back to initial shadow style */
 	}
 }
 
