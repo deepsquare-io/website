@@ -359,7 +359,7 @@
 	</main>
 </section>
 
-<section id="partners" class="relative m-0" style="background-color: transparent;">
+<section id="partners" class="m-0">
 	<main>
 		<center>
 			<section id="builders">
