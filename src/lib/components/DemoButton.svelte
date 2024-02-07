@@ -458,7 +458,7 @@
 <div>
 	<div
 		class="relative flex w-full flex-col items-center justify-center p-2"
-		style="background-color: #000; border: var(--primary-hover) solid 1px; min-height: 200px"
+		style="background-color: #000; border: var(--primary) solid 1px; min-height: 200px"
 	>
 		{#if jobStatus === JobStatus.UNINITIALIZED}
 			<div
@@ -482,7 +482,7 @@
 			<p style="font-family: monospace; text-align: left; margin: 0;">
 				{@html line}
 				{#if index === lines.length - 1 && urls.length === 0}<Spinner
-						style="color: var(--primary-hover)"
+						style="color: var(--primary)"
 					/>{/if}
 			</p>
 		{/each}
