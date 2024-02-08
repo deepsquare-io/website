@@ -28,6 +28,7 @@
 	let jobStatus: JobStatus = JobStatus.UNINITIALIZED;
 	let buttonLabel = 'Submit Job';
 
+	// The button label changes depending on the job status
 	$: if (hasSubmitted && jobStatus !== JobStatus.RUNNING) {
 		buttonLabel = 'Submitting...';
 	} else if (jobStatus === JobStatus.RUNNING && urls.length === 0) {
@@ -38,6 +39,7 @@
 		buttonLabel = 'Submit Job';
 	}
 
+	// Update the lines of the "terminal" when the job status changes
 	$: {
 		if (oldJobStatus !== jobStatus) {
 			oldJobStatus = jobStatus;
@@ -77,6 +79,7 @@
 			return;
 		}
 		try {
+			// Submit the job to the DeepSquare Grid
 			hasSubmitted = true;
 			const response = await fetch(`https://${demoApiHost}/job?job=tgi`, {
 				method: 'POST'
@@ -86,9 +89,12 @@
 				throw new Error(`Failed to submit job: ${body}`);
 			}
 
+			// Close the previous socket if it exists
 			if (socket) {
 				socket.close();
 			}
+
+			// Open a new WebSocket to receive job status updates
 			socket = new WebSocket(`wss://${demoApiHost}/job?token=${body}`);
 			socket.addEventListener('message', (event) => {
 				try {
@@ -115,6 +121,7 @@
 		});
 	}
 
+	// SVG animation
 	let submittedCircle: SVGCircleElement;
 	let metaScheduledCircle: SVGCircleElement;
 	let scheduledCircle: SVGCircleElement;
@@ -147,6 +154,9 @@
 		}
 	}
 
+	// Load notyf only on this component.
+	//
+	// NOTE: You could also load it "app" level instead of component level if needed.
 	onMount(() => {
 		notyf = new Notyf({
 			duration: 10000,

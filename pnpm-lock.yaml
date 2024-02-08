@@ -59,9 +59,6 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: 2.35.1
     version: 2.35.1(eslint@8.56.0)(svelte@4.2.10)
-  material-symbols:
-    specifier: 0.14.7
-    version: 0.14.7
   notyf:
     specifier: ^3.10.0
     version: 3.10.0
@@ -2413,10 +2410,6 @@ packages:
     resolution: {integrity: sha512-ahRPGXJpjMjwSOlBoTMZAK7ATXkli5qCPxZ21TG44rx1KEo44bii4ekgTDQPNRQ4Kh7JMb9Ub1PVk1NxRSsorg==}
     engines: {node: '>= 16'}
     hasBin: true
-    dev: true
-
-  /material-symbols@0.14.7:
-    resolution: {integrity: sha512-65aJAnHtKx98tm41vz9gS6fQfUo+8pCg2sETOC/linpHKEv6gw7U+iHN5Bha6tfM8hDSGfjCwaKOWb+Rs/XyDg==}
     dev: true
 
   /mdn-data@2.0.30:
