@@ -78,7 +78,7 @@
 		}
 		try {
 			hasSubmitted = true;
-			const response = await fetch(`https://${demoApiHost}/job`, {
+			const response = await fetch(`https://${demoApiHost}/job?job=tgi`, {
 				method: 'POST'
 			});
 			const body = await response.text();
