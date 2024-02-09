@@ -1,5 +1,5 @@
 <script lang="ts">
-	const title = 'Privacy Policy';
+	const title = 'Terms and Conditions';
 </script>
 
 <svelte:head>
