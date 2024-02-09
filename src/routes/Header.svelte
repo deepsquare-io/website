@@ -75,19 +75,19 @@
 		},
 		{
 			name: 'GitHub',
-			icon: '<i class="fa-brands fa-github"></i>',
+			icon: '<i class="si si-github"></i>',
 			href: 'https://github.com/deepsquare-io/grid',
 			isExternal: true
 		},
 		{
 			name: 'Telegram',
-			icon: '<i class="fa-brands fa-telegram"></i>',
+			icon: '<i class="si si-telegram"></i>',
 			href: 'https://t.me/DeepSquareProject',
 			isExternal: true
 		},
 		{
 			name: 'Discord',
-			icon: '<i class="fa-brands fa-discord"></i>',
+			icon: '<i class="si si-discord"></i>',
 			href: 'https://discord.gg/KYWh28BkUE',
 			isExternal: true
 		}

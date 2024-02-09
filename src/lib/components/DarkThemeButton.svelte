@@ -21,12 +21,11 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="cursor-pointer" on:click={toggleDarkTheme}>
+<!-- svelte-ignore a11y-invalid-attribute -->
+<a href="#" on:click={toggleDarkTheme}>
 	{#if darkTheme}
-		<i class="fa-regular fa-moon"></i>
+		<span class="material-symbols-outlined"> dark_mode </span>
 	{:else}
-		<i class="fa-solid fa-sun"></i>
+		<span class="material-symbols-outlined"> light_mode </span>
 	{/if}
-</div>
+</a>
