@@ -16,7 +16,7 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
-		"@picocss/pico": "1.5.11",
+		"@picocss/pico": "1.5.12",
 		"@playwright/test": "1.41.2",
 		"@sveltejs/adapter-static": "3.0.1",
 		"@sveltejs/enhanced-img": "0.1.8",
