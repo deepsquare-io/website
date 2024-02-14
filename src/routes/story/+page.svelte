@@ -37,7 +37,7 @@
 		{
 			id: 'origin',
 			title: 'Our Origins: From Mining to Meaning',
-			content: `<p>In 2020, we ran a powerful 70MW crypto mining farm in Sweden with many GPUs.<p/>
+			content: `<p>In 2020, we ran a powerful 7MW crypto mining farm in Sweden with around 40k GPUs.<p/>
 <p>However, we realized that focusing solely on Ethereum mining contradicted our core principles. This led us to <b>shift towards impactful endeavors with genuine meaning</b>.</p>`,
 			illustration: `<img class="max-h-[35vh] lg:max-h-full" height="512" width="512" src=${Change}>`,
 			animation: 'fade 0.5s ease-in-out 0.4s both'
