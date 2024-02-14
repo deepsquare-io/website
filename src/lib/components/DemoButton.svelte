@@ -17,7 +17,7 @@
 
 	let notyf: Notyf;
 
-	const demoApiHost = 'demo-api.deepsquare.run';
+	export let demoApiHost = 'demo-api.deepsquare.run';
 
 	let urls: string[] = [];
 	let lines: string[] = [];
