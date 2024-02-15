@@ -32,7 +32,7 @@
 		"notyf": "3.10.0",
 		"postcss": "8.4.35",
 		"prettier": "3.2.5",
-		"prettier-plugin-svelte": "3.2.0",
+		"prettier-plugin-svelte": "3.2.1",
 		"prettier-plugin-tailwindcss": "0.5.11",
 		"sass": "1.70.0",
 		"svelte": "4.2.10",
