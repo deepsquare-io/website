@@ -415,3 +415,7 @@ html {
 	line-height: 1;
 	text-rendering: auto;
 }
+
+.aura-primary {
+	filter: drop-shadow(0 0 1.25rem var(--primary));
+}

@@ -29,6 +29,42 @@
 	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
 	import YAMLIcon from '$lib/assets/media/yaml-file-icon.svg';
 
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
+	let hasSubmitted = false;
+
+	const jobs = [
+		{
+			type: 'tgi',
+			name: 'Text Generation Inference',
+			introduction:
+				'Instantly launch <a href="https://mistral.ai/news/announcing-mistral-7b"/>a Mistral Large Language Model (LLM)</a>, and feel the seamless deployment on DeepSquare.',
+			description:
+				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/text-generation-inference/text-generation-inference.yaml">This LLM workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
+		},
+		{
+			type: 'jupyter',
+			name: 'JupyterLab',
+			introduction:
+				'Instantly launch <a href="https://jupyter.org">a Jupyter Notebook</a>, and feel the seamless deployment on DeepSquare.',
+			description:
+				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/jupyterlab/jupyterlab.yaml">This JupyterLab workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
+		},
+		{
+			type: 'stable-diffusion',
+			name: 'Stable Diffusion',
+			introduction:
+				'Instantly launch <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">a Stable Diffusion</a>, and feel the seamless deployment on DeepSquare.',
+			description:
+				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-webui.yaml">This Stable Diffusion workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
+		}
+	];
+	let job = jobs[0];
+	$: if ($page.url.searchParams.has('job') && job.type !== $page.url.searchParams.get('job')) {
+		job = jobs.find((j) => j.type === $page.url.searchParams.get('job')) || jobs[0];
+	}
+
 	const builders = [
 		{
 			name: 'SquareFactory',
@@ -276,23 +312,61 @@
 			animation={`from-bottom-slow 0.4s ease-out both`}
 		>
 			<center class="flex flex-col space-y-8">
-				<p>
-					Instantly launch <a href="https://mistral.ai/news/announcing-mistral-7b/"
-						>a Mistral Large Language Model (LLM)</a
-					>, and feel the seamless deployment on DeepSquare.
-				</p>
-
-				<DemoButton />
+				<div>
+					<div class="grid place-content-center justify-items-center gap-4 md:grid-cols-3">
+						{#each jobs as j}
+							<!-- svelte-ignore a11y-invalid-attribute -->
+							<a
+								href={j === job || hasSubmitted ? null : 'javascript:void(0)'}
+								on:click={() => {
+									if (j !== job && !hasSubmitted) {
+										$page.url.searchParams.set('job', j.type);
+										goto($page.url.toString(), { noScroll: true, replaceState: true });
+										job = j;
+									}
+								}}
+								class="w-full {j === job || hasSubmitted
+									? 'cursor-default hover:no-underline'
+									: ''}"
+							>
+								<article
+									class="m-0 flex min-h-20 w-full flex-col content-center items-stretch justify-center p-1 px-4 {j ===
+									job
+										? 'aura-primary'
+										: !hasSubmitted
+											? 'aura'
+											: 'bg-[#322f46]'} {hasSubmitted ? 'shadow-none' : ''}"
+								>
+									<p style="color: var(--h1-color);" class="m-0 w-full">{j.name}</p>
+								</article>
+							</a>
+						{/each}
+					</div>
+				</div>
 
 				<div>
-					<p class="pt-4">
-						<a
-							href="https://github.com/deepsquare-io/workflow-catalog/blob/main/text-generation-inference/text-generation-inference.yaml"
-							>This LLM workflow</a
-						>
-						showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing
-						decentralized HPC resources billed by the minute.
-					</p>
+					{#key job}
+						<p>
+							{@html job.introduction}
+						</p>
+					{/key}
+				</div>
+
+				<DemoButton
+					jobType={job.type}
+					on:submit={(e) => {
+						hasSubmitted = e.detail;
+					}}
+				/>
+
+				<div>
+					<div class="pt-4">
+						{#key job}
+							<p>
+								{@html job.description}
+							</p>
+						{/key}
+					</div>
 					<p>
 						Our Platform-as-a-Service (PaaS) environment offers agility, seamlessly integrating AI
 						and high-performance computing into scalable SaaS applications, making deployment easy

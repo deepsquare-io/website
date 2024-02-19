@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Notyf } from 'notyf';
-	import { onDestroy, onMount } from 'svelte';
+	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 	import { quintInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import Spinner from './Spinner.svelte';
@@ -18,12 +18,19 @@
 	let notyf: Notyf;
 
 	export let demoApiHost = 'demo-api.deepsquare.run';
+	export let jobType = 'tgi';
+
+	const dispatch = createEventDispatcher();
+	let hasSubmitted = false;
+
+	$: if (hasSubmitted) {
+		dispatch('submit', hasSubmitted);
+	}
 
 	let urls: string[] = [];
 	let lines: string[] = [];
 	let socket: WebSocket;
 
-	let hasSubmitted = false;
 	let oldJobStatus: JobStatus = JobStatus.UNINITIALIZED;
 	let jobStatus: JobStatus = JobStatus.UNINITIALIZED;
 	let buttonLabel = 'Submit Job';
@@ -81,7 +88,7 @@
 		try {
 			// Submit the job to the DeepSquare Grid
 			hasSubmitted = true;
-			const response = await fetch(`https://${demoApiHost}/job?job=tgi`, {
+			const response = await fetch(`https://${demoApiHost}/job?job=${jobType}`, {
 				method: 'POST'
 			});
 			const body = await response.text();
