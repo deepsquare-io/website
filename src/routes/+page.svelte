@@ -31,6 +31,7 @@
 
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	let hasSubmitted = false;
 
@@ -61,9 +62,12 @@
 		}
 	];
 	let job = jobs[0];
-	$: if ($page.url.searchParams.has('job') && job.type !== $page.url.searchParams.get('job')) {
-		job = jobs.find((j) => j.type === $page.url.searchParams.get('job')) || jobs[0];
-	}
+
+	onMount(() => {
+		if ($page.url.searchParams.has('job') && job.type !== $page.url.searchParams.get('job')) {
+			job = jobs.find((j) => j.type === $page.url.searchParams.get('job')) || jobs[0];
+		}
+	});
 
 	const builders = [
 		{
