@@ -53,12 +53,20 @@
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/jupyterlab/jupyterlab.yaml">This JupyterLab workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
 		{
-			type: 'stable-diffusion',
-			name: 'Stable Diffusion',
+			type: 'comfy',
+			name: 'Stable Diffusion ComfyUI',
 			introduction:
-				'Instantly launch <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">a Stable Diffusion</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch <a href="https://huggingface.co/stabilityai/stable-cascade">Stable Cascade</a> on <a href="https://github.com/comfyanonymous/ComfyUI">ComfyUI</a>, and feel the seamless deployment on DeepSquare.',
 			description:
-				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-webui.yaml">This Stable Diffusion workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
+				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-comfyui.yaml">This Stable Diffusion ComfyUI workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
+		},
+		{
+			type: 'stable-diffusion',
+			name: 'Stable Diffusion WebUI',
+			introduction:
+				'Instantly launch <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">Stable Diffusion</a>on <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">WebUI</a>, and feel the seamless deployment on DeepSquare.',
+			description:
+				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-webui.yaml">This Stable Diffusion WebUI workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		}
 	];
 	let job = jobs[0];
@@ -317,7 +325,9 @@
 		>
 			<center class="flex flex-col space-y-8">
 				<div>
-					<div class="grid place-content-center justify-items-center gap-4 md:grid-cols-3">
+					<div
+						class="grid place-content-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-4"
+					>
 						{#each jobs as j}
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
