@@ -56,7 +56,7 @@
 			type: 'stable-diffusion',
 			name: 'Stable Diffusion',
 			introduction:
-				'Instantly launch <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">a Stable Diffusion</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">a Stable Diffusion</a>, and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-webui.yaml">This Stable Diffusion workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		}
