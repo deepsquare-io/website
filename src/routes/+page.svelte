@@ -40,7 +40,7 @@
 			type: 'tgi',
 			name: 'Text Generation Inference',
 			introduction:
-				'Instantly launch <a href="https://mistral.ai/news/announcing-mistral-7b"/>a Mistral Large Language Model (LLM)</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch a Mistral Large Language Model (LLM), and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/text-generation-inference/text-generation-inference.yaml">This LLM workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
@@ -48,7 +48,7 @@
 			type: 'jupyter',
 			name: 'JupyterLab',
 			introduction:
-				'Instantly launch <a href="https://jupyter.org">a Jupyter Notebook</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch a Jupyter Notebook, and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/jupyterlab/jupyterlab.yaml">This JupyterLab workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
@@ -56,7 +56,7 @@
 			type: 'comfy',
 			name: 'Stable Diffusion ComfyUI',
 			introduction:
-				'Instantly launch <a href="https://huggingface.co/stabilityai/stable-cascade">Stable Cascade</a> on <a href="https://github.com/comfyanonymous/ComfyUI">ComfyUI</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch Stable Diffusion with ComfyUI, and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-comfyui.yaml">This Stable Diffusion ComfyUI workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
@@ -64,7 +64,7 @@
 			type: 'stable-diffusion',
 			name: 'Stable Diffusion WebUI',
 			introduction:
-				'Instantly launch <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5">Stable Diffusion</a>on <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">WebUI</a>, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch  Stable Diffusion with WebUI, and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/stable-diffusion-webui/stable-diffusion-webui.yaml">This Stable Diffusion WebUI workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		}

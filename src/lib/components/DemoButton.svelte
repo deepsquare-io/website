@@ -179,6 +179,54 @@
 	});
 </script>
 
+<div>
+	<div
+		class="relative flex w-full flex-col items-center justify-center p-2"
+		style="background-color: #000; border: var(--primary) solid 1px; min-height: 200px"
+	>
+		{#if jobStatus === JobStatus.UNINITIALIZED}
+			<div
+				transition:fade={{ duration: 300, easing: quintInOut }}
+				class="absolute -inset-1"
+				style="backdrop-filter: blur(8px); background-color: rgba(0, 0, 0, 0);"
+			></div>
+			<div
+				transition:fade={{ duration: 300, easing: quintInOut }}
+				class="absolute inset-0 flex flex-col items-center justify-center"
+			>
+				<button
+					class="m-0 {!hasSubmitted ? 'blinking-aura' : ''}"
+					aria-busy={hasSubmitted}
+					style="width: fit-content;"
+					on:click={submitJob}>{buttonLabel}</button
+				>
+			</div>
+		{/if}
+		{#each lines as line, index}
+			<p style="font-family: monospace; text-align: left; margin: 0;">
+				{@html line}
+				{#if index === lines.length - 1 && urls.length === 0}<Spinner
+						style="color: var(--primary)"
+					/>{/if}
+			</p>
+		{/each}
+		{#if urls.length > 0}
+			<div transition:fade={{ duration: 300, easing: quintInOut }}>
+				{#each urls as url, index}
+					<a class="blinking-aura mt-4 underline" role="button" href={url}
+						>OPEN APP{index > 1 ? ` ${index}` : ''}
+						<span class="material-symbols-outlined">arrow_outward</span></a
+					>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	{#if urls.length > 0}
+		<small transition:fade={{ duration: 300, easing: quintInOut }}
+			>The session will last 10 minutes.</small
+		>
+	{/if}
+</div>
 <svg
 	width="100%"
 	viewBox="0 0 325.78583 62.558063"
@@ -472,51 +520,3 @@
 		/></g
 	></svg
 >
-<div>
-	<div
-		class="relative flex w-full flex-col items-center justify-center p-2"
-		style="background-color: #000; border: var(--primary) solid 1px; min-height: 200px"
-	>
-		{#if jobStatus === JobStatus.UNINITIALIZED}
-			<div
-				transition:fade={{ duration: 300, easing: quintInOut }}
-				class="absolute -inset-1"
-				style="backdrop-filter: blur(8px); background-color: rgba(0, 0, 0, 0);"
-			></div>
-			<div
-				transition:fade={{ duration: 300, easing: quintInOut }}
-				class="absolute inset-0 flex flex-col items-center justify-center"
-			>
-				<button
-					class="m-0 {!hasSubmitted ? 'blinking-aura' : ''}"
-					aria-busy={hasSubmitted}
-					style="width: fit-content;"
-					on:click={submitJob}>{buttonLabel}</button
-				>
-			</div>
-		{/if}
-		{#each lines as line, index}
-			<p style="font-family: monospace; text-align: left; margin: 0;">
-				{@html line}
-				{#if index === lines.length - 1 && urls.length === 0}<Spinner
-						style="color: var(--primary)"
-					/>{/if}
-			</p>
-		{/each}
-		{#if urls.length > 0}
-			<div transition:fade={{ duration: 300, easing: quintInOut }}>
-				{#each urls as url, index}
-					<a class="blinking-aura mt-4 underline" role="button" href={url}
-						>OPEN APP{index > 1 ? ` ${index}` : ''}
-						<span class="material-symbols-outlined">arrow_outward</span></a
-					>
-				{/each}
-			</div>
-		{/if}
-	</div>
-	{#if urls.length > 0}
-		<small transition:fade={{ duration: 300, easing: quintInOut }}
-			>The session will last 5 minutes.</small
-		>
-	{/if}
-</div>
