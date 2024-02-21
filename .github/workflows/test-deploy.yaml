@@ -28,6 +28,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Set Public Version
+        run: |
+          # Get the short commit SHA
+          COMMIT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
+
+          # Set it as an environment variable
+          echo "PUBLIC_VERSION=$COMMIT_SHA" >> $GITHUB_ENV
+
       - name: Test build website
         run: |
           pnpm run build
