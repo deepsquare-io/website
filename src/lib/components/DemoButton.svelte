@@ -71,7 +71,11 @@
 					lines = [];
 					hasSubmitted = false;
 					if (socket) socket.close();
-					notyf.success('The session has ended!\nThank you for trying DeepSquare!');
+					notyf.success({
+						message: 'The session has ended!\nThank you for trying DeepSquare!',
+						dismissible: true,
+						duration: 0
+					});
 					break;
 			}
 		}
