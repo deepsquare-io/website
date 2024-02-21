@@ -40,7 +40,7 @@
 			type: 'tgi',
 			name: 'Text Generation Inference',
 			introduction:
-				'Instantly launch a Mistral Large Language Model (LLM), and feel the seamless deployment on DeepSquare.',
+				'Instantly launch the Mistral Large Language Model (LLM), and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/text-generation-inference/text-generation-inference.yaml">This LLM workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
@@ -48,7 +48,7 @@
 			type: 'jupyter',
 			name: 'JupyterLab',
 			introduction:
-				'Instantly launch a Jupyter Notebook, and feel the seamless deployment on DeepSquare.',
+				'Instantly launch Jupyter Notebook, and feel the seamless deployment on DeepSquare.',
 			description:
 				'<a href="https://github.com/deepsquare-io/workflow-catalog/blob/main/jupyterlab/jupyterlab.yaml">This JupyterLab workflow</a> showcases the ease of developing Software-as-a-Service (SaaS) solutions on DeepSquare, utilizing decentralized HPC resources billed by the minute.'
 		},
