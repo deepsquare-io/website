@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { PUBLIC_VERSION } from '$env/static/public';
 	import Whitepaper from '$lib/assets/media/DeepSquare_White-Paper-1.pdf';
 	import Yellowpaper from '$lib/assets/media/Yellow-Paper_Tokenize_HPC.pdf';
 	import logo from '$lib/assets/media/deepsquare-logo-h-neg-BIJELI-1.svg';
@@ -22,9 +23,12 @@
 					services.
 				</p>
 				<p>
-					Copyright © {year} – <b>The DeepSquare Association</b> – CHE-130.663.967, Switzerland.
+					{PUBLIC_VERSION ? `Built on commit ${PUBLIC_VERSION} –` : ''} Copyright © {year} –
+					<b>The DeepSquare Association</b> – CHE-130.663.967, Switzerland.
 				</p>
-				<img src={poweredby} alt="Powered by Avalanche" />
+				<div>
+					<img src={poweredby} alt="Powered by Avalanche" />
+				</div>
 			</div>
 		</div>
 		<div>
