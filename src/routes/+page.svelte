@@ -360,7 +360,7 @@
 
 				<div>
 					{#key job}
-						<p>
+						<p class="m-0">
 							{@html job.introduction}
 						</p>
 					{/key}
