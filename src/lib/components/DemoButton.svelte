@@ -181,7 +181,7 @@
 
 <div>
 	<div
-		class="relative flex w-full flex-col items-center justify-center"
+		class="relative flex w-full flex-col items-center justify-center p-4"
 		style="background-color: #000; border: var(--primary) solid 1px; min-height: 200px"
 	>
 		{#if jobStatus === JobStatus.UNINITIALIZED}
