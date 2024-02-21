@@ -23,9 +23,7 @@
 	const dispatch = createEventDispatcher();
 	let hasSubmitted = false;
 
-	$: if (hasSubmitted) {
-		dispatch('submit', hasSubmitted);
-	}
+	$: dispatch('submit', hasSubmitted);
 
 	let urls: string[] = [];
 	let lines: string[] = [];
