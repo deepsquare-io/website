@@ -213,7 +213,12 @@
 		{#if urls.length > 0}
 			<div transition:fade={{ duration: 300, easing: quintInOut }}>
 				{#each urls as url, index}
-					<a class="blinking-aura mt-4 underline" role="button" href={url}
+					<a
+						class="blinking-aura mt-4 underline"
+						role="button"
+						href={url}
+						target="_blank"
+						rel="noopener"
 						>OPEN APP{index > 1 ? ` ${index}` : ''}
 						<span class="material-symbols-outlined">arrow_outward</span></a
 					>
