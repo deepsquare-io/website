@@ -20,8 +20,8 @@
 	import StableDiffusion from '$lib/assets/media/stablediffusion.drawio.svg';
 
 	import JupyterCode from '$lib/assets/media/jupyter-code.svg';
-	import JupyterVideo from '$lib/assets/media/jupyter-term.mp4';
-	import JupyterWindow from '$lib/assets/media/jupyter-window.mp4';
+	import JupyterVideo from '$lib/assets/media/jupyter-term.webm';
+	import JupyterWindow from '$lib/assets/media/jupyter-window.webm';
 
 	import Price1 from '$lib/assets/media/price-part-1.png';
 	import Price2 from '$lib/assets/media/price-part-2.png';
@@ -311,7 +311,7 @@
 						class="drop-shadow-a max-w-[50vh] rounded-lg sm:max-w-[70vh]"
 						style="max-height: 50vh; width: auto; height: auto;"
 						width={1920 / 4}
-						height={1080 / 4}><source src={JupyterVideo} type="video/mp4; codes=avc1" /></video
+						height={1080 / 4}><source src={JupyterVideo} type="video/webm;codecs=vp9,opus" /></video
 					>
 				</AnimatedInView>
 				<AnimatedInView
@@ -336,7 +336,8 @@
 						class="drop-shadow-a max-w-[50vh] rounded-lg sm:max-w-[70vh]"
 						style="max-height: 50vh; width: auto; height: auto;"
 						width={1920 / 4}
-						height={1080 / 4}><source src={JupyterWindow} type="video/mp4; codes=avc1" /></video
+						height={1080 / 4}
+						><source src={JupyterWindow} type="video/webm;codecs=vp9,opus" /></video
 					>
 				</AnimatedInView>
 			</div>
