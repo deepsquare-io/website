@@ -190,9 +190,7 @@
 		<div class="grid lg:grid-cols-3">
 			<div class="lg:col-span-2">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
-					<h1 class="text-4xl md:text-6xl">
-						Decentralized compute power in one click.
-					</h1>
+					<h1 class="text-4xl md:text-6xl">Decentralized compute power in one click.</h1>
 				</AnimatedInView>
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
 					<p class="text-xl">
@@ -342,6 +340,30 @@
 				</AnimatedInView>
 			</div>
 		</center>
+	</main>
+</section>
+
+<section>
+	<header>
+		<center>
+			<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+				<h2>Experience Our Solution in Action</h2>
+			</AnimatedInView>
+		</center>
+	</header>
+
+	<main>
+		<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
+			<a
+				href="https://share-eu1.hsforms.com/10E8kuadjQRWGqA6tiO-SPwev6gi"
+				role="button"
+				target="_blank"
+				rel="noopener"
+				style="text-transform: uppercase"
+			>
+			Request a demo
+			</a>
+		</AnimatedInView>
 	</main>
 </section>
 
