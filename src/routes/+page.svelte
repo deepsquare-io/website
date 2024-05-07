@@ -23,13 +23,11 @@
 	import HubFranceIA from '$lib/assets/media/HubFranceAI.png';
 
 	import AnimatedInView from '$components/AnimatedInView.svelte';
-	import DemoButton from '$components/DemoButton.svelte';
 	import Parallax from '$components/Parallax.svelte';
 	import ContainerIcon from '$lib/assets/media/container-registry-svgrepo-com.svg';
 	import HandshakeIcon from '$lib/assets/media/handshake-regular.svg';
 	import YAMLIcon from '$lib/assets/media/yaml-file-icon.svg';
 
-	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
@@ -193,7 +191,7 @@
 			<div class="lg:col-span-2">
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out both`}>
 					<h1 class="text-4xl md:text-6xl">
-						Decentralized compute power <a href="#live-demo">in one click</a>
+						Decentralized compute power in one click.
 					</h1>
 				</AnimatedInView>
 				<AnimatedInView once={true} animation={`from-bottom-slow 0.5s ease-out 0.5s both`}>
@@ -289,106 +287,6 @@
 				</p>
 			</AnimatedInView>
 		</div>
-	</main>
-</section>
-
-<section id="live-demo" class="relative" style="background-color: transparent;">
-	<!-- Overlays -->
-	<div
-		class="absolute inset-0 -z-10"
-		style="backdrop-filter: blur(10px); background-color: var(--background-color);"
-	></div>
-	<Parallax
-		factor={0.3}
-		class="absolute inset-0 -z-10"
-		style="background: radial-gradient(circle, rgba(9,4,87,1) 0%, rgba(9,4,87, 0) 50%, rgba(9,4,87,0) 100%); background-position: center center; background-repeat: no-repeat;"
-	></Parallax>
-	<div
-		class="absolute inset-0 -z-10"
-		style="backdrop-filter: blur(0px); background-color: rgba(0, 0, 0, 0);"
-	></div>
-
-	<!-- Content -->
-	<header>
-		<center>
-			<AnimatedInView once={true} animation={`from-bottom-slow 0.4s ease-out both`}>
-				<h2>Try DeepSquare in one click!</h2>
-			</AnimatedInView>
-		</center>
-	</header>
-
-	<main>
-		<AnimatedInView
-			class="w-full lg:w-[50vw]"
-			once={true}
-			animation={`from-bottom-slow 0.4s ease-out both`}
-		>
-			<center class="flex flex-col space-y-8">
-				<div>
-					<div
-						class="grid place-content-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-4"
-					>
-						{#each jobs as j}
-							<!-- svelte-ignore a11y-invalid-attribute -->
-							<a
-								href={j === job || hasSubmitted ? null : 'javascript:void(0)'}
-								on:click={() => {
-									if (j !== job && !hasSubmitted) {
-										$page.url.searchParams.set('job', j.type);
-										goto($page.url.toString(), { noScroll: true, replaceState: true });
-										job = j;
-									}
-								}}
-								class="w-full {j === job || hasSubmitted
-									? 'cursor-default hover:no-underline'
-									: ''}"
-							>
-								<article
-									class="m-0 flex min-h-20 w-full flex-col content-center items-stretch justify-center p-1 px-4 {j ===
-									job
-										? 'aura-primary'
-										: !hasSubmitted
-											? 'aura'
-											: 'bg-[#322f46]'} {hasSubmitted ? 'shadow-none' : ''}"
-								>
-									<p style="color: var(--h1-color);" class="m-0 w-full">{j.name}</p>
-								</article>
-							</a>
-						{/each}
-					</div>
-				</div>
-
-				<div>
-					{#key job}
-						<p class="m-0">
-							{@html job.introduction}
-						</p>
-					{/key}
-				</div>
-
-				<DemoButton
-					jobType={job.type}
-					on:submit={(e) => {
-						hasSubmitted = e.detail;
-					}}
-				/>
-
-				<div>
-					<div class="pt-4">
-						{#key job}
-							<p>
-								{@html job.description}
-							</p>
-						{/key}
-					</div>
-					<p>
-						Our Platform-as-a-Service (PaaS) environment offers agility, seamlessly integrating AI
-						and high-performance computing into scalable SaaS applications, making deployment easy
-						and cost-efficient.
-					</p>
-				</div>
-			</center>
-		</AnimatedInView>
 	</main>
 </section>
 
