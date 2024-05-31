@@ -166,7 +166,7 @@
 </script>
 
 <svelte:head>
-	<title>{title} - DeepSquare</title>
+	<title>{title}</title>
 	<meta
 		name="description"
 		content="DeepSquare is a pioneering technology company dedicated to build the Decentralized Cloud Ecosystem and to High-Performance Computing (HPC)
