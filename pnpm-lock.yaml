@@ -60,8 +60,8 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(prettier@3.3.2)(svelte@4.2.18)
       prettier-plugin-tailwindcss:
-        specifier: 0.6.2
-        version: 0.6.2(prettier-plugin-svelte@3.2.4(prettier@3.3.2)(svelte@4.2.18))(prettier@3.3.2)
+        specifier: 0.6.4
+        version: 0.6.4(prettier-plugin-svelte@3.2.4(prettier@3.3.2)(svelte@4.2.18))(prettier@3.3.2)
       sass:
         specifier: 1.77.4
         version: 1.77.4
@@ -1542,8 +1542,8 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier-plugin-tailwindcss@0.6.2:
-    resolution: {integrity: sha512-eFefm4cg+1c2B57+H274Qm//CTWBdtQN9ansl0YTP/8TC8x3bugCTQSS/e4FC5Ctl9djhTzsbcMrZ7x2/abIow==}
+  prettier-plugin-tailwindcss@0.6.4:
+    resolution: {integrity: sha512-3vhbIvlKyAWPaw9bUr2cw6M1BGx2Oy9CCLJyv+nxEiBGCTcL69WcAz2IFMGqx8IXSzQCInGSo2ujAByg9poHLQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -3350,7 +3350,7 @@ snapshots:
       prettier: 3.3.2
       svelte: 4.2.18
 
-  prettier-plugin-tailwindcss@0.6.2(prettier-plugin-svelte@3.2.4(prettier@3.3.2)(svelte@4.2.18))(prettier@3.3.2):
+  prettier-plugin-tailwindcss@0.6.4(prettier-plugin-svelte@3.2.4(prettier@3.3.2)(svelte@4.2.18))(prettier@3.3.2):
     dependencies:
       prettier: 3.3.2
     optionalDependencies:
