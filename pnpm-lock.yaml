@@ -16,13 +16,13 @@ importers:
         version: 1.44.1
       '@sveltejs/adapter-static':
         specifier: 3.0.2
-        version: 3.0.2(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))
+        version: 3.0.2(@sveltejs/kit@2.5.11(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))
       '@sveltejs/enhanced-img':
         specifier: 0.2.1
         version: 0.2.1(rollup@4.17.2)(svelte@4.2.18)
       '@sveltejs/kit':
-        specifier: 2.5.10
-        version: 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
+        specifier: 2.5.11
+        version: 2.5.11(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
       '@sveltejs/vite-plugin-svelte':
         specifier: 3.1.1
         version: 3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
@@ -567,8 +567,8 @@ packages:
   '@sveltejs/enhanced-img@0.2.1':
     resolution: {integrity: sha512-tEJCtDDSY4Od7YosS2OAHFjGwM09AOHaL97YuqDAnnKLnTpSYJvpLl3r6bLmWDht2ZqoAXfaPsbFJaG9zbQMjw==}
 
-  '@sveltejs/kit@2.5.10':
-    resolution: {integrity: sha512-OqoyTmFG2cYmCFAdBfW+Qxbg8m23H4dv6KqwEt7ofr/ROcfcIl3Z/VT56L22H9f0uNZyr+9Bs1eh2gedOCK9kA==}
+  '@sveltejs/kit@2.5.11':
+    resolution: {integrity: sha512-zsx/wI8/z0pvoJkKg0pxFpfYR/DgIxJyik7BemLSYd4n9GO4R/GJQ4zMVg27VjJtxnyWh3SDptL2CDomQctUpg==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -2351,9 +2351,9 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@sveltejs/adapter-static@3.0.2(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))':
+  '@sveltejs/adapter-static@3.0.2(@sveltejs/kit@2.5.11(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))':
     dependencies:
-      '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
+      '@sveltejs/kit': 2.5.11(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
 
   '@sveltejs/enhanced-img@0.2.1(rollup@4.17.2)(svelte@4.2.18)':
     dependencies:
@@ -2364,7 +2364,7 @@ snapshots:
       - rollup
       - svelte
 
-  '@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))':
+  '@sveltejs/kit@2.5.11(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5)))(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.2.13(sass@1.77.5))
       '@types/cookie': 0.6.0
