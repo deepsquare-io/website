@@ -17,7 +17,7 @@
 	},
 	"devDependencies": {
 		"@picocss/pico": "1.5.13",
-		"@playwright/test": "1.44.1",
+		"@playwright/test": "1.45.0",
 		"@sveltejs/adapter-static": "3.0.2",
 		"@sveltejs/enhanced-img": "0.3.0",
 		"@sveltejs/kit": "2.5.17",
