@@ -18,8 +18,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(sass@1.77.8)))(svelte@4.2.18)(vite@5.3.4(sass@1.77.8)))
       '@sveltejs/enhanced-img':
-        specifier: 0.3.0
-        version: 0.3.0(rollup@4.17.2)(svelte@4.2.18)
+        specifier: 0.3.1
+        version: 0.3.1(rollup@4.17.2)(svelte@4.2.18)(vite@5.3.4(sass@1.77.8))
       '@sveltejs/kit':
         specifier: 2.5.18
         version: 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(sass@1.77.8)))(svelte@4.2.18)(vite@5.3.4(sass@1.77.8))
@@ -564,8 +564,11 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/enhanced-img@0.3.0':
-    resolution: {integrity: sha512-o8FdEUyJR/+LjUUl4sgB9QeM9rSGpOzTO6/CH0AmO/FgwWkcJdj/MwVNtr2F/AtaPgNfzvRpnExjklmuuDOtPA==}
+  '@sveltejs/enhanced-img@0.3.1':
+    resolution: {integrity: sha512-75A4YiXQp+GRc54EyiNOlhHnHt9O8e0CdCHLm3RWESLRaazd5OIciSa4SbKIo9DM84yGwSVShU0buyUmNJvgWg==}
+    peerDependencies:
+      svelte: ^4.0.0 || ^5.0.0-next.0
+      vite: '>= 5.0.0'
 
   '@sveltejs/kit@2.5.18':
     resolution: {integrity: sha512-+g06hvpVAnH7b4CDjhnTDgFWBKBiQJpuSmQeGYOuzbO3SC3tdYjRNlDCrafvDtKbGiT2uxY5Dn9qdEUGVZdWOQ==}
@@ -2363,14 +2366,15 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(sass@1.77.8)))(svelte@4.2.18)(vite@5.3.4(sass@1.77.8))
 
-  '@sveltejs/enhanced-img@0.3.0(rollup@4.17.2)(svelte@4.2.18)':
+  '@sveltejs/enhanced-img@0.3.1(rollup@4.17.2)(svelte@4.2.18)(vite@5.3.4(sass@1.77.8))':
     dependencies:
       magic-string: 0.30.10
+      svelte: 4.2.18
       svelte-parse-markup: 0.1.2(svelte@4.2.18)
+      vite: 5.3.4(sass@1.77.8)
       vite-imagetools: 7.0.2(rollup@4.17.2)
     transitivePeerDependencies:
       - rollup
-      - svelte
 
   '@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(sass@1.77.8)))(svelte@4.2.18)(vite@5.3.4(sass@1.77.8))':
     dependencies:
