@@ -1,1 +1,1 @@
-export const env={"PUBLIC_VERSION":"98f21ff"}
+export const env={"PUBLIC_VERSION":"1501931"}
