@@ -72,8 +72,8 @@ importers:
         specifier: 3.8.6
         version: 3.8.6(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(sass@1.79.4)(svelte@4.2.19)
       svelte-inview:
-        specifier: 4.0.3
-        version: 4.0.3(svelte@4.2.19)
+        specifier: 4.0.4
+        version: 4.0.4(svelte@4.2.19)
       svelte-markdown:
         specifier: 0.4.1
         version: 0.4.1(svelte@4.2.19)
@@ -1813,10 +1813,10 @@ packages:
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
 
-  svelte-inview@4.0.3:
-    resolution: {integrity: sha512-22zoPz9XBscuOY/MuJ6AVoWOXDDn9IqnlFQt4HwACM2oRqu3IOo85q8VIF+2wdXkQ7eG9y+zpOQV52jwL9/+MQ==}
+  svelte-inview@4.0.4:
+    resolution: {integrity: sha512-PlXNSHHijvQ6MhmSYUj6cMyS+39NttoTffk7W5WYF8T2tsyLgJnKhyuAF+/hSujbY0vpsmqXaMd2nolEKvR8Kw==}
     peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
+      svelte: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^5.0.0-next
 
   svelte-markdown@0.4.1:
     resolution: {integrity: sha512-pOlLY6EruKJaWI9my/2bKX8PdTeP5CM0s4VMmwmC2prlOkjAf+AOmTM4wW/l19Y6WZ87YmP8+ZCJCCwBChWjYw==}
@@ -3647,7 +3647,7 @@ snapshots:
     dependencies:
       svelte: 4.2.19
 
-  svelte-inview@4.0.3(svelte@4.2.19):
+  svelte-inview@4.0.4(svelte@4.2.19):
     dependencies:
       svelte: 4.2.19
 
