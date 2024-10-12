@@ -18,8 +18,8 @@ importers:
         specifier: 3.0.5
         version: 3.0.5(@sveltejs/kit@2.6.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(sass@1.79.5)))(svelte@4.2.19)(vite@5.4.8(sass@1.79.5)))
       '@sveltejs/enhanced-img':
-        specifier: 0.3.8
-        version: 0.3.8(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))
+        specifier: 0.3.9
+        version: 0.3.9(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))
       '@sveltejs/kit':
         specifier: 2.6.4
         version: 2.6.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(sass@1.79.5)))(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))
@@ -656,8 +656,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/enhanced-img@0.3.8':
-    resolution: {integrity: sha512-n66u46ZeqHltiTm0BEjWptYmCrCY0EltEEvakmC7d5o5ZejDbOvOWm914mebbRKaP2Bezv65TNCod/wqvw/0KA==}
+  '@sveltejs/enhanced-img@0.3.9':
+    resolution: {integrity: sha512-hDhoIbkDAY08II/1DWeY2lGMY9nhETC96B2HTbxoI6EDqxLErBDKqnRN3QQRuMJATxPGVNhCKUkuARi4TCLtpQ==}
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       vite: '>= 5.0.0'
@@ -1911,10 +1911,10 @@ packages:
     peerDependencies:
       svelte: ^4.0.0
 
-  svelte-parse-markup@0.1.2:
-    resolution: {integrity: sha512-DycY7DJr7VqofiJ63ut1/NEG92HrWWL56VWITn/cJCu+LlZhMoBkBXT4opUitPEEwbq1nMQbv4vTKUfbOqIW1g==}
+  svelte-parse-markup@0.1.5:
+    resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
     peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
+      svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
 
   svelte-preprocess@5.1.3:
     resolution: {integrity: sha512-xxAkmxGHT+J/GourS5mVJeOXZzne1FR5ljeOUAMXUkfEhkLEllRreXpbl3dIYJlcJRfL1LO1uIAPpBpBfiqGPw==}
@@ -2551,11 +2551,11 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.6.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.8(sass@1.79.5)))(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))
 
-  '@sveltejs/enhanced-img@0.3.8(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))':
+  '@sveltejs/enhanced-img@0.3.9(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.8(sass@1.79.5))':
     dependencies:
       magic-string: 0.30.10
       svelte: 4.2.19
-      svelte-parse-markup: 0.1.2(svelte@4.2.19)
+      svelte-parse-markup: 0.1.5(svelte@4.2.19)
       vite: 5.4.8(sass@1.79.5)
       vite-imagetools: 7.0.2(rollup@4.21.0)
     transitivePeerDependencies:
@@ -3809,7 +3809,7 @@ snapshots:
       marked: 5.1.2
       svelte: 4.2.19
 
-  svelte-parse-markup@0.1.2(svelte@4.2.19):
+  svelte-parse-markup@0.1.5(svelte@4.2.19):
     dependencies:
       svelte: 4.2.19
 
