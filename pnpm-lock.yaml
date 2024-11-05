@@ -18,8 +18,8 @@ importers:
         specifier: 3.0.6
         version: 3.0.6(@sveltejs/kit@2.7.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.10(sass@1.80.6)))(svelte@4.2.19)(vite@5.4.10(sass@1.80.6)))
       '@sveltejs/enhanced-img':
-        specifier: 0.4.0
-        version: 0.4.0(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))
+        specifier: 0.4.1
+        version: 0.4.1(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))
       '@sveltejs/kit':
         specifier: 2.7.4
         version: 2.7.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.10(sass@1.80.6)))(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))
@@ -664,8 +664,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/enhanced-img@0.4.0':
-    resolution: {integrity: sha512-zqKcKZ0asE6NsU+Y9QfGq/G+7pLNDNeQqjpgm2izRAJz3XiPgQlRJlbGUmW9D0M4/Rap/ENrB/I8N1C70IerAA==}
+  '@sveltejs/enhanced-img@0.4.1':
+    resolution: {integrity: sha512-Z0xwQWM7tfdlNYuaFsAsbjEosEZb961yP7hlvZBLlh3+Rv4tI3BboD6bUkmInj+cC66p/5rybgvEtxX5LILSuw==}
     peerDependencies:
       svelte: ^5.0.0
       vite: '>= 5.0.0'
@@ -2572,7 +2572,7 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.7.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.10(sass@1.80.6)))(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))
 
-  '@sveltejs/enhanced-img@0.4.0(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))':
+  '@sveltejs/enhanced-img@0.4.1(rollup@4.21.0)(svelte@4.2.19)(vite@5.4.10(sass@1.80.6))':
     dependencies:
       magic-string: 0.30.10
       svelte: 4.2.19
