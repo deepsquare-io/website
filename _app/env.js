@@ -1,1 +1,1 @@
-export const env={"PUBLIC_VERSION":"dbcad72"}
+export const env={"PUBLIC_VERSION":"77eb50b"}
