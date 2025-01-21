@@ -92,16 +92,15 @@
 					26, 6300 Zug, Switzerland</a
 				>
 			</p>
-
+			
 			<p>
 				<a
-					target="_blank"
-					rel="noopener"
+					href="mailto:info@deepsquare.io"
 					style="color: #FFF;"
-					href="https://share-eu1.hsforms.com/1uKsDKrlhRnGk3UeUEz7DLgev6gi"
-					><span class="material-symbols-outlined"> contact_page </span> External Contact Form
-					<span class="material-symbols-outlined"> arrow_outward </span></a
 				>
+					<span class="material-symbols-outlined"> contact_page </span> Contact Us via Email
+					<span class="material-symbols-outlined"> arrow_outward </span>
+				</a>
 			</p>
 		</div>
 	</div>
