@@ -78,8 +78,8 @@ importers:
         specifier: 0.4.1
         version: 0.4.1(svelte@4.2.20)
       svelte-sitemap:
-        specifier: 2.7.0
-        version: 2.7.0
+        specifier: 2.7.1
+        version: 2.7.1
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -1965,8 +1965,8 @@ packages:
       typescript:
         optional: true
 
-  svelte-sitemap@2.7.0:
-    resolution: {integrity: sha512-/0rHrKQuA4MQ7CyHj6d9lD5jSO3woq86LR+ATUS/lx9hxwiQee6awjJ2nzy639Giu6m/Bhzereu9738CkWprfw==}
+  svelte-sitemap@2.7.1:
+    resolution: {integrity: sha512-9b6GAoaBZde3CCDvmfoDvRWLPAXeawg8MlcXyMmbf8Iu1HEOvVockagu+PiOhaKmyJE3Q9tnIZLaXlMdkfTxHA==}
     engines: {node: '>= 14.17.0'}
     hasBin: true
 
@@ -3234,7 +3234,7 @@ snapshots:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       ignore: 5.3.1
       merge2: 1.4.1
       slash: 3.0.0
@@ -3863,7 +3863,7 @@ snapshots:
       sass: 1.87.0
       typescript: 5.8.3
 
-  svelte-sitemap@2.7.0:
+  svelte-sitemap@2.7.1:
     dependencies:
       fast-glob: 3.3.3
       minimist: 1.2.8
