@@ -19,7 +19,7 @@
 		"@picocss/pico": "1.5.13",
 		"@playwright/test": "1.53.2",
 		"@sveltejs/adapter-static": "3.0.8",
-		"@sveltejs/enhanced-img": "0.4.4",
+		"@sveltejs/enhanced-img": "0.6.1",
 		"@sveltejs/kit": "2.20.7",
 		"@sveltejs/vite-plugin-svelte": "3.1.2",
 		"@types/eslint": "8.56.12",
