@@ -18,8 +18,8 @@ importers:
         specifier: 3.0.10
         version: 3.0.10(@sveltejs/kit@2.55.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(svelte@4.2.20)(typescript@5.9.3)(vite@5.4.21(sass@1.98.0)))
       '@sveltejs/enhanced-img':
-        specifier: 0.6.1
-        version: 0.6.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(rollup@4.21.0)(svelte@4.2.20)(vite@5.4.21(sass@1.98.0))
+        specifier: 0.10.4
+        version: 0.10.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(rollup@4.21.0)(svelte@4.2.20)(vite@5.4.21(sass@1.98.0))
       '@sveltejs/kit':
         specifier: 2.55.0
         version: 2.55.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(svelte@4.2.20)(typescript@5.9.3)(vite@5.4.21(sass@1.98.0))
@@ -712,12 +712,12 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/enhanced-img@0.6.1':
-    resolution: {integrity: sha512-8oj/cXc/M1soGQOkkkuEzeaiE/LTa3MJnoRwoRzG7GOPKHOfNRJDzsCcx3s1GqxQlcoHc4BJK3HoU1m0OV9UMA==}
+  '@sveltejs/enhanced-img@0.10.4':
+    resolution: {integrity: sha512-Am5nmAKUo7Nboqq7Dhtfn7dcXA087d7gIz6Vecn1opB41aJ680+0q9U9KvEcMgduOyeiwckTIOQOx4Mmq9GcvA==}
     peerDependencies:
-      '@sveltejs/vite-plugin-svelte': ^5.0.0 || ^6.0.0-next.0
+      '@sveltejs/vite-plugin-svelte': ^6.0.0 || ^7.0.0
       svelte: ^5.0.0
-      vite: '>= 5.0.0'
+      vite: ^6.3.0 || >=7.0.0
 
   '@sveltejs/kit@2.55.0':
     resolution: {integrity: sha512-MdFRjevVxmAknf2NbaUkDF16jSIzXMWd4Nfah0Qp8TtQVoSp3bV4jKt8mX7z7qTUTWvgSaxtR0EG5WJf53gcuA==}
@@ -1304,9 +1304,9 @@ packages:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
 
-  imagetools-core@7.1.0:
-    resolution: {integrity: sha512-8Aa4NecBBGmTkaAUjcuRYgTPKHCsBEWYmCnvKCL6/bxedehtVVFyZPdXe8DD0Nevd6UWBq85ifUaJ8498lgqNQ==}
-    engines: {node: '>=18.0.0'}
+  imagetools-core@9.1.0:
+    resolution: {integrity: sha512-xQjs+2vrxLnAjCq+omuNkd5UQTld9/bP8+YT0LyYTlKfuSQtgUBvqhUwGugzSAh6sCdN+LnROMuLswn5hZ9Fhg==}
+    engines: {node: '>=20.0.0'}
 
   immutable@5.1.5:
     resolution: {integrity: sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A==}
@@ -1832,11 +1832,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.6.3:
-    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
@@ -2086,9 +2081,9 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vite-imagetools@7.1.0:
-    resolution: {integrity: sha512-Mqh1uUY2DEMuBOogFz5Rd7cAs70VP6wsdQh2IShrJ+qGk5f7yQa4pN8w0YMLlGIKYW1JfM8oXrznUwVkhG+qxg==}
-    engines: {node: '>=18.0.0'}
+  vite-imagetools@9.0.3:
+    resolution: {integrity: sha512-FwjApRNZyN+RucPW9Z9kf0dyzyi3r3zlDfrTnzHXNaYpmT3pZ5w//d6QkApy1iypbDm+3fq+Gwfv+PYA4j4uYw==}
+    engines: {node: '>=20.0.0'}
 
   vite-node@1.6.1:
     resolution: {integrity: sha512-YAXkfvGtuTzwWbDSACdJSg4A4DZiAqckWe90Zapc/sEX3XvHcw1NdurM/6od8J207tSDqNbSsgdCacBgvJKFuA==}
@@ -2630,7 +2625,7 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.55.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(svelte@4.2.20)(typescript@5.9.3)(vite@5.4.21(sass@1.98.0))
 
-  '@sveltejs/enhanced-img@0.6.1(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(rollup@4.21.0)(svelte@4.2.20)(vite@5.4.21(sass@1.98.0))':
+  '@sveltejs/enhanced-img@0.10.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0)))(rollup@4.21.0)(svelte@4.2.20)(vite@5.4.21(sass@1.98.0))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@4.2.20)(vite@5.4.21(sass@1.98.0))
       magic-string: 0.30.10
@@ -2638,7 +2633,7 @@ snapshots:
       svelte: 4.2.20
       svelte-parse-markup: 0.1.5(svelte@4.2.20)
       vite: 5.4.21(sass@1.98.0)
-      vite-imagetools: 7.1.0(rollup@4.21.0)
+      vite-imagetools: 9.0.3(rollup@4.21.0)
       zimmerframe: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -2761,7 +2756,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.3
+      semver: 7.7.2
       ts-api-utils: 1.3.0(typescript@5.9.3)
     optionalDependencies:
       typescript: 5.9.3
@@ -3298,7 +3293,7 @@ snapshots:
 
   ignore@5.3.1: {}
 
-  imagetools-core@7.1.0: {}
+  imagetools-core@9.1.0: {}
 
   immutable@5.1.5: {}
 
@@ -3719,8 +3714,6 @@ snapshots:
 
   semver@7.6.2: {}
 
-  semver@7.6.3: {}
-
   semver@7.7.2: {}
 
   set-cookie-parser@3.0.1: {}
@@ -3998,10 +3991,10 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-imagetools@7.1.0(rollup@4.21.0):
+  vite-imagetools@9.0.3(rollup@4.21.0):
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.21.0)
-      imagetools-core: 7.1.0
+      imagetools-core: 9.1.0
       sharp: 0.34.2
     transitivePeerDependencies:
       - rollup
